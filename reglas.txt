@@ -1,0 +1,28 @@
+tablero de 4x4 variable segun el modo de juego (un modo de juego te da un tamaño "aleatorio" de filas y columnas para 
+que no sea cuadrado pero mantiene el nuemero de casillas adecuadas)
+
+Estilo piedra, papel , tijera. Cada carta puede tener uno de estos atributos en sus caras. Una de las caras tendrá un elemento "neutro".
+Este elemento pierde contra todos los demás siempre, pero el atacante no puede hacer combo ganando la battalla por ese lado.
+Las cartas mas poderosas no tienen este elementoneutro, en su lugar tienen un espacio vacio que no es debil contra nada (hace de pared)
+además de alguna habilidad sencilla como cambiar el atributo de tus cartas momentaneamente o tomar el control directo de una casilla vecina
+para hacer doble invocacion?
+
+Cartas de juego rápido simples que tienen efecto por el turno jugable. Cosas como rotar los atributos ese turno o cambiar alguno en concreto.
+
+Si se gana a la carta oponente esta carta pasa a tu control. Si esa carta a su vez gana a otras que tiene cerca estas cambian de control en ese momento.
+En otros modos de juego los combos estan eliminados.
+
+El tiempo entre turnos será de unos 30 segundos. En otro modo de juego "blitz" este tiempo se reduce a unos 5 segundos.
+
+Los jugadores se turnan para jugar y puede haber cartas de jugado rapido en el turno del rival (posibilidad?)
+
+habilidad pasiva por cada mitologia. Los griegos ganan los empates, los ejipcios pueden cambiar su atributo X veces por partida
+y los nordicos
+
+las partidas son la mejor de 3 por defecto.
+
+extra deck? condiciones?
+
+Boton de rendicion
+
+
