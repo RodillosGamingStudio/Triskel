@@ -1,28 +1,37 @@
-tablero de 4x4 variable segun el modo de juego (un modo de juego te da un tama�o "aleatorio" de filas y columnas para 
-que no sea cuadrado pero mantiene el nuemero de casillas adecuadas)
+*DESCRIPCIÓN*
+Juego multijugador de estrategia basado en cartas. Cada jugador dispodrá de un mazo de 8 cartas como máximo. Existirán 2 posibles modos de juego:
+  - Clásico: se jugará en un tablero de 4x4, con tiempo de turno de 30s.
+  - Aleatorio: el tamaño del tablero tendrá un número de filas y columnas calculados arbitrariamente, pudiendo no ser cuadrado dicho   tablero. El tiempo de turno será 30s.
+  - Blitz: el tablero volverá a ser de 4x4 pero la partida será más dinámica y acelerada, pues solo tendremos 5s por turno.
 
-Estilo piedra, papel , tijera. Cada carta puede tener uno de estos atributos en sus caras. Una de las caras tendr� un elemento "neutro".
-Este elemento pierde contra todos los dem�s siempre, pero el atacante no puede hacer combo ganando la battalla por ese lado.
+*MECÁNICAS*
+La mecánica se basa en el juego "Piedra, papel, tijera". Es decir, habrá 3 atributos diferentes que podrá ganar o perder frente a ellos. En nuestro caso, los atributos serán: 
+  -
+  -
+  -
+  - Neutral.
+Una de las caras tendrá un atributo "neutral". Este atributo pierde siempre contra todos los demás, pero el atacante no podrá hacer ningún combo de cartas.
+Los mazos de cartas se basan en mitologías antiguas, conteniendo dioses y seres fantásticos relativos a cada una de ellas. Cada jugador escogerá un mazo, pero no podrán usar ambos el mismo. Las mitologías contempladas son:
+  - Griega
+  - Egipcia
+  - Nórdica.
+Además, cada una de ellas tendrá una habilidad. Las cartas griegas siempre ganan los empates, las egipcios pueden cambiar su atributo X veces por partida y las nórdicas ¿?.
+Si se gana a la carta oponente, ésta carta pasa a tu control. Si esa carta a su vez gana a otras que tiene cerca, también cambian de control en ese momento.
+La partida se considera ganada al mejor de 3 turnos.
+También estará disponible el botón de rendición, que supondrá la retirada de la partida y la victoria inminente del contrincante.
+
+*COMBOS*
+El combo de cartas se realiza uniendo varias cartas de tu mazo
 Las cartas mas poderosas no tienen este elementoneutro, en su lugar tienen un espacio vacio que no es debil contra nada (hace de pared)
-adem�s de alguna habilidad sencilla como cambiar el atributo de tus cartas momentaneamente o tomar el control directo de una casilla vecina
-para hacer doble invocacion?
+además de alguna habilidad sencilla como cambiar el atributo de tus cartas momentaneamente o tomar el control directo de una casilla vecina.
+Los combos no están disponibles en todos los modos de juego.
 
-Cartas de juego r�pido simples que tienen efecto por el turno jugable. Cosas como rotar los atributos ese turno o cambiar alguno en concreto.
 
-Si se gana a la carta oponente esta carta pasa a tu control. Si esa carta a su vez gana a otras que tiene cerca estas cambian de control en ese momento.
-En otros modos de juego los combos estan eliminados.
 
-El tiempo entre turnos ser� de unos 30 segundos. En otro modo de juego "blitz" este tiempo se reduce a unos 5 segundos.
+((Para hacer doble invocacion?))
+((Cartas de juego rápido simples que tienen efecto por el turno jugable. Cosas como rotar los atributos ese turno o cambiar alguno en concreto.))
+((puede haber cartas de jugado rapido en el turno del rival (posibilidad?)))
+((Extra deck? condiciones?))
 
-Los jugadores se turnan para jugar y puede haber cartas de jugado rapido en el turno del rival (posibilidad?)
-
-habilidad pasiva por cada mitologia. Los griegos ganan los empates, los ejipcios pueden cambiar su atributo X veces por partida
-y los nordicos
-
-las partidas son la mejor de 3 por defecto.
-
-extra deck? condiciones?
-
-Boton de rendicion
 
 
