@@ -6,7 +6,8 @@ Triskel.preloadState.prototype = {
     },
 
     create: function(){
-        game.state.start('partidaState');
+        partida = new tablero();
+        partida.crearTablero();
     },
 
     update: function(){

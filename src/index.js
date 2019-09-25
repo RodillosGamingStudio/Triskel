@@ -1,13 +1,33 @@
-game = new Phaser.Game(800, 600, Phaser.AUTO, "gameDiv");
+var config = {
+          type: Phaser.AUTO,
+          width: 800,
+          height: 600,
+          scene: {
+              preload: preload,
+              create: create,
+              update: update
+          }
+      };
+  
+      var game = new Phaser.Game(config);
 
-game.state.add('bootState', DLabyrinth.bootState)
+      game.state.add('bootState', Triskel.bootState);
 
-/*game.state.add('preloadState', DLabyrinth.preloadState)
-game.state.add('menuState', DLabyrinth.menuState)
-game.state.add('optionState', DLabyrinth.optionState)
-game.state.add('matchingState', DLabyrinth.matchingState)
-game.state.add('levelState', DLabyrinth.levelState)
-game.state.add('endingState', DLabyrinth.endingState)
+      game.state.start('bootState');
+
+      /*
+function preload ()
+{
+    this.load.image('sky', 'assets/prueba.jpg');
+   
+}
+
+function create ()
+{
+    this.add.image(400, 300, 'sky');
+}
+
+function update ()
+{
+}
 */
-
-game.state.start('bootState')
