@@ -1,16 +1,17 @@
-Triskel.preloadState = function(game) {
-}
-
-Triskel.preloadState.prototype = {
-    preload: function(){
-    },
-
-    create: function(){
-        game.state.start('partidaState');
-    },
-
-    update: function(){
+class menu extends Phaser.Scene {
+    constructor() {
+        super("menuScene");
     }
-    
-    
+
+    preload(){
+        
+    }
+
+    create() {
+        this.scene.start('partidaScene');
+    }
+
+    update() {
+
+    }
 }

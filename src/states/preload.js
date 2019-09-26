@@ -1,18 +1,18 @@
-Triskel.preloadState = function(game) {
-}
-
-Triskel.preloadState.prototype = {
-    preload: function(){
-        //Tablero
-        game.load.image('fondo', 'assets/prueba.jpg');
-    },
-
-    create: function(){
-        game.state.start('menuState');
-    },
-
-    update: function(){
+class preload extends Phaser.Scene {
+    constructor() {
+        super("preloadScene");
     }
 
+    preload(){
+        this.load.image('fondo', 'assets/prueba.jpg');
+    }
 
+    create() {
+        //this.add.image(400, 300, 'fondo');
+        this.scene.start('menuScene');
+    }
+
+    update() {
+
+    }
 }
