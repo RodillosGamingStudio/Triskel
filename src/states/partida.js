@@ -29,7 +29,7 @@ class partida extends Phaser.Scene {
      
        this.jugador2 = new Jugador(this);
        this.jugador2.crearMano(this);
-       this.jugador2.setManoX(600);
+       this.jugador2.setManoX(1185);
        this.mano1 = this.jugador1.getMano();
        this.mano2 = this.jugador2.getMano();      
        
@@ -59,7 +59,7 @@ class partida extends Phaser.Scene {
 
         for (var z=0; z<this.mano1.length; z++){
             this.mano1[z].getX();
-            if(this.mano1[z].getX() < 700){
+            if(this.mano1[z].getX() < 400 || this.mano1[z].getX() > 800){
                 this.mano1[z].setA(true);
             } else { this.mano1[z].setA(false); }
             if (this.mano1[z].getA()){
@@ -72,7 +72,7 @@ class partida extends Phaser.Scene {
 
        for (var z=0; z<this.mano2.length; z++){
         this.mano2[z].getX();
-        if(this.mano2[z].getX() < 700){
+        if(this.mano2[z].getX() < 400 || this.mano2[z].getX() > 800){
             this.mano2[z].setA(true);
         } else { this.mano2[z].setA(false); }
         if (this.mano2[z].getA()){
@@ -93,7 +93,7 @@ class partida extends Phaser.Scene {
 
         this.input.on('dragend', function (pointer, gameObject) {
 
-            if (gameObject.x < 400){
+            if (gameObject.x < 400 || gameObject.x > 800){
                 gameObject.posVal = false;
             } else {
                 gameObject.posVal = true;
