@@ -1,5 +1,5 @@
 var config = {
-          type: Phaser.AUTO,
+          type: Phaser.WEBGL,
           width: 1280,
           height: 720,
           scene: [boot, preload, menu, partida]

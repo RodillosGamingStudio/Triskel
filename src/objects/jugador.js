@@ -1,15 +1,33 @@
 
-class Jugador {
+class Jugador{
     
     constructor(scene){
         var i = 0;
         var n = 100;
-        var mano = new Array(8);
-        for (i; i < 5; i++) {
-            mano[i] = new Carta(this);
-            //mano[i].y = mano[i].y + i*100;
-            n = n + 100;
-            mano[i].pintarCarta(100, n);
+        var m = 100;
+        this.mano = [];
+        for (i; i<5; i++) {
+          this.mano[i] = new Carta(scene);
+          this.mano[i].setPosicion(m, n + 100*i);
         }
     }
+    
+    getMano(){
+      return this.mano;
+    }
+    
+    crearMano(scene){
+      var i = 0;
+      for (i; i<5; i++) {
+        this.mano[i].pintarCarta(scene); 
+      }
+    }
+
+    setManoX(a) {
+        var i =0;
+        for (i; i<5; i++) {
+            this.mano[i].setX(a);  
+        }
+    }
+
 }
