@@ -5,7 +5,7 @@ class Carta extends Phaser.GameObjects.Sprite{
         super(scene, x, y, 'carta');
 
         this.movible;
-        this.posVal = true;
+        this.posVal = false;
         
         this.setInteractive();
 
@@ -55,7 +55,7 @@ class Carta extends Phaser.GameObjects.Sprite{
 
 
     setCeldaCercana(celda){
-        var distX = Math.abs(celda.isOcupada() - this.getX());
+        var distX = Math.abs(celda.getX() - this.getX());
         var distY = Math.abs(celda.getY() - this.getY());
 
         if(distX < 118 && distY < 153) {
