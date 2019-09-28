@@ -1,9 +1,0 @@
-class Mano {
-    constructor() {
-        
-     
-    }
-
-
-
-}
