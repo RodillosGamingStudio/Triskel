@@ -1,13 +1,13 @@
 
 class Jugador{
     
-    constructor(scene){
+    constructor(scene, cont){
         var i = 0;
         var n = 100;
         var m = 100;
         this.mano = [];
         for (i; i<5; i++) {
-          this.mano[i] = new Carta(scene);
+          this.mano[i] = new Carta(scene, cont);
           this.mano[i].setPosicion(m, n + 100*i);
         }
     }
