@@ -11,48 +11,23 @@ class Tablero extends Phaser.GameObjects.Sprite{
         this.ancho = ancho;
         
         this.matrizCeldas = new Array();
-        //this.Create2DArray(this.ancho, this.alto);
-        //463 + 118*i, 130.5 + 153*j
-
-        /*
-        for(i; i < this.ancho; i++){
-            this.matrizCeldas[i] = new Array(this.alto);
-            for(j; j < this.alto; j++){
-                this.matrizCeldas[i][j] = new Celda();
-            }
-        }*/
     }
-
-    /*Create2DArray(filas, columnas) {
-        var arr = new Array(filas);
-      
-        for (var i=0; i < filas;i++) {
-           arr[i] = new Array(columnas);
-        }
-      
-        return arr;
-
-      }*/
 
     getAlto(){ return this.alto; }
     getAncho(){ return this.ancho; }
 
-    crearMatrizCeldas(x, y){
+    crearMatrizCeldas(scene){
         for(var i = 0; i < this.ancho; i++){
             this.matrizCeldas[i] = new Array();
             for(var j = 0; j < this.alto; j++){
-                this.matrizCeldas[i][j] = new Celda();
+                this.matrizCeldas[i][j] = new Celda(scene);
                 this.matrizCeldas[i][j].setX(463 + 118*i);
                 this.matrizCeldas[i][j].setY(130.5 + 153*j);
+                this.matrizCeldas[i][j].pintarCelda(scene);                
             }
         }
     }
 
     getMatrizCeldas(){ return this.matrizCeldas; }
-
-    pintarTablero(escena){
-        escena.add.existing(this);
-    }
-
-    
+        
 }

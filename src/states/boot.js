@@ -8,7 +8,6 @@ class boot extends Phaser.Scene {
     }
 
     create() {
-        //this.add.image(400, 300, 'fondo');
         this.scene.start('preloadScene');
     }
 
