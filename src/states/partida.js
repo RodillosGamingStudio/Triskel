@@ -104,7 +104,7 @@ class partida extends Phaser.Scene {
                 a1 = this.getData('i');
                 x01 = this.x;
                 y01 = this.y;
-                console.log(x01, y01);
+                //console.log(x01, y01);
 
                 this.setData({ "seleccionada": true });
                 this.setTint(0xff0000);
