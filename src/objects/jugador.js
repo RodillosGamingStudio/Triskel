@@ -17,9 +17,9 @@ class Jugador{
     }
     
     crearMano(scene){
-      var o = 0;
-      for (o; o<5; o++) {
-        this.mano[o].pintarCarta(scene); 
+      var i = 0;
+      for (i; i<5; i++) {
+        this.mano[i].pintarCarta(scene); 
       }
     }
 
