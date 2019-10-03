@@ -124,6 +124,12 @@ class partida extends Phaser.Scene {
 
                             if (!mano1[a1].colocada) {
                                 if (!celdas[b1][c1].ocupada) {
+                                    celdas[b1][c1].norte = mano1[a1].norte;
+                                    celdas[b1][c1].sur = mano1[a1].sur;
+                                    celdas[b1][c1].este = mano1[a1].este;
+                                    celdas[b1][c1].oeste = mano1[a1].oeste;
+
+                                    console.log(celdas[b1][c1].norte, celdas[b1][c1].sur, celdas[b1][c1], celdas[b1][c1]);
 
                                     mano1[a1].x = celdas[b1][c1].x;
                                     mano1[a1].y = celdas[b1][c1].y;
@@ -190,7 +196,10 @@ class partida extends Phaser.Scene {
 
                             if (!mano2[a2].colocada) {
                                 if (!celdas[b2][c2].ocupada) {
-
+                                    celdas[b2][c2].norte = mano2[a2].norte;
+                                    celdas[b2][c2].sur = mano2[a2].sur;
+                                    celdas[b2][c2].este = mano2[a2].este;
+                                    celdas[b2][c2].oeste = mano2[a2].oeste;
                                     mano2[a2].x = celdas[b2][c2].x;
                                     mano2[a2].y = celdas[b2][c2].y;
                                     mano2[a2].setTint(0xfc8987);
