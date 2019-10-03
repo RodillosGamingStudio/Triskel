@@ -13,10 +13,6 @@ class partida extends Phaser.Scene {
         this.pos0Y2 = [];
 
         this.cartaId;
-
-
-
-
     }
 
     preload() {
@@ -41,10 +37,11 @@ class partida extends Phaser.Scene {
         var x02;
         var y02;
 
-        
-        
 
+         //Variables generales
         var celdas;
+        var turno = -1;
+        var turnonumerico = 1;
 
         this.background = this.add.image(0, 0, 'fondo');
         this.background.setOrigin(0, 0);
@@ -94,9 +91,14 @@ class partida extends Phaser.Scene {
         
         //MANO 1
         //Para seleccionar solamente una carta a la vez
+        if ( turno == -1){
+            for (var i = 0; i < mano1.length; i++) {
+                mano1[i].setInteractive();
+            }
+        }    
         for (var i = 0; i < mano1.length; i++) {
             mano1[i].setData({ seleccionada: false, i: i });
-            var jose1 = mano1[i].on('pointerup', function () {
+            var jose1 = mano1[i].on('pointerup', function (turnonumerico) {
                 if (a1 != -1) {
                     mano1[a1].setData({ 'seleccionada': false });
                     mano1[a1].clearTint();
@@ -105,7 +107,7 @@ class partida extends Phaser.Scene {
                 x01 = this.x;
                 y01 = this.y;
                 //console.log(x01, y01);
-
+                console.log(turnonumerico);
                 this.setData({ "seleccionada": true });
                 this.setTint(0xff0000);
                 //console.log(cartaAux);
@@ -115,7 +117,7 @@ class partida extends Phaser.Scene {
                 for (var i = 0; i < 4; i++) {
                     for (var j = 0; j < 4; j++) {
                         celdas[i][j].setData({ ocupada: false, i: i, j: j });
-                        celdas[i][j].on('pointerup', function (jose1) {
+                        var chuko1 = celdas[i][j].on('pointerup', function (jose1, chuko2) {
 
                             b1 = this.getData('i');
                             c1 = this.getData('j');
@@ -126,9 +128,19 @@ class partida extends Phaser.Scene {
                                     mano1[a1].x = celdas[b1][c1].x;
                                     mano1[a1].y = celdas[b1][c1].y;
                                     mano1[a1].clearTint();
-                                    mano1[a1].removeInteractive();
+
                                     mano1[a1].colocada = true;
                                     celdas[b1][c1].ocupada = true;
+                                    for(var z = 0; z < 5; z++){
+                                    mano1[z].removeInteractive();
+                                    if (mano2[z].x < 463 ||  mano2[z].x > 935 || mano2[z].y < 130.5 || mano2[z].y > 742.5) {
+                                        mano2[z].setInteractive();
+                                    }
+                                    }
+                                    turno = 1;
+                                    turnonumerico++;
+                                    
+                                    //mano2[i].setInteractive();
                                 } else {
                                     mano1[a1].x = x01;
                                     mano1[a1].y = y01;
@@ -139,17 +151,16 @@ class partida extends Phaser.Scene {
                         });
                     }
 
-                }
-
-
-
-
+                } 
 
             });
+          
         }
+       
 
         //MANO 2
         //Para seleccionar solamente una carta a la vez
+       
         for (var i = 0; i < mano2.length; i++) {
             mano2[i].setTint(0xfc8987);
             mano2[i].setData({ seleccionada: false, i: i });
@@ -172,7 +183,7 @@ class partida extends Phaser.Scene {
                 for (var i = 0; i < 4; i++) {
                     for (var j = 0; j < 4; j++) {
                         celdas[i][j].setData({ ocupada: false, i: i, j: j });
-                        celdas[i][j].on('pointerup', function (jose2) {
+                       var chuko2 = celdas[i][j].on('pointerup', function (jose2, chuko1) {
 
                             b2 = this.getData('i');
                             c2 = this.getData('j');
@@ -183,27 +194,36 @@ class partida extends Phaser.Scene {
                                     mano2[a2].x = celdas[b2][c2].x;
                                     mano2[a2].y = celdas[b2][c2].y;
                                     mano2[a2].setTint(0xfc8987);
-                                    mano2[a2].removeInteractive();
                                     mano2[a2].colocada = true;
                                     celdas[b2][c2].ocupada = true;
+                                    for(var z = 0; z < 5; z++){
+                                        mano2[z].removeInteractive();
+                                        if (mano1[z].x < 463 ||  mano1[z].x > 935 || mano1[z].y < 130.5 || mano1[z].y > 742.5) {
+                                            mano1[z].setInteractive();
+                                        }
+                                    }
+                                        turno = 0;
+                                        turnonumerico++;
                                 } else {
                                     mano2[a2].x = x02;
                                     mano2[a2].y = y02;
                                 }
                             }
-
+                         
                             //console.log(a);                            
                         });
                     }
-
+                
                 }
 
             });
+            
         }
+    
+          
 
-
-
-
+      
+        
 
 
         function mostrarSeleccionadas() {
@@ -220,8 +240,7 @@ class partida extends Phaser.Scene {
     }
 
     update() {
-
-
+  
         /*
         for (var x = 0; x < this.mano1.length; x++) {
             if (this.jugador1.getCartaSeleccionada() > -1) {
@@ -276,6 +295,11 @@ class partida extends Phaser.Scene {
     getPos0Y2(index) {
         return this.pos0Y2[index];
     }
-
+    
+    setAllInteractive(){
+        for(var i = 0; i < 5; i++){
+            this[i].setInteractive();
+        }
+    }
 
 }

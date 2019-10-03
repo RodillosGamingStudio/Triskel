@@ -4,9 +4,10 @@ class Carta extends Phaser.GameObjects.Sprite {
         var y = 0;
         super(scene, x, y, 'carta');
 
-        this.setInteractive();
+        //this.setInteractive();
 
         this.seleccionada;
+        this.kk;
 
         this.colocada = false;
 
