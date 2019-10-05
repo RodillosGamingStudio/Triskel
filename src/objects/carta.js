@@ -10,6 +10,7 @@ class Carta extends Phaser.GameObjects.Sprite {
         this.kk;
 
         this.colocada = false;
+        this.owner;
 
         this.norte;
         this.sur;

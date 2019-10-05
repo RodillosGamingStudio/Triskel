@@ -12,13 +12,15 @@ class Celda extends Phaser.GameObjects.Sprite {
         this.width = 118;
         this.centroHeight = 76.5;
         this.centroWidth = 59;
+        this.owner;
+
 
         this.norte;
         this.sur;
         this.este;
         this.oeste;
 
-
+        this.indice;
         this.setInteractive();
 
         this.ocupada;
