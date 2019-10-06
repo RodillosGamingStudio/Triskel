@@ -90,6 +90,10 @@ class partida extends Phaser.Scene {
         mano2[0].este = "oscuro";
         mano2[0].oeste = "neutro";
         mano2[0].owner = 1;
+        mano1[1].sur = "neutro";
+        mano1[1].este = "neutro";
+        mano1[1].oeste = "neutro";
+        mano1[1].norte = "terrenal";
 
         //Posicion inicial de las cartas
         for (var z = 0; z < mano1.length; z++) {
@@ -114,7 +118,9 @@ class partida extends Phaser.Scene {
             var jose1 = mano1[i].on('pointerup', function (turnonumerico) {
                 if (a1 != -1) {
                     mano1[a1].setData({ 'seleccionada': false });
+                    if (!mano1[a1].colocada){
                     mano1[a1].clearTint();
+                    }
                 }
                 a1 = this.getData('i');
                 x01 = this.x;
@@ -123,9 +129,7 @@ class partida extends Phaser.Scene {
                 console.log(turnonumerico);
                 this.setData({ "seleccionada": true });
                 this.setTint(0xff0000);
-                //console.log(cartaAux);
-                //mostrarSeleccionadas();
-
+            
                 //Para las celdas
                 for (var i = 0; i < 4; i++) {
                     for (var j = 0; j < 4; j++) {
@@ -151,337 +155,8 @@ class partida extends Phaser.Scene {
                                     mano1[a1].clearTint();
                                     mano1[a1].colocada = true;
                                     celdas[b1][c1].ocupada = true;
-                                    //ESQUINA SUPERIOR IZQUIERDA
-                                    if (b1 == 0 && c1 == 0) {
-                                        if (celdas[1][0].owner != celdas[0][0].owner) {
-                                            if (celdas[0][0].este == "terrenal" && (celdas[1][0].oeste == "oscuro" || celdas[1][0].oeste == "neutro")) {
-                                                celdas[1][0].owner = 0;
-                                                mano2[celdas[1][0].indice].setInteractive();
-                                                mano2[celdas[1][0].indice].clearTint();
-                                                mano2[celdas[1][0].indice].removeInteractive();
-                                            }
-                                            if (celdas[0][0].este == "sagrado" && (celdas[1][0].oeste == "terrenal" || celdas[1][0].oeste == "neutro")) {
-                                                celdas[1][0].owner = 0;
-                                                mano2[celdas[1][0].indice].setInteractive();
-                                                mano2[celdas[1][0].indice].clearTint();
-                                                mano2[celdas[1][0].indice].removeInteractive();
-                                            }
-                                            if (celdas[0][0].este == "oscuro" && (celdas[1][0].oeste == "sagrado" || celdas[1][0].oeste == "neutro")) {
-                                                celdas[1][0].owner = 0;
-                                                mano2[celdas[1][0].indice].setInteractive();
-                                                mano2[celdas[1][0].indice].clearTint();
-                                                mano2[celdas[1][0].indice].removeInteractive();
-                                            }
-                                        }
-                                        if (celdas[0][1].owner != celdas[0][0].owner) {
-                                            if (celdas[0][0].sur == "terrenal" && (celdas[0][1].norte == "oscuro" || celdas[0][1].norte == "neutro")) {
-                                                celdas[0][1].owner = 0;
-                                                mano2[celdas[0][1].indice].setInteractive();
-                                                mano2[celdas[0][1].indice].clearTint();
-                                                mano2[celdas[0][1].indice].removeInteractive();
-                                            }
-                                            if (celdas[0][0].sur == "sagrado" && (celdas[0][1].norte == "terrenal" || celdas[0][1].norte == "neutro")) {
-                                                celdas[0][1].owner = 0;
-                                                mano2[celdas[0][1].indice].setInteractive();
-                                                mano2[celdas[0][1].indice].clearTint();
-                                                mano2[celdas[0][1].indice].removeInteractive();
-                                            }
-                                            if (celdas[0][0].sur == "oscuro" && (celdas[0][1].norte == "sagrado" || celdas[0][1].norte == "neutro")) {
-                                                celdas[0][1].owner = 0;
-                                                mano2[celdas[0][1].indice].setInteractive();
-                                                mano2[celdas[0][1].indice].clearTint();
-                                                mano2[celdas[0][1].indice].removeInteractive();
-                                            }
-                                        }
 
-                                    }
-
-                                    //ESQUINA SUPERIOR DERECHA
-                                    else if (b1 == 3 && c1 == 0) {
-                                        if (celdas[2][0].owner != celdas[3][0].owner) {
-                                            if (celdas[3][0].oeste == "terrenal" && (celdas[2][0].este == "oscuro" || celdas[2][0].este == "neutro")) {
-                                                celdas[2][0].owner = 0;
-                                            }
-                                            if (celdas[3][0].oeste == "sagrado" && (celdas[2][0].este == "terrenal" || celdas[2][0].este == "neutro")) {
-                                                celdas[2][0].owner = 0;
-                                            }
-                                            if (celdas[3][0].oeste == "oscuro" && (celdas[2][0].este == "sagrado" || celdas[2][0].este == "neutro")) {
-                                                celdas[2][0].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[3][1].owner != celdas[3][0].owner) {
-                                            if (celdas[3][0].sur == "terrenal" && (celdas[3][1].norte == "oscuro" || celdas[3][1].norte == "neutro")) {
-                                                celdas[3][1].owner = 0;
-                                            }
-                                            if (celdas[3][0].sur == "sagrado" && (celdas[3][1].norte == "terrenal" || celdas[3][1].norte == "neutro")) {
-                                                celdas[3][1].owner = 0;
-                                            }
-                                            if (celdas[3][0].sur == "oscuro" && (celdas[3][1].norte == "sagrado" || celdas[3][1].norte == "neutro")) {
-                                                celdas[3][1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //ESQUINA INFERIOR IZQUIERDA
-
-                                    else if (b1 == 0 && c1 == 3) {
-                                        if (celdas[1][3].owner != celdas[0][3].owner) {
-                                            if (celdas[0][3].este == "terrenal" && (celdas[1][3].oeste == "oscuro" || celdas[1][3].oeste == "neutro")) {
-                                                celdas[1][3].owner = 0;
-                                            }
-                                            if (celdas[0][3].este == "sagrado" && (celdas[1][3].oeste == "terrenal" || celdas[1][3].oeste == "neutro")) {
-                                                celdas[1][3].owner = 0;
-                                            }
-                                            if (celdas[0][3].este == "oscuro" && (celdas[1][3].oeste == "sagrado" || celdas[1][3].oeste == "neutro")) {
-                                                celdas[1][3].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[0][2].owner != celdas[0][3].owner) {
-                                            if (celdas[0][3].norte == "terrenal" && (celdas[0][2].sur == "oscuro" || celdas[0][2].sur == "neutro")) {
-                                                celdas[0][2].owner = 0;
-                                            }
-                                            if (celdas[0][3].norte == "sagrado" && (celdas[0][2].sur == "terrenal" || celdas[0][2].sur == "neutro")) {
-                                                celdas[0][2].owner = 0;
-                                            }
-                                            if (celdas[0][3].norte == "oscuro" && (celdas[0][2].sur == "sagrado" || celdas[0][2].sur == "neutro")) {
-                                                celdas[0][2].owner = 0;
-                                            }
-                                        }
-
-                                    }
-
-                                    //ESQUINA INFERIOR DERECHA
-                                    else if (b1 == 3 && c1 == 3) {
-                                        if (celdas[2][3].owner != celdas[3][3].owner) {
-                                            if (celdas[3][3].oeste == "terrenal" && (celdas[2][3].este == "oscuro" || celdas[2][3].este == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                            if (celdas[3][3].oeste == "sagrado" && (celdas[2][3].este == "terrenal" || celdas[2][3].este == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                            if (celdas[3][3].oeste == "oscuro" && (celdas[2][3].este == "sagrado" || celdas[2][3].este == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[3][2].owner != celdas[3][3].owner) {
-                                            if (celdas[3][3].norte == "terrenal" && (celdas[2][3].sur == "oscuro" || celdas[2][3].sur == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                            if (celdas[3][3].norte == "sagrado" && (celdas[2][3].sur == "terrenal" || celdas[2][3].sur == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                            if (celdas[3][3].norte == "oscuro" && (celdas[2][3].sur == "sagrado" || celdas[2][3].sur == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //LADO SUPERIOR
-                                    else if ((b1 == 1 || b1 == 2) && c1 == 0) {
-                                        if (celdas[b1 - 1][c1].owner != celdas[b1][c1].owner) {
-                                            if (celdas[b1][c1].oeste == "terrenal" && (celdas[b1 - 1][c1].este == "oscuro" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].oeste == "sagrado" && (celdas[b1 - 1][c1].este == "terrenal" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].oeste == "oscuro" && (celdas[b1 - 1][c1].este == "sagrado" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[b1 + 1][c1].owner != celdas[b1][c1].owner) {
-                                            if (celdas[b1][c1].este == "terrenal" && (celdas[b1 + 1][c1].oeste == "oscuro" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].este == "sagrado" && (celdas[b1 + 1][c1].oeste == "terrenal" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].este == "oscuro" && (celdas[b1 + 1][c1].oeste == "sagrado" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[b1][c1 + 1].owner != celdas[b1][c1].owner) {
-                                            if (celdas[b1][c1].sur == "terrenal" && (celdas[b1][c1 + 1].norte == "oscuro" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].sur == "sagrado" && (celdas[b1][c1 + 1].norte == "terrenal" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].sur == "oscuro" && (celdas[b1][c1 + 1].norte == "sagrado" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //LADO INFERIOR
-                                    else if (c1 == 3 && (b1 == 1 || b1 == 2)) {
-                                        //Interaccion con la izquierda
-                                        if (celdas[b1][c1].owner != celdas[b1 - 1][c1].owner) {
-                                            if (celdas[b1][c1].oeste == "terrenal" && (celdas[b1 - 1][c1].este == "oscuro" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].oeste == "sagrado" && (celdas[b1 - 1][c1].este == "terrenal" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].oeste == "oscuro" && (celdas[b1 - 1][c1].este == "sagrado" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con la derecha
-                                        if (celdas[b1][c1].owner != celdas[b1 + 1][c1].owner) {
-                                            if (celdas[b1][c1].este == "terrenal" && (celdas[b1 + 1][c1].oeste == "oscuro" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].este == "sagrado" && (celdas[b1 + 1][c1].oeste == "terrenal" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].este == "oscuro" && (celdas[b1 + 1][c1].oeste == "sagrado" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con norte
-                                        if (celdas[b1][c1].owner != celdas[b1][c1 - 1].owner) {
-                                            if (celdas[b1][c1].norte == "terrenal" && (celdas[b1][c1 - 1].sur == "oscuro" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].norte == "sagrado" && (celdas[b1][c1 - 1].sur == "terrenal" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].norte == "oscuro" && (celdas[b1][c1 - 1].sur == "sagrado" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-
-                                    //LADO IZQUIERDO
-                                    else if (b1 == 0 && (c1 == 1 || c1 == 2)) {
-                                        if (celdas[b1][c1 - 1].owner != celdas[b1][c1].owner) {
-                                            if (celdas[b1][c1].norte == "terrenal" && (celdas[b1][c1 - 1].sur == "oscuro" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].norte == "sagrado" && (celdas[b1][c1 - 1].sur == "terrenal" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].norte == "oscuro" && (celdas[b1][c1 - 1].sur == "sagrado" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[b1][c1 + 1].owner != celdas[b1][c1].owner) {
-                                            if (celdas[b1][c1].sur == "terrenal" && (celdas[b1][c1 + 1].norte == "oscuro" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].sur == "sagrado" && (celdas[b1][c1 + 1].norte == "terrenal" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].sur == "oscuro" && (celdas[b1][c1 + 1].norte == "sagrado" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[b1 + 1][c1].owner != celdas[b1][c1].owner) {
-                                            if (celdas[b1][c1].este == "terrenal" && (celdas[b1 + 1][c1].oeste == "oscuro" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].este == "sagrado" && (celdas[b1 + 1][c1].oeste == "terrenal" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].este == "oscuro" && (celdas[b1 + 1][c1].oeste == "sagrado" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //LADO DERECHO
-                                    else if (b1 == 3 && (c1 == 1 || c1 == 2)) {
-                                        //Interaccion con la izquierda
-                                        if (celdas[b1][c1].owner != celdas[b1 - 1][c1].owner) {
-                                            if (celdas[b1][c1].oeste == "terrenal" && (celdas[b1 - 1][c1].este == "oscuro" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].oeste == "sagrado" && (celdas[b1 - 1][c1].este == "terrenal" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].oeste == "oscuro" && (celdas[b1 - 1][c1].este == "sagrado" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con norte
-                                        if (celdas[b1][c1].owner != celdas[b1][c1 - 1].owner) {
-                                            if (celdas[b1][c1].norte == "terrenal" && (celdas[b1][c1 - 1].sur == "oscuro" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].norte == "sagrado" && (celdas[b1][c1 - 1].sur == "terrenal" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].norte == "oscuro" && (celdas[b1][c1 - 1].sur == "sagrado" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con sur
-                                        if (celdas[b1][c1 + 1].owner != celdas[b1][c1 + 1].owner) {
-                                            if (celdas[b1][c1].sur == "terrenal" && (celdas[b1][c1 + 1].norte == "oscuro" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].sur == "sagrado" && (celdas[b1][c1 + 1].oeste == "terrenal" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].sur == "oscuro" && (celdas[b1][c1 + 1].oeste == "sagrado" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //RESTO
-                                    else {
-                                        //Interaccion con la izquierda
-                                        if (celdas[b1][c1].owner != celdas[b1 - 1][c1].owner) {
-                                            if (celdas[b1][c1].oeste == "terrenal" && (celdas[b1 - 1][c1].este == "oscuro" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].oeste == "sagrado" && (celdas[b1 - 1][c1].este == "terrenal" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].oeste == "oscuro" && (celdas[b1 - 1][c1].este == "sagrado" || celdas[b1 - 1][c1].este == "neutro")) {
-                                                celdas[b1 - 1][c1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con norte
-                                        if (celdas[b1][c1].owner != celdas[b1][c1 - 1].owner) {
-                                            if (celdas[b1][c1].norte == "terrenal" && (celdas[b1][c1 - 1].sur == "oscuro" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].norte == "sagrado" && (celdas[b1][c1 - 1].sur == "terrenal" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].norte == "oscuro" && (celdas[b1][c1 - 1].sur == "sagrado" || celdas[b1][c1 - 1].sur == "neutro")) {
-                                                celdas[b1][c1 - 1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con sur
-                                        if (celdas[b1][c1 + 1].owner != celdas[b1][c1 + 1].owner) {
-                                            if (celdas[b1][c1].sur == "terrenal" && (celdas[b1][c1 + 1].norte == "oscuro" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].sur == "sagrado" && (celdas[b1][c1 + 1].oeste == "terrenal" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].sur == "oscuro" && (celdas[b1][c1 + 1].oeste == "sagrado" || celdas[b1][c1 + 1].norte == "neutro")) {
-                                                celdas[b1][c1 + 1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con la derecha
-                                        if (celdas[b1][c1].owner != celdas[b1 + 1][c1].owner) {
-                                            if (celdas[b1][c1].este == "terrenal" && (celdas[b1 + 1][c1].oeste == "oscuro" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].este == "sagrado" && (celdas[b1 + 1][c1].oeste == "terrenal" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                            if (celdas[b1][c1].este == "oscuro" && (celdas[b1 + 1][c1].oeste == "sagrado" || celdas[b1 + 1][c1].oeste == "neutro")) {
-                                                celdas[b1 + 1][c1].owner = 0;
-                                            }
-                                        }
-                                    }
+                                    interaccion1(mano2, celdas, b1, c1);
 
                                     for (var z = 0; z < 5; z++) {
                                         mano1[z].removeInteractive();
@@ -491,6 +166,8 @@ class partida extends Phaser.Scene {
                                     }
                                     turno = 1;
                                     turnonumerico++;
+
+                                    console.log(celdas[0][0].owner);
 
                                     //mano2[i].setInteractive();
                                 } else {
@@ -519,7 +196,9 @@ class partida extends Phaser.Scene {
             var jose2 = mano2[i].on('pointerup', function () {
                 if (a2 != -1) {
                     mano2[a2].setData({ 'seleccionada': false });
-                    mano2[a2].setTint(0xfc8987);
+                    if (!mano2[a2].colocada){
+                        mano2[a2].setTint(0xfc8987);
+                        }
                 }
                 a2 = this.getData('i');
                 x02 = this.x;
@@ -554,365 +233,23 @@ class partida extends Phaser.Scene {
                                     mano2[a2].colocada = true;
                                     celdas[b2][c2].ocupada = true;
 
-                                    //ESQUINA SUPERIOR IZQUIERDA
-                                    if (b2 == 0 && c2 == 0) {
-                                        if (celdas[1][0].owner != celdas[0][0].owner) {
-                                            if (celdas[0][0].este == "terrenal" && (celdas[1][0].oeste == "oscuro" || celdas[1][0].oeste == "neutro")) {
-                                                celdas[1][0].owner = 1;
-                                                mano1[celdas[1][0].indice].setInteractive();
-                                                mano1[celdas[1][0].indice].setTint(0xfc8987);
-                                                mano1[celdas[1][0].indice].removeInteractive();
-                                            }
-                                            if (celdas[0][0].este == "sagrado" && (celdas[1][0].oeste == "terrenal" || celdas[1][0].oeste == "neutro")) {
-                                                celdas[1][0].owner = 1;
-                                                mano1[celdas[1][0].indice].setInteractive();
-                                                mano1[celdas[1][0].indice].setTint(0xfc8987);
-                                                mano1[celdas[1][0].indice].removeInteractive();
-                                            }
-                                            if (celdas[0][0].este == "oscuro" && (celdas[1][0].oeste == "sagrado" || celdas[1][0].oeste == "neutro")) {
-                                                celdas[1][0].owner = 1;
-                                                mano1[celdas[1][0].indice].setInteractive();
-                                                mano1[celdas[1][0].indice].setTint(0xfc8987);
-                                                mano1[celdas[1][0].indice].removeInteractive();
-                                            }
-                                        }
-                                        if (celdas[0][1].owner != celdas[0][0].owner) {
-                                            if (celdas[0][0].sur == "terrenal" && (celdas[0][1].norte == "oscuro" || celdas[0][1].norte == "neutro")) {
-                                                celdas[0][1].owner = 1;
-                                                mano1[celdas[0][1].indice].setInteractive();
-                                                mano1[celdas[0][1].indice].setTint(0xfc8987);
-                                                mano1[celdas[0][1].indice].removeInteractive();
-                                            }
-                                            if (celdas[0][0].sur == "sagrado" && (celdas[0][1].norte == "terrenal" || celdas[0][1].norte == "neutro")) {
-                                                celdas[0][1].owner = 1;
-                                                mano1[celdas[0][1].indice].setInteractive();
-                                                mano1[celdas[0][1].indice].setTint(0xfc8987);
-                                                mano1[celdas[0][1].indice].removeInteractive();
-                                            }
-                                            if (celdas[0][0].sur == "oscuro" && (celdas[0][1].norte == "sagrado" || celdas[0][1].norte == "neutro")) {
-                                                celdas[0][1].owner = 1;
-                                                mano1[celdas[0][1].indice].setInteractive();
-                                                mano1[celdas[0][1].indice].setTint(0xfc8987);
-                                                mano1[celdas[0][1].indice].removeInteractive();
-                                            }
-                                        }
-
-                                    }
-
-                                    //ESQUINA SUPERIOR DERECHA
-                                    else if (b2 == 3 && c2 == 0) {
-                                        if (celdas[2][0].owner != celdas[3][0].owner) {
-                                            if (celdas[3][0].oeste == "terrenal" && (celdas[2][0].este == "oscuro" || celdas[2][0].este == "neutro")) {
-                                                celdas[2][0].owner = 0;
-                                            }
-                                            if (celdas[3][0].oeste == "sagrado" && (celdas[2][0].este == "terrenal" || celdas[2][0].este == "neutro")) {
-                                                celdas[2][0].owner = 0;
-                                            }
-                                            if (celdas[3][0].oeste == "oscuro" && (celdas[2][0].este == "sagrado" || celdas[2][0].este == "neutro")) {
-                                                celdas[2][0].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[3][1].owner != celdas[3][0].owner) {
-                                            if (celdas[3][0].sur == "terrenal" && (celdas[3][1].norte == "oscuro" || celdas[3][1].norte == "neutro")) {
-                                                celdas[3][1].owner = 0;
-                                            }
-                                            if (celdas[3][0].sur == "sagrado" && (celdas[3][1].norte == "terrenal" || celdas[3][1].norte == "neutro")) {
-                                                celdas[3][1].owner = 0;
-                                            }
-                                            if (celdas[3][0].sur == "oscuro" && (celdas[3][1].norte == "sagrado" || celdas[3][1].norte == "neutro")) {
-                                                celdas[3][1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //ESQUINA INFERIOR IZQUIERDA
-
-                                    else if (b2 == 0 && c2 == 3) {
-                                        if (celdas[1][3].owner != celdas[0][3].owner) {
-                                            if (celdas[0][3].este == "terrenal" && (celdas[1][3].oeste == "oscuro" || celdas[1][3].oeste == "neutro")) {
-                                                celdas[1][3].owner = 0;
-                                            }
-                                            if (celdas[0][3].este == "sagrado" && (celdas[1][3].oeste == "terrenal" || celdas[1][3].oeste == "neutro")) {
-                                                celdas[1][3].owner = 0;
-                                            }
-                                            if (celdas[0][3].este == "oscuro" && (celdas[1][3].oeste == "sagrado" || celdas[1][3].oeste == "neutro")) {
-                                                celdas[1][3].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[0][2].owner != celdas[0][3].owner) {
-                                            if (celdas[0][3].norte == "terrenal" && (celdas[0][2].sur == "oscuro" || celdas[0][2].sur == "neutro")) {
-                                                celdas[0][2].owner = 0;
-                                            }
-                                            if (celdas[0][3].norte == "sagrado" && (celdas[0][2].sur == "terrenal" || celdas[0][2].sur == "neutro")) {
-                                                celdas[0][2].owner = 0;
-                                            }
-                                            if (celdas[0][3].norte == "oscuro" && (celdas[0][2].sur == "sagrado" || celdas[0][2].sur == "neutro")) {
-                                                celdas[0][2].owner = 0;
-                                            }
-                                        }
-
-                                    }
-
-                                    //ESQUINA INFERIOR DERECHA
-                                    else if (b2 == 3 && c2 == 3) {
-                                        if (celdas[2][3].owner != celdas[3][3].owner) {
-                                            if (celdas[3][3].oeste == "terrenal" && (celdas[2][3].este == "oscuro" || celdas[2][3].este == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                            if (celdas[3][3].oeste == "sagrado" && (celdas[2][3].este == "terrenal" || celdas[2][3].este == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                            if (celdas[3][3].oeste == "oscuro" && (celdas[2][3].este == "sagrado" || celdas[2][3].este == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[3][2].owner != celdas[3][3].owner) {
-                                            if (celdas[3][3].norte == "terrenal" && (celdas[2][3].sur == "oscuro" || celdas[2][3].sur == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                            if (celdas[3][3].norte == "sagrado" && (celdas[2][3].sur == "terrenal" || celdas[2][3].sur == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                            if (celdas[3][3].norte == "oscuro" && (celdas[2][3].sur == "sagrado" || celdas[2][3].sur == "neutro")) {
-                                                celdas[2][3].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //LADO SUPERIOR
-                                    else if ((b2 == 1 || b2 == 2) && c2 == 0) {
-                                        if (celdas[b2 - 1][c2].owner != celdas[b2][c2].owner) {
-                                            if (celdas[b2][c2].oeste == "terrenal" && (celdas[b2 - 1][c2].este == "oscuro" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].oeste == "sagrado" && (celdas[b2 - 1][c2].este == "terrenal" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].oeste == "oscuro" && (celdas[b2 - 1][c2].este == "sagrado" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[b2 + 1][c2].owner != celdas[b2][c2].owner) {
-                                            if (celdas[b2][c2].este == "terrenal" && (celdas[b2 + 1][c2].oeste == "oscuro" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].este == "sagrado" && (celdas[b2 + 1][c2].oeste == "terrenal" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].este == "oscuro" && (celdas[b2 + 1][c2].oeste == "sagrado" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                        }
-                                        if (celdas[b2][c2 + 1].owner != celdas[b2][c2].owner) {
-                                            if (celdas[b2][c2].sur == "terrenal" && (celdas[b2][c2 + 1].norte == "oscuro" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].sur == "sagrado" && (celdas[b2][c2 + 1].norte == "terrenal" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].sur == "oscuro" && (celdas[b2][c2 + 1].norte == "sagrado" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //LADO INFERIOR
-                                    else if (c2 == 3 && (b2 == 1 || b2 == 2)) {
-                                        //Interaccion con la izquierda
-                                        if (celdas[b2][c2].owner != celdas[b2 - 1][c2].owner) {
-                                            if (celdas[b2][c2].oeste == "terrenal" && (celdas[b2 - 1][c2].este == "oscuro" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].oeste == "sagrado" && (celdas[b2 - 1][c2].este == "terrenal" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].oeste == "oscuro" && (celdas[b2 - 1][c2].este == "sagrado" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con la derecha
-                                        if (celdas[b2][c2].owner != celdas[b2 + 1][c2].owner) {
-                                            if (celdas[b2][c2].este == "terrenal" && (celdas[b2 + 1][c2].oeste == "oscuro" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].este == "sagrado" && (celdas[b2 + 1][c2].oeste == "terrenal" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].este == "oscuro" && (celdas[b2 + 1][c2].oeste == "sagrado" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con norte
-                                        if (celdas[b2][c2].owner != celdas[b2][c2 - 1].owner) {
-                                            if (celdas[b2][c2].norte == "terrenal" && (celdas[b2][c2 - 1].sur == "oscuro" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].norte == "sagrado" && (celdas[b2][c2 - 1].sur == "terrenal" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].norte == "oscuro" && (celdas[b2][c2 - 1].sur == "sagrado" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-
-                                    //LADO IZQUIERDO
-                                    else if (b2 == 0 && (c2 == 1 || c2 == 2)) {
-                                        if (celdas[b2][c2 - 1].owner != celdas[b2][c2].owner) {
-                                            if (celdas[b2][c2].norte == "terrenal" && (celdas[b2][c2 - 1].sur == "oscuro" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 1;
-                                                mano1[celdas[b2][c2 - 1].indice].setInteractive();
-                                                mano1[celdas[b2][c2 - 1].indice].setTint(0xfc8987);
-                                                mano1[celdas[b2][c2 - 1].indice].removeInteractive();
-                                            }
-                                            if (celdas[b2][c2].norte == "sagrado" && (celdas[b2][c2 - 1].sur == "terrenal" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 1;
-                                                mano1[celdas[b2][c2 - 1].indice].setInteractive();
-                                                mano1[celdas[b2][c2 - 1].indice].setTint(0xfc8987);
-                                                mano1[celdas[b2][c2 - 1].indice].removeInteractive();
-                                            }
-                                            if (celdas[b2][c2].norte == "oscuro" && (celdas[b2][c2 - 1].sur == "sagrado" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 1;
-                                                mano1[celdas[b2][c2 - 1].indice].setInteractive();
-                                                mano1[celdas[b2][c2 - 1].indice].setTint(0xfc8987);
-                                                mano1[celdas[b2][c2 - 1].indice].removeInteractive();
-                                            }
-                                        }
-                                        if (celdas[b2][c2 + 1].owner != celdas[b2][c2].owner) {
-                                            if (celdas[b2][c2].sur == "terrenal" && (celdas[b2][c2 + 1].norte == "oscuro" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 1;
-                                            }
-                                            if (celdas[b2][c2].sur == "sagrado" && (celdas[b2][c2 + 1].norte == "terrenal" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 1;
-                                            }
-                                            if (celdas[b2][c2].sur == "oscuro" && (celdas[b2][c2 + 1].norte == "sagrado" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 1;
-                                            }
-                                        }
-                                        if (celdas[b2 + 1][c2].owner != celdas[b2][c2].owner) {
-                                            if (celdas[b2][c2].este == "terrenal" && (celdas[b2 + 1][c2].oeste == "oscuro" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 1;
-                                            }
-                                            if (celdas[b2][c2].este == "sagrado" && (celdas[b2 + 1][c2].oeste == "terrenal" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 1;
-                                            }
-                                            if (celdas[b2][c2].este == "oscuro" && (celdas[b2 + 1][c2].oeste == "sagrado" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 1;
-                                            }
-                                        }
-                                    }
-
-                                    //LADO DERECHO
-                                    else if (b2 == 3 && (c2 == 1 || c2 == 2)) {
-                                        //Interaccion con la izquierda
-                                        if (celdas[b2][c2].owner != celdas[b2 - 1][c2].owner) {
-                                            if (celdas[b2][c2].oeste == "terrenal" && (celdas[b2 - 1][c2].este == "oscuro" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].oeste == "sagrado" && (celdas[b2 - 1][c2].este == "terrenal" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].oeste == "oscuro" && (celdas[b2 - 1][c2].este == "sagrado" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con norte
-                                        if (celdas[b2][c2].owner != celdas[b2][c2 - 1].owner) {
-                                            if (celdas[b2][c2].norte == "terrenal" && (celdas[b2][c2 - 1].sur == "oscuro" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].norte == "sagrado" && (celdas[b2][c2 - 1].sur == "terrenal" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].norte == "oscuro" && (celdas[b2][c2 - 1].sur == "sagrado" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con sur
-                                        if (celdas[b2][c2 + 1].owner != celdas[b2][c2 + 1].owner) {
-                                            if (celdas[b2][c2].sur == "terrenal" && (celdas[b2][c2 + 1].norte == "oscuro" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].sur == "sagrado" && (celdas[b2][c2 + 1].oeste == "terrenal" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].sur == "oscuro" && (celdas[b2][c2 + 1].oeste == "sagrado" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                        }
-                                    }
-
-                                    //RESTO
-                                    else {
-                                        //Interaccion con la izquierda
-                                        if (celdas[b2][c2].owner != celdas[b2 - 1][c2].owner) {
-                                            if (celdas[b2][c2].oeste == "terrenal" && (celdas[b2 - 1][c2].este == "oscuro" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].oeste == "sagrado" && (celdas[b2 - 1][c2].este == "terrenal" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].oeste == "oscuro" && (celdas[b2 - 1][c2].este == "sagrado" || celdas[b2 - 1][c2].este == "neutro")) {
-                                                celdas[b2 - 1][c2].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con norte
-                                        if (celdas[b2][c2].owner != celdas[b2][c2 - 1].owner) {
-                                            if (celdas[b2][c2].norte == "terrenal" && (celdas[b2][c2 - 1].sur == "oscuro" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].norte == "sagrado" && (celdas[b2][c2 - 1].sur == "terrenal" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].norte == "oscuro" && (celdas[b2][c2 - 1].sur == "sagrado" || celdas[b2][c2 - 1].sur == "neutro")) {
-                                                celdas[b2][c2 - 1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con sur
-                                        if (celdas[b2][c2 + 1].owner != celdas[b2][c2 + 1].owner) {
-                                            if (celdas[b2][c2].sur == "terrenal" && (celdas[b2][c2 + 1].norte == "oscuro" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].sur == "sagrado" && (celdas[b2][c2 + 1].oeste == "terrenal" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].sur == "oscuro" && (celdas[b2][c2 + 1].oeste == "sagrado" || celdas[b2][c2 + 1].norte == "neutro")) {
-                                                celdas[b2][c2 + 1].owner = 0;
-                                            }
-                                        }
-                                        //Interaccion con la derecha
-                                        if (celdas[b2][c2].owner != celdas[b2 + 1][c2].owner) {
-                                            if (celdas[b2][c2].este == "terrenal" && (celdas[b2 + 1][c2].oeste == "oscuro" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].este == "sagrado" && (celdas[b2 + 1][c2].oeste == "terrenal" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                            if (celdas[b2][c2].este == "oscuro" && (celdas[b2 + 1][c2].oeste == "sagrado" || celdas[b2 + 1][c2].oeste == "neutro")) {
-                                                celdas[b2 + 1][c2].owner = 0;
-                                            }
-                                        }
-                                    }
-                                    
-                                    console.log()
-
-
+                                    interaccion2(mano1, celdas, b2, c2);
+      
                                     for (var z = 0; z < 5; z++) {
                                         mano2[z].removeInteractive();
                                         if (mano1[z].x < 463 || mano1[z].x > 935 || mano1[z].y < 130.5 || mano1[z].y > 742.5) {
                                             mano1[z].setInteractive();
                                         }
                                     }
+
+                                    console.log(celdas[0][0].owner);
                                     turno = 0;
                                     turnonumerico++;
                                 } else {
                                     mano2[a2].x = x02;
                                     mano2[a2].y = y02;
                                 }
-                            }
-
-                            //console.log(a);                            
+                            }                            
                         });
                     }
 
@@ -921,10 +258,7 @@ class partida extends Phaser.Scene {
             });
 
         }
-        //ESQUINA SUPERIOR IZQUIERDA
-
-
-
+    
     }
 
     update() {
