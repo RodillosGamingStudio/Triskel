@@ -88,12 +88,13 @@ class partida extends Phaser.Scene {
         mano2[0].norte = "oscuro";
         mano2[0].sur = "oscuro";
         mano2[0].este = "oscuro";
-        mano2[0].oeste = "oscuro";
+        mano2[0].oeste = "neutro";
         mano2[0].owner = 1;
         mano1[1].sur = "neutro";
-        mano1[1].este = "neutro";
+        mano1[1].este = "terrenal";
         mano1[1].oeste = "neutro";
         mano1[1].norte = "terrenal";
+        mano1[1].owner = 0;
 
         //Posicion inicial de las cartas
         for (var z = 0; z < mano1.length; z++) {
@@ -157,7 +158,7 @@ class partida extends Phaser.Scene {
                                     mano1[a1].colocada = true;
                                     celdas[b1][c1].ocupada = true;
 
-                                    interaccion(mano1 ,mano2, celdas, b1, c1);
+                                    interaccion2(mano1 ,mano2, celdas, b1, c1);
 
                                     for (var z = 0; z < 5; z++) {
                                         mano1[z].removeInteractive();
@@ -168,7 +169,7 @@ class partida extends Phaser.Scene {
                                     turno = 1;
                                     turnonumerico++;
 
-                                    console.log(celdas[0][0].owner);
+                                    console.log(celdas[1][0].owner);
 
                                     //mano2[i].setInteractive();
                                 } else {
@@ -235,7 +236,7 @@ class partida extends Phaser.Scene {
                                     mano2[a2].colocada = true;
                                     celdas[b2][c2].ocupada = true;
 
-                                    interaccion(mano1, mano2, celdas, b2, c2);
+                                    interaccion2(mano1, mano2, celdas, b2, c2);
       
                                     for (var z = 0; z < 5; z++) {
                                         mano2[z].removeInteractive();
@@ -244,7 +245,7 @@ class partida extends Phaser.Scene {
                                         }
                                     }
 
-                                    console.log(celdas[0][0].owner);
+                                    console.log(celdas[1][0].owner);
                                     turno = 0;
                                     turnonumerico++;
                                 } else {
