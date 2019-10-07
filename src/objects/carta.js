@@ -7,7 +7,7 @@ class Carta extends Phaser.GameObjects.Sprite {
         //this.setInteractive();
 
         this.seleccionada;
-        this.kk;
+        this.which = cont;
 
         this.colocada = false;
         this.owner;

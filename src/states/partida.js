@@ -77,18 +77,18 @@ class partida extends Phaser.Scene {
         this.mano2[3].setId('b4');
         this.mano2[4].setId('b5');
         */
-
+        console.log(mano2[0].which);
         //pruebas
 
         mano1[0].sur = "sagrado";
         mano1[0].norte = "terrenal";
-        mano1[0].este = "sagrado";
+        mano1[0].este = "terrenal";
         mano1[0].oeste = "terrenal";
         mano1[0].owner = 0;
         mano2[0].norte = "oscuro";
         mano2[0].sur = "oscuro";
         mano2[0].este = "oscuro";
-        mano2[0].oeste = "neutro";
+        mano2[0].oeste = "oscuro";
         mano2[0].owner = 1;
         mano1[1].sur = "neutro";
         mano1[1].este = "neutro";
@@ -141,6 +141,7 @@ class partida extends Phaser.Scene {
 
                             if (!mano1[a1].colocada) {
                                 if (!celdas[b1][c1].ocupada) {
+                                    celdas[b1][c1].which = mano1[a1].which;
                                     celdas[b1][c1].indice = a1;
                                     celdas[b1][c1].norte = mano1[a1].norte;
                                     celdas[b1][c1].sur = mano1[a1].sur;
@@ -156,7 +157,7 @@ class partida extends Phaser.Scene {
                                     mano1[a1].colocada = true;
                                     celdas[b1][c1].ocupada = true;
 
-                                    interaccion1(mano2, celdas, b1, c1);
+                                    interaccion(mano1 ,mano2, celdas, b1, c1);
 
                                     for (var z = 0; z < 5; z++) {
                                         mano1[z].removeInteractive();
@@ -221,6 +222,7 @@ class partida extends Phaser.Scene {
 
                             if (!mano2[a2].colocada) {
                                 if (!celdas[b2][c2].ocupada) {
+                                    celdas[b2][c2].which = mano2[a2].which;
                                     celdas[b2][c2].indice = a2;
                                     celdas[b2][c2].norte = mano2[a2].norte;
                                     celdas[b2][c2].sur = mano2[a2].sur;
@@ -233,7 +235,7 @@ class partida extends Phaser.Scene {
                                     mano2[a2].colocada = true;
                                     celdas[b2][c2].ocupada = true;
 
-                                    interaccion2(mano1, celdas, b2, c2);
+                                    interaccion(mano1, mano2, celdas, b2, c2);
       
                                     for (var z = 0; z < 5; z++) {
                                         mano2[z].removeInteractive();
