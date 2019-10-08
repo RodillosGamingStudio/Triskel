@@ -1,0 +1,2 @@
+var buttons = '{"play": ["JUGAR", "PLAY"], "credits": ["CRÉDITOS", "CREDITS"], "language":["ESP", "ENG"], "back": ["ATRÁS", "BACK"]}';
+var credits = '{"body": ["Hecho por Rodillos Gaming, un grupo de estudiantes de desarollo de videojuegos de la URJC", "Made by Rodillos Gaming, a little group of game development students based in URJC."]}'
