@@ -1,8 +1,8 @@
 class Carta extends Phaser.GameObjects.Sprite {
-    constructor(scene, cont) {
+    constructor(scene, cont, sprite) {
         var x = 0;
         var y = 0;
-        super(scene, x, y, 'carta');
+        super(scene, x, y, sprite);
 
         //this.setInteractive();
 

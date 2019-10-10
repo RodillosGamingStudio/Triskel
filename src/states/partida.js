@@ -52,12 +52,12 @@ class partida extends Phaser.Scene {
 
         celdas = this.tablero.getMatrizCeldas();
 
-        this.jugador1 = new Jugador(this, 1);
-        this.jugador1.crearMano(this);
+        this.jugador1 = new Jugador(this, 1, 0);
+        this.jugador1.pintarMano(this);
 
-        this.jugador2 = new Jugador(this, 2);
-        this.jugador2.crearMano(this);
-        this.jugador2.setManoX(1185);
+        this.jugador2 = new Jugador(this, 2, 1);
+        this.jugador2.pintarMano(this);
+        //this.jugador2.setManoX(1185);
 
 
         mano1 = this.jugador1.getMano();
@@ -77,10 +77,9 @@ class partida extends Phaser.Scene {
         this.mano2[3].setId('b4');
         this.mano2[4].setId('b5');
         */
-        console.log(mano2[0].which);
         //pruebas
 
-        mano1[0].sur = "sagrado";
+        /*mano1[0].sur = "sagrado";
         mano1[0].norte = "terrenal";
         mano1[0].este = "terrenal";
         mano1[0].oeste = "terrenal";
@@ -94,7 +93,7 @@ class partida extends Phaser.Scene {
         mano1[1].este = "terrenal";
         mano1[1].oeste = "neutro";
         mano1[1].norte = "terrenal";
-        mano1[1].owner = 0;
+        mano1[1].owner = 0;*/
 
         //Posicion inicial de las cartas
         for (var z = 0; z < mano1.length; z++) {
@@ -160,7 +159,7 @@ class partida extends Phaser.Scene {
 
                                     interaccion2(mano1 ,mano2, celdas, b1, c1);
 
-                                    for (var z = 0; z < 5; z++) {
+                                    for (var z = 0; z < 8; z++) {
                                         mano1[z].removeInteractive();
                                         if (mano2[z].x < 463 || mano2[z].x > 935 || mano2[z].y < 130.5 || mano2[z].y > 742.5) {
                                             mano2[z].setInteractive();
@@ -238,7 +237,7 @@ class partida extends Phaser.Scene {
 
                                     interaccion2(mano1, mano2, celdas, b2, c2);
       
-                                    for (var z = 0; z < 5; z++) {
+                                    for (var z = 0; z < 8; z++) {
                                         mano2[z].removeInteractive();
                                         if (mano1[z].x < 463 || mano1[z].x > 935 || mano1[z].y < 130.5 || mano1[z].y > 742.5) {
                                             mano1[z].setInteractive();
@@ -322,7 +321,7 @@ class partida extends Phaser.Scene {
     }
 
     setAllInteractive() {
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 8; i++) {
             this[i].setInteractive();
         }
     }
