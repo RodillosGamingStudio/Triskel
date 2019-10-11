@@ -1,2 +1,3 @@
-var buttons = '{"play": ["JUGAR", "PLAY"], "credits": ["CRÉDITOS", "CREDITS"], "language":["ESP", "ENG"], "back": ["ATRÁS", "BACK"]}';
-var credits = '{"body": ["Hecho por Rodillos Gaming, un grupo de estudiantes de desarollo de videojuegos de la URJC", "Made by Rodillos Gaming, a little group of game development students based in URJC."]}'
+var buttons = '{"play": ["JUGAR", "PLAY"], "credits": ["CRÉDITOS", "CREDITS"], "language":["ESP", "ENG"], "back": ["ATRÁS", "BACK"], "mode1": ["MODO 1", "MODE 1"], "mode2": ["MODO 2", "MODE 2"], "gamemode": ["MODO DE JUEGO", "GAME MODE"], "settings": ["AJUSTES", "SETTINGS"]}';
+var settings_text = '{"language":[["IDIOMA", "LANGUAGE"],["ESPAÑOL", "ENGLISH"]], "volume":["VOLUMEN", "VOLUME"], "return": ["VOLVER", "RETURN"], "settings": ["AJUSTES", "SETTINGS"]}'
+var credits_text = '{"title": "Triskel", "subtitle": ["Hecho por Rodillos Gaming", "Made by Rodillos Gaming"], "roles":[["Diseño", "Programación", "Arte 2D"],["Designers", "Programmers", "2D Artist"]], "names": [["Laura Rodriguez Corpas", "Javier Bravo Bolívar"], ["Andrés Gónzalez Pérez", "Manuel Martín Rodríguez", "Javier Bravo Bolívar"], ["Daniel Jimenez Vela"]]}'
