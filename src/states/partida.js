@@ -52,10 +52,10 @@ class partida extends Phaser.Scene {
 
         celdas = this.tablero.getMatrizCeldas();
 
-        this.jugador1 = new Jugador(this, 1, 0);
+        this.jugador1 = new Jugador(this, 1, 0, 0);
         this.jugador1.pintarMano(this);
 
-        this.jugador2 = new Jugador(this, 2, 1);
+        this.jugador2 = new Jugador(this, 2, 1, 1);
         this.jugador2.pintarMano(this);
         //this.jugador2.setManoX(1185);
 
@@ -125,9 +125,10 @@ class partida extends Phaser.Scene {
                 a1 = this.getData('i');
                 x01 = this.x;
                 y01 = this.y;
-                //console.log(x01, y01);
-                console.log(turnonumerico);
-                this.setData({ "seleccionada": true });
+                this.setData({ 'seleccionada': true });
+                console.log(this.seleccionada);
+                console.log(this.norte);
+                console.log(this.sur);
                 this.setTint(0xff0000);
             
                 //Para las celdas
@@ -208,8 +209,9 @@ class partida extends Phaser.Scene {
 
                 this.setData({ "seleccionada": true });
                 this.setTint(0x2828fe);
-                //console.log(cartaAux);
-                //mostrarSeleccionadas();
+                console.log(this.seleccionada);
+                console.log(this.norte);
+                console.log(this.sur);
 
                 //Para las celdas
                 for (var i = 0; i < 4; i++) {
