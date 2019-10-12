@@ -174,7 +174,7 @@ class partida extends Phaser.Scene {
                                     turno = 1;
                                     turnonumerico++;
 
-                                    console.log(celdas[1][0].owner);
+                                    console.log(celdas[b1][c1].owner);
 
                                     //mano2[i].setInteractive();
                                 } else {
@@ -253,7 +253,11 @@ class partida extends Phaser.Scene {
                                         }
                                     }
 
-                                    console.log(celdas[1][0].owner);
+                                    console.log(celdas[b2][c2].sur);
+                                    console.log(celdas[b2][c2 + 1].norte);
+                                    console.log(celdas[b2][c2].which);
+                                    console.log(celdas[b2][c2 + 1].which);
+
                                     turno = 0;
                                     turnonumerico++;
                                 } else {

@@ -157,7 +157,7 @@ class CartaG2 extends Carta {
         //terrenal sagrado oscuro neutro
         //1	1	4	1
 
-        this.setNorte("norte");
+        this.setNorte("oscuro");
         this.setSur("neutro");
         this.setEste("sagrado");
         this.setOeste("sagrado");
