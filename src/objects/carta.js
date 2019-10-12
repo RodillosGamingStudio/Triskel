@@ -38,6 +38,7 @@ class Carta extends Phaser.GameObjects.Sprite {
     }
 
     getSeleccionada(){return this.seleccionada};
+    setSeleccionada(info){ this.seleccionada = info};
 
     getId() { return this.ident; }
     setId(idn) { this.ident = idn; }
