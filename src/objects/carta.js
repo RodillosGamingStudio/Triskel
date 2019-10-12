@@ -1,7 +1,8 @@
 class Carta extends Phaser.GameObjects.Sprite {
-    constructor(scene, cont, sprite) {
+    constructor(scene, cont, own, sprite) {
         var x = 0;
         var y = 0;
+        var spriteusar;
         super(scene, x, y, sprite);
 
         //this.setInteractive();
@@ -10,7 +11,7 @@ class Carta extends Phaser.GameObjects.Sprite {
         this.which = cont;
 
         this.colocada = false;
-        this.owner;
+        this.owner = own;
 
         this.norte;
         this.sur;
@@ -36,6 +37,9 @@ class Carta extends Phaser.GameObjects.Sprite {
         this.y = posy;
     }
 
+    getSeleccionada(){return this.seleccionada};
+    setSeleccionada(info){ this.seleccionada = info};
+
     getId() { return this.ident; }
     setId(idn) { this.ident = idn; }
 
@@ -50,12 +54,24 @@ class Carta extends Phaser.GameObjects.Sprite {
     setEste(a) { this.este = a; }
     setOeste(a) { this.oeste = a; }
 
+    setWhich(cont){
+        this.which = cont;
+    }
+
+    setOwner(propietario){
+        this.owner = propietario;
+    }
 
 
     pintarCarta(escena) {
         escena.add.existing(this);
     }
 
+    setSprite(sprite){
+
+        spriteusar = sprite;
+
+    }
 
     /*
     setCeldaCercana(celda){

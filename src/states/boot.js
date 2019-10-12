@@ -3,6 +3,10 @@ class boot extends Phaser.Scene {
         super("bootScene");
     }
 
+    init(){
+        
+    }
+
     preload(){
         
     }

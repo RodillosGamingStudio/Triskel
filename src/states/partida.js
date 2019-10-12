@@ -13,13 +13,21 @@ class partida extends Phaser.Scene {
         this.pos0Y2 = [];
 
         this.cartaId;
+
     }
-
+   
     preload() {
-
+        
     }
 
     create() {
+      
+            var music2  = this.sound.add('musica1', {volume: 0.1 ,loop: true});
+
+            music2.play();
+
+        var click1 = this.sound.add('clickCarta');
+        var click2 = this.sound.add('clickCelda');
 
         //Variables para el jugador 1
         var mano1;
@@ -52,10 +60,10 @@ class partida extends Phaser.Scene {
 
         celdas = this.tablero.getMatrizCeldas();
 
-        this.jugador1 = new Jugador(this, 1, 0);
+        this.jugador1 = new Jugador(this, 1, 0, 0);
         this.jugador1.pintarMano(this);
 
-        this.jugador2 = new Jugador(this, 2, 1);
+        this.jugador2 = new Jugador(this, 2, 1, 1);
         this.jugador2.pintarMano(this);
         //this.jugador2.setManoX(1185);
 
@@ -116,6 +124,7 @@ class partida extends Phaser.Scene {
         for (var i = 0; i < mano1.length; i++) {
             mano1[i].setData({ seleccionada: false, i: i });
             var jose1 = mano1[i].on('pointerup', function (turnonumerico) {
+                click1.play();
                 if (a1 != -1) {
                     mano1[a1].setData({ 'seleccionada': false });
                     if (!mano1[a1].colocada){
@@ -125,22 +134,29 @@ class partida extends Phaser.Scene {
                 a1 = this.getData('i');
                 x01 = this.x;
                 y01 = this.y;
-                //console.log(x01, y01);
-                console.log(turnonumerico);
-                this.setData({ "seleccionada": true });
+                
+                mano1[a1].setSeleccionada(true);
+                //this.setData({ 'seleccionada': true });
+                console.log(this.seleccionada);
+                console.log(this.norte);
+                console.log(this.sur);
                 this.setTint(0xff0000);
             
                 //Para las celdas
+                if(mano1[a1].getSeleccionada()){
                 for (var i = 0; i < 4; i++) {
                     for (var j = 0; j < 4; j++) {
                         celdas[i][j].setData({ ocupada: false, i: i, j: j });
+                        celdas[i][j].setInteractive();
                         var chuko1 = celdas[i][j].on('pointerup', function (jose1, chuko2) {
+                            
 
                             b1 = this.getData('i');
                             c1 = this.getData('j');
 
                             if (!mano1[a1].colocada) {
                                 if (!celdas[b1][c1].ocupada) {
+                                    click2.play();
                                     celdas[b1][c1].which = mano1[a1].which;
                                     celdas[b1][c1].indice = a1;
                                     celdas[b1][c1].norte = mano1[a1].norte;
@@ -167,8 +183,14 @@ class partida extends Phaser.Scene {
                                     }
                                     turno = 1;
                                     turnonumerico++;
-
-                                    console.log(celdas[1][0].owner);
+                                    mano1[a1].setSeleccionada(false);
+                                    
+                                    for (var i = 0; i < 4; i++) {
+                                        for (var j = 0; j < 4; j++) {
+                                            celdas[i][j].removeInteractive();
+                                        }
+                                    }            
+                                    console.log(mano1[a1].getSeleccionada());
 
                                     //mano2[i].setInteractive();
                                 } else {
@@ -183,6 +205,8 @@ class partida extends Phaser.Scene {
 
                 }
 
+            }
+
             });
 
         }
@@ -195,6 +219,7 @@ class partida extends Phaser.Scene {
             mano2[i].setTint(0xfc8987);
             mano2[i].setData({ seleccionada: false, i: i });
             var jose2 = mano2[i].on('pointerup', function () {
+                click1.play();
                 if (a2 != -1) {
                     mano2[a2].setData({ 'seleccionada': false });
                     if (!mano2[a2].colocada){
@@ -206,22 +231,27 @@ class partida extends Phaser.Scene {
                 y02 = this.y;
                 //console.log(x01, y01);
 
-                this.setData({ "seleccionada": true });
+                mano2[a2].setSeleccionada(true);
                 this.setTint(0x2828fe);
-                //console.log(cartaAux);
-                //mostrarSeleccionadas();
+                console.log(this.seleccionada);
+                console.log(this.norte);
+                console.log(this.sur);
 
                 //Para las celdas
+                if(mano2[a2].getSeleccionada()){
                 for (var i = 0; i < 4; i++) {
                     for (var j = 0; j < 4; j++) {
+                        celdas[i][j].setInteractive();
                         celdas[i][j].setData({ ocupada: false, i: i, j: j });
                         var chuko2 = celdas[i][j].on('pointerup', function (jose2, chuko1) {
-
+                           
                             b2 = this.getData('i');
                             c2 = this.getData('j');
 
                             if (!mano2[a2].colocada) {
                                 if (!celdas[b2][c2].ocupada) {
+                                    click2.play();
+
                                     celdas[b2][c2].which = mano2[a2].which;
                                     celdas[b2][c2].indice = a2;
                                     celdas[b2][c2].norte = mano2[a2].norte;
@@ -244,6 +274,12 @@ class partida extends Phaser.Scene {
                                         }
                                     }
 
+                                    for (var i = 0; i < 4; i++) {
+                                        for (var j = 0; j < 4; j++) {
+                                            celdas[i][j].removeInteractive();
+                                        }
+                                    } 
+
                                     console.log(celdas[1][0].owner);
                                     turno = 0;
                                     turnonumerico++;
@@ -256,6 +292,7 @@ class partida extends Phaser.Scene {
                     }
 
                 }
+            }
 
             });
 

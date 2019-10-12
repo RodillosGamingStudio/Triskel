@@ -1683,7 +1683,7 @@ function interaccion2(mano1, mano2, celdas, b, c) {
             }
         }
         //interaccion21 con sur
-        if (celdas[b][c + 1].owner != celdas[b][c + 1].owner) {
+        if (celdas[b][c + 1].owner != celdas[b][c].owner) {
             if (celdas[b][c].sur == "terrenal" && (celdas[b][c + 1].norte == "oscuro" || celdas[b][c + 1].norte == "neutro")) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
@@ -1712,7 +1712,7 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                     interaccion2(mano1, mano2, celdas, b, c + 1);
                 }
             }
-            if (celdas[b][c].sur == "sagrado" && (celdas[b][c + 1].oeste == "terrenal" || celdas[b][c + 1].norte == "neutro")) {
+            if (celdas[b][c].sur == "sagrado" && (celdas[b][c + 1].norte == "terrenal" || celdas[b][c + 1].norte == "neutro")) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
@@ -1740,7 +1740,7 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                     interaccion2(mano1, mano2, celdas, b, c + 1);
                 }
             }
-            if (celdas[b][c].sur == "oscuro" && (celdas[b][c + 1].oeste == "sagrado" || celdas[b][c + 1].norte == "neutro")) {
+            if (celdas[b][c].sur == "oscuro" && (celdas[b][c + 1].norte == "sagrado" || celdas[b][c + 1].norte == "neutro")) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
@@ -1948,7 +1948,7 @@ function interaccion2(mano1, mano2, celdas, b, c) {
             }
         }
         //interaccion21 con sur
-        if (celdas[b][c + 1].owner != celdas[b][c + 1].owner) {
+        if (celdas[b][c + 1].owner != celdas[b][c].owner) {
             if (celdas[b][c].sur == "terrenal" && (celdas[b][c + 1].norte == "oscuro" || celdas[b][c + 1].norte == "neutro")) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
@@ -1977,7 +1977,7 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                     interaccion2(mano1, mano2, celdas, b, c + 1);
                 }
             }
-            if (celdas[b][c].sur == "sagrado" && (celdas[b][c + 1].oeste == "terrenal" || celdas[b][c + 1].norte == "neutro")) {
+            if (celdas[b][c].sur == "sagrado" && (celdas[b][c + 1].norte == "terrenal" || celdas[b][c + 1].norte == "neutro")) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
@@ -2005,7 +2005,7 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                     interaccion2(mano1, mano2, celdas, b, c + 1);
                 }
             }
-            if (celdas[b][c].sur == "oscuro" && (celdas[b][c + 1].oeste == "sagrado" || celdas[b][c + 1].norte == "neutro")) {
+            if (celdas[b][c].sur == "oscuro" && (celdas[b][c + 1].norte == "sagrado" || celdas[b][c + 1].norte == "neutro")) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {

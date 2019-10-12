@@ -21,7 +21,7 @@ class Celda extends Phaser.GameObjects.Sprite {
         this.oeste;
 
         this.indice;
-        this.setInteractive();
+        //this.setInteractive();
 
         this.ocupada;
 

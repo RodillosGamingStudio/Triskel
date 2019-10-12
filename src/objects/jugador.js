@@ -1,7 +1,7 @@
 
 class Jugador {
 
-	constructor(scene, cont, ndeck) {
+	constructor(scene, cont, own, ndeck) {
 		var i = 0;
 		var n = 100;
 		var m = 100;
@@ -11,9 +11,9 @@ class Jugador {
 		this.mano = [];
 		
 		if (ndeck == 0) {
-			this.mano = this.crearManoNordico(scene, cont);
+			this.mano = this.crearManoNordico(scene, cont, own);
 		} else {
-			this.mano = this.crearManoGriego(scene, cont);
+			this.mano = this.crearManoGriego(scene, cont, own);
 		}
 
 		if (cont == 1) {
@@ -23,34 +23,32 @@ class Jugador {
 		}
 	}
 
-	crearManoNordico(scene, cont){
+	crearManoNordico(scene, cont, own){
 		var aux = [];
 
-		aux[0] = new Carta(scene, cont, 'dorsocarta');
-		aux[1] = new Carta(scene, cont, 'dorsocarta');
-		aux[2] = new Carta(scene, cont, 'dorsocarta');
-		aux[3] = new Carta(scene, cont, 'dorsocarta');
-		aux[4] = new Carta(scene, cont, 'dorsocarta');
-		aux[5] = new Carta(scene, cont, 'dorsocarta');
-		aux[6] = new Carta(scene, cont, 'dorsocarta');
-		aux[7] = new Carta(scene, cont, 'dorsocarta');
-
-
+		aux[0] = new CartaRagnar(scene, cont, own);
+		aux[1] = new CartaRagnar(scene, cont, own);
+		aux[2] = new CartaN1(scene, cont, own);
+		aux[3] = new CartaN1(scene, cont, own);
+		aux[4] = new CartaN2(scene, cont, own);
+		aux[5] = new CartaN2(scene, cont, own);
+		aux[6] = new CartaN3(scene, cont, own);
+		aux[7] = new CartaN3(scene, cont, own);
 
 		return aux;
 	}
 
-	crearManoGriego(scene, cont){
+	crearManoGriego(scene, cont, own){
 		var aux = [];
 
-		aux[0] = new Carta(scene, cont, 'dorsocarta2');
-		aux[1] = new Carta(scene, cont, 'dorsocarta2');
-		aux[2] = new Carta(scene, cont, 'dorsocarta2');
-		aux[3] = new Carta(scene, cont, 'dorsocarta2');
-		aux[4] = new Carta(scene, cont, 'dorsocarta2');
-		aux[5] = new Carta(scene, cont, 'dorsocarta2');
-		aux[6] = new Carta(scene, cont, 'dorsocarta2');
-		aux[7] = new Carta(scene, cont, 'dorsocarta2');
+		aux[0] = new CartaMedusa(scene, cont, own);
+		aux[1] = new CartaMedusa(scene, cont, own);
+		aux[2] = new CartaG1(scene, cont, own);
+		aux[3] = new CartaG1(scene, cont, own);
+		aux[4] = new CartaG2(scene, cont, own);
+		aux[5] = new CartaG2(scene, cont, own);
+		aux[6] = new CartaG3(scene, cont, own);
+		aux[7] = new CartaG3(scene, cont, own);
 
 		return aux;
 	}
