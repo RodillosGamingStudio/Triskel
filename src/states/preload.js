@@ -14,6 +14,9 @@ class preload extends Phaser.Scene {
         this.load.image('menu', 'assets/Pantallas/Menu.png');
         this.load.spritesheet('Bbutton', 'assets/Botones/Bbutton.png',  { frameWidth: 267, frameHeight: 86 });
         this.load.spritesheet('Lbutton', 'assets/Botones/Lbutton.png',  { frameWidth: 138, frameHeight: 75 });
+
+        this.load.audio('clickCarta', 'assets/Sonidos/clickCarta.mp3');
+        this.load.audio('clickCelda', 'assets/Sonidos/clickCelda.mp3');
     }
 
     create() {
