@@ -13,13 +13,18 @@ class partida extends Phaser.Scene {
         this.pos0Y2 = [];
 
         this.cartaId;
+
     }
-
+   
     preload() {
-
+        
     }
 
     create() {
+      
+            var music2  = this.sound.add('musica1', {volume: 0.1 ,loop: true});
+
+            music2.play();
 
         var click1 = this.sound.add('clickCarta');
         var click2 = this.sound.add('clickCelda');
