@@ -3,7 +3,7 @@ class makeButton{
     constructor(){}
 
     //Crea un botón a partir del contexto (context), su posición x e y (posX, posY), el tipo de botón (type), texto que contiene (text) y escena a la que transiciona (scene)
-    setButton(context, posX, posY, type, text, scene){
+    setButton(context, posX, posY, type, text, scene, selecMode){
         var button;
         var t;
 
@@ -51,7 +51,7 @@ class makeButton{
 
         if(scene != "none"){
             button.on('pointerdown', function () {
-                    context.scene.start(scene);    
+                    context.scene.start(scene, {mode: selecMode});    
             });
         }
 

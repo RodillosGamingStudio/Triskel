@@ -2,6 +2,7 @@ class menu extends Phaser.Scene {
 
     constructor() {
         super("menuScene");
+
     }
 
 
@@ -11,6 +12,8 @@ class menu extends Phaser.Scene {
     }
 
     create() { 
+
+        var mododejuego = -1;
 
         this.background = this.add.image(0, 0, 'menu');
         this.background.setOrigin(0, 0);
@@ -41,23 +44,24 @@ class menu extends Phaser.Scene {
             var mode1 = makebutton.setButton(that, 640, 300, 'Bbutton', B.mode1[game.language], 'mode');
             var mode2 = makebutton.setButton(that, 640, 400, 'Bbutton', B.mode2[game.language], 'mode');
 
-            mode1.setFrame(1);
-            game.mode = 0;
+            mode1.setFrame(0);
 
             mode1.on('pointerdown', function () {  
                 mode1.setFrame(1);
                 mode2.setFrame(0);
-                game.mode = 0;
+                mododejuego = 0;
+                makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego);
             });            
 
             mode2.on('pointerdown', function () {  
                 mode1.setFrame(0);
                 mode2.setFrame(1);
-                game.mode = 1;
+                mododejuego = 1;
+                makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego);
             });
 
-            makebutton.setButton(that, 500, 600, 'Lbutton', B.back[game.language], 'menuScene');
-            makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene');
+            makebutton.setButton(that, 500, 600, 'Lbutton', B.back[game.language], 'menuScene', mododejuego);
+            //makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene', game.mode);
 
         }); 
         
@@ -65,7 +69,9 @@ class menu extends Phaser.Scene {
 
 
     update() {
+        
+    
 
-    }
+    }   
 
 }
