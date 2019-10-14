@@ -38,7 +38,7 @@ class partida extends Phaser.Scene {
 
         var volumen = this.volumen;
     
-        var music2  = this.sound.add('musica1', {volume: (volumen/10) ,loop: true});
+        var music2  = this.sound.add('musica1', {volume: (volumen/20) ,loop: true});
             
         music2.play();
 
@@ -298,9 +298,12 @@ class partida extends Phaser.Scene {
                                     turnonumerico++;
                                     mano2[a2].setSeleccionada(false);
 
-                                    if (turnonumerico == 3){
+
+                                    //FUNCION QUE HAY QUE RECUPERAR PARA EL FINAL DE LA PARTIDA
+                                    /*if (turnonumerico == 3){
                                         setTimeout(function(){  that.scene.start('menuScene'); }, 3000);
-                                    }
+                                    }*/
+                                    
 
                                 } else {
                                     mano2[a2].x = x02;
