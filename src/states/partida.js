@@ -18,7 +18,11 @@ class partida extends Phaser.Scene {
 
     init(data){
         this.mode = data.mode;
+        this.volumen = data.volumen;
 
+        //this.that = this;
+
+        this.turnof;
         
     }
    
@@ -27,10 +31,16 @@ class partida extends Phaser.Scene {
     }
 
     create() {
-      
-            var music2  = this.sound.add('musica1', {volume: 0.1 ,loop: true});
+        var that = this;
+
+        var escena = this.that;
+
+
+        var volumen = this.volumen;
+    
+        var music2  = this.sound.add('musica1', {volume: volumen ,loop: true});
             
-            //music2.play();
+        music2.play();
 
         var click1 = this.sound.add('clickCarta');
         var click2 = this.sound.add('clickCelda');
@@ -130,7 +140,7 @@ class partida extends Phaser.Scene {
         }
         for (var i = 0; i < mano1.length; i++) {
             mano1[i].setData({ seleccionada: false, i: i });
-            var jose1 = mano1[i].on('pointerup', function (turnonumerico) {
+            var jose1 = mano1[i].on('pointerup', function () {
                 click1.play();
                 if (a1 != -1) {
                     mano1[a1].setData({ 'seleccionada': false });
@@ -144,7 +154,6 @@ class partida extends Phaser.Scene {
                 y01 = this.y;
                 
                 mano1[a1].setSeleccionada(true);
-                //this.setData({ 'seleccionada': true });
                 this.setTint(0xff0000);
             
                 //Para las celdas
@@ -190,6 +199,7 @@ class partida extends Phaser.Scene {
                                     }
                                     turno = 1;
                                     turnonumerico++;
+                                    this.turnof = turnonumerico;
                                     mano1[a1].setSeleccionada(false);
                                     
                                     for (var i = 0; i < 4; i++) {
@@ -198,15 +208,12 @@ class partida extends Phaser.Scene {
                                         }
                                     }            
                                     
-
-                                    //mano2[i].setInteractive();
                                 } else {
                                     mano1[a1].x = x01;
                                     mano1[a1].y = y01;
                                 }
                             }
-
-                            //console.log(a);                            
+                           
                         });
                     }
 
@@ -289,6 +296,12 @@ class partida extends Phaser.Scene {
                                     } 
                                     turno = 0;
                                     turnonumerico++;
+                                    mano2[a2].setSeleccionada(false);
+
+                                    if (turnonumerico == 3){
+                                        setTimeout(function(){  that.scene.start('menuScene'); }, 3000);
+                                    }
+
                                 } else {
                                     mano2[a2].x = x02;
                                     mano2[a2].y = y02;
@@ -303,32 +316,25 @@ class partida extends Phaser.Scene {
             });
 
         }
+
     
+        
+        //FINALIZAR LA PARTIDA
+       
     }
 
     update() {
-
-        /*
-        for (var x = 0; x < this.mano1.length; x++) {
-            if (this.jugador1.getCartaSeleccionada() > -1) {
-                this.seleccionarCarta(this.mano1[x]);
-                this.seleccionarCarta(this.mano1[x]);
-                this.jugador1.setCartaSeleccionada(x);
-                this.cartaId = this.jugador1.getCartaSeleccionada();
-                //}
-            }
-        }*/
-
-        //} else {
-        //this.desseleccionarCarta(this.mano1[this.cartaId])
-
-        //}
-
-
-        //console.log(this.cartaId);
+        
 
     }
 
+    changescene(){
+        this.scene.start('menuScene');
+    }
+
+    setTurno(num){
+        this.turnof = num;
+    }
 
     setPos0X1(index, c) {
         this.pos0X1[index] = c;
