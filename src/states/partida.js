@@ -38,7 +38,7 @@ class partida extends Phaser.Scene {
 
         var volumen = this.volumen;
     
-        var music2  = this.sound.add('musica1', {volume: volumen ,loop: true});
+        var music2  = this.sound.add('musica1', {volume: (volumen/10) ,loop: true});
             
         music2.play();
 
