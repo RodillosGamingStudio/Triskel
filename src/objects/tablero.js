@@ -1,7 +1,7 @@
 class Tablero extends Phaser.GameObjects.Sprite{
     constructor(scene, alto, ancho){
-        var x = 640;
-        var y = 360;
+        var x = 800;
+        var y = 450;
         super(scene, x, y, 'tablero');
 
         var i = 0;
@@ -21,8 +21,8 @@ class Tablero extends Phaser.GameObjects.Sprite{
             this.matrizCeldas[i] = new Array();
             for(var j = 0; j < this.alto; j++){
                 this.matrizCeldas[i][j] = new Celda(scene);
-                this.matrizCeldas[i][j].setX(463 + 118*i);
-                this.matrizCeldas[i][j].setY(130.5 + 153*j);
+                this.matrizCeldas[i][j].setX(623 + 118*i);
+                this.matrizCeldas[i][j].setY(220.5 + 153*j);
                 this.matrizCeldas[i][j].pintarCelda(scene);                
             }
         }

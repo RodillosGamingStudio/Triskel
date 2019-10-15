@@ -37,13 +37,13 @@ class menu extends Phaser.Scene {
         var makebutton = new makeButton();
 
         //Botón de créditos
-        var credits_button = makebutton.setButton(this, 640, 440, 'Bbutton', B.credits[game.language], 'creditsScene');
+        var credits_button = makebutton.setButton(this, 800, 440, 'Bbutton', B.credits[game.language], 'creditsScene');
 
         //Botón de ajustes
         makebutton.setButton(this, 180, 400, 'Sbutton', B.settings[game.language], 'settingsScene', null, volumen);
 
         //Botón jugar
-        var play_button = makebutton.setButton(this, 640, 280, 'Bbutton', B.play[game.language], 'none');
+        var play_button = makebutton.setButton(this, 800, 280, 'Bbutton', B.play[game.language], 'none');
 
         var that = this;
         play_button.on('pointerdown', function () {
@@ -54,9 +54,9 @@ class menu extends Phaser.Scene {
             //Imagen y botones de selección de modo de juego
             that.add.image(640, 360, 'mode').setOrigin(0.5, 0.5);
             that.add.text(640, 150, B.gamemode[game.language], { fontFamily: '"Roboto Condensed"', fontSize: '36px', color: 'white' }).setOrigin(0.5);
-            var mode1 = makebutton.setButton(that, 640, 250, 'Bbutton', B.mode1[game.language], 'mode');
-            var mode2 = makebutton.setButton(that, 640, 350, 'Bbutton', B.mode2[game.language], 'mode');
-            var mode3 = makebutton.setButton(that, 640, 450, 'Bbutton', B.mode3[game.language], 'mode');
+            var mode1 = makebutton.setButton(that, 800, 250, 'Bbutton', B.mode1[game.language], 'mode');
+            var mode2 = makebutton.setButton(that, 800, 350, 'Bbutton', B.mode2[game.language], 'mode');
+            var mode3 = makebutton.setButton(that, 800, 450, 'Bbutton', B.mode3[game.language], 'mode');
 
             mode1.setFrame(0);
 
