@@ -5,7 +5,7 @@ class settings extends Phaser.Scene {
 
     init(data){
         this.vol = data.volumen;
-        console.log(data);
+       
     }
 
     preload(){
@@ -49,7 +49,7 @@ class settings extends Phaser.Scene {
         this.add.text(500, 500, S.volume[game.language]+" :", { fontFamily: '"Roboto Condensed"', fontSize:'40px', color:'white' }).setOrigin(0.5);
         
         this.add.image(910, 500, 'Scrollbar').setScale(1.55, 1);
-        var volume_bar = this.add.sprite(750 + game.volume * 30, 500, 'Lbutton', 2);
+        var volume_bar = this.add.sprite(750 + game.volume * 30, 500, 'Lbutton', 0);
         
         var volume_number = this.add.text(750 + game.volume * 30, 500, game.volume, { fontFamily: '"Roboto Condensed"', fontSize:'40px', color:'white' });
         volume_number.setOrigin(0.5);
@@ -68,15 +68,18 @@ class settings extends Phaser.Scene {
 
             that.input.on('dragend', function (pointer, gameObject, jose){
                 
-                volumen = game.volume
-               
+                //volumen = game.volume
+                game.volume = ((dragX - 750) / 30 | 0);
                 
                 //Botón de retorno al menú
-                makebutton.setButton(that, 800, 815, "Bbutton", S.return[game.language], "menuScene", null, volumen);
+                //makebutton.setButton(that, 800, 815, "Bbutton", S.return[game.language], "menuScene", null, volumen);
 
 
             })
         });
+
+        makebutton.setButton(that, 800, 815, "Bbutton", S.return[game.language], "menuScene", null, volumen);
+
     }
 
     update() {

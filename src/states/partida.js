@@ -35,7 +35,9 @@ class partida extends Phaser.Scene {
 
         var escena = this.that;
 
-        var volumen = this.volumen;
+        //var volumen = this.volumen;
+        var volumen = game.volume;
+        console.log(volumen);
         var random = Phaser.Math.Between(1, 2);
     
         if (random == 1){
@@ -385,14 +387,14 @@ class partida extends Phaser.Scene {
     setWinner(celdas){
 
         var j1 = 0;
-        var j2 = 0
+        var j2 = 0;
 
         for(var i = 0; i < 4; i++){
             for(var j = 0; j < 4; j++){
                 if(celdas[i][j].owner == 0){
-                    j1++
+                    j1++;
                 } else if (celdas[i][j].owner == 1){
-                    j2++
+                    j2++;
                 }
             }
         }

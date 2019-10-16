@@ -9,23 +9,23 @@ class makeButton{
         //Tipo de botón
         switch(type){
             case 'Bbutton':
-                    button = context.add.sprite(posX, posY, 'Bbutton', 2);
+                    button = context.add.sprite(posX, posY, 'Bbutton', 0);
                     t = context.add.text(posX, posY, text, { fontFamily: '"Roboto Condensed"', fontSize:'36px', color:'white' });
             break;
 
             case 'Lbutton':
-                    button = context.add.sprite(posX, posY, 'Lbutton', 2);
+                    button = context.add.sprite(posX, posY, 'Lbutton', 0);
                     t = context.add.text(posX, posY, text, { fontFamily: '"Roboto Condensed"', fontSize:'27px', color:'white' });
             break;
 
             case 'Sbutton':
-                    button = context.add.sprite(posX, posY, 'Sbutton', 2);
+                    button = context.add.sprite(posX, posY, 'Sbutton', 0);
                     button.scale = 0.6;
                     t = context.add.text(posX, posY + 50, text, { fontFamily: '"Roboto Condensed"', fontSize:'27px', color:'white' });
             break;
 
             default:
-                    button = context.add.sprite(posX, posY, 'Lbutton', 2);
+                    button = context.add.sprite(posX, posY, 'Lbutton', 0);
                     t = context.add.text(posX, posY, text, { fontFamily: '"Roboto Condensed"', fontSize:'27px', color:'white' });
             break;
 
@@ -44,7 +44,7 @@ class makeButton{
         
         button.on('pointerout', function (event) { 
             t.setOrigin(0.5);   
-            button.setFrame(2);    
+            button.setFrame(0);    
         });
 
 
