@@ -5,6 +5,7 @@ class preload extends Phaser.Scene {
 
     preload() {
         this.load.image('fondo', 'assets/tablero1.jpg');
+        this.load.image('fondo2', 'assets/tablero2.jpg');
         this.load.image('carta', 'assets/carta.jpg');
         //this.load.image('dorsocarta', 'assets/dorsocarta.jpg');
         //this.load.image('dorsocarta2', 'assets/dorsocarta2.jpg');

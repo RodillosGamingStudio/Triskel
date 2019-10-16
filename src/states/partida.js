@@ -38,10 +38,15 @@ class partida extends Phaser.Scene {
     
         if (random == 1){
             var music = this.sound.add('musica1', {volume: (volumen/20) ,loop: true});
+            this.background = this.add.image(0, 0, 'fondo');
         } else if (random == 2) {
             var music = this.sound.add('musica2', {volume: (volumen/20) ,loop: true});
+            this.background = this.add.image(0, 0, 'fondo2');
         }
+        this.background.setOrigin(0, 0);
         music.play()
+
+        
 
         var click1 = this.sound.add('clickCarta');
         var click2 = this.sound.add('clickCelda');
@@ -68,10 +73,6 @@ class partida extends Phaser.Scene {
         var turno = -1;
         var turnonumerico = 1;
         var modojuego = this.mode;
-
-        this.background = this.add.image(0, 0, 'fondo');
-        this.background.setOrigin(0, 0);
-
 
         this.tablero = new Tablero(this, 4, 4);
         this.tablero.crearMatrizCeldas(this);
