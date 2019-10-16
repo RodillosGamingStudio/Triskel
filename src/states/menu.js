@@ -79,7 +79,7 @@ class menu extends Phaser.Scene {
                 mode2.setFrame(0);
                 mode3.setFrame(1)
                 mododejuego = 2;
-                makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, volumen);
+                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, volumen);
             });
 
             makebutton.setButton(that, 685, 670, 'Lbutton', B.back[game.language], 'menuScene', mododejuego);
