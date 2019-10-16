@@ -32,7 +32,7 @@ class settings extends Phaser.Scene {
         this.add.text(800, 187, S.settings[game.language], { fontFamily: '"Roboto Condensed"', fontSize:'60px', color:'white' }).setOrigin(0.5);
 
         //Botón de idioma
-        var language_button = makebutton.setButton(this, 1062, 375, 'Bbutton', S.language[1][game.language], 'settingsScene');
+        var language_button = makebutton.setButton(this, 805, 375, 'Bbutton', S.language[1][game.language], 'settingsScene');
         language_button.on('pointerdown', function () {
             if(game.language == 1){
                 game.language = 0;  
@@ -48,10 +48,10 @@ class settings extends Phaser.Scene {
         //Barra de volumen
         this.add.text(500, 500, S.volume[game.language]+" :", { fontFamily: '"Roboto Condensed"', fontSize:'40px', color:'white' }).setOrigin(0.5);
         
-        this.add.image(900, 500, 'Scrollbar').setScale(1.45, 1);
-        var volume_bar = this.add.sprite(600 + game.volume * 30, 500, 'Lbutton', 2);
+        this.add.image(910, 500, 'Scrollbar').setScale(1.55, 1);
+        var volume_bar = this.add.sprite(750 + game.volume * 30, 500, 'Lbutton', 2);
         
-        var volume_number = this.add.text(600 + game.volume * 30, 500, game.volume, { fontFamily: '"Roboto Condensed"', fontSize:'40px', color:'white' });
+        var volume_number = this.add.text(750 + game.volume * 30, 500, game.volume, { fontFamily: '"Roboto Condensed"', fontSize:'40px', color:'white' });
         volume_number.setOrigin(0.5);
 
         volume_bar.setInteractive();
@@ -59,9 +59,9 @@ class settings extends Phaser.Scene {
         
         // ARREGLAR THIS
         var jose = this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
-            if((volume_bar.x <= 600 && dragX - gameObject.x < 0)||(volume_bar.x >= 900 && dragX - gameObject.x > 0)) return;
+            if((volume_bar.x <= 750 && dragX - gameObject.x < 0)||(volume_bar.x >= 1070 && dragX - gameObject.x > 0)) return;
             gameObject.x = dragX;
-            game.volume = ((dragX - 600) / 30 | 0);
+            game.volume = ((dragX - 750) / 30 | 0);
             volume_number.x = dragX;
             volume_number.text = game.volume;
 
