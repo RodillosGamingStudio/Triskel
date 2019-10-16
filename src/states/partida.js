@@ -18,10 +18,7 @@ class partida extends Phaser.Scene {
 
     init(data){
         this.mode = data.mode;
-        this.volumen = data.volumen;
-
-        //this.that = this;
-
+       
         this.turnof;
         
     }
@@ -35,9 +32,8 @@ class partida extends Phaser.Scene {
 
         var escena = this.that;
 
-        //var volumen = this.volumen;
         var volumen = game.volume;
-        console.log(volumen);
+        
         var random = Phaser.Math.Between(1, 2);
     
         if (random == 1){

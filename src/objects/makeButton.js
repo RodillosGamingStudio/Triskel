@@ -3,7 +3,7 @@ class makeButton{
     constructor(){}
 
     //Crea un botón a partir del contexto (context), su posición x e y (posX, posY), el tipo de botón (type), texto que contiene (text) y escena a la que transiciona (scene)
-    setButton(context, posX, posY, type, text, scene, selecMode = null, volume = null){
+    setButton(context, posX, posY, type, text, scene, selecMode = null, music = null){
         var button;
         var t;
         //Tipo de botón
@@ -50,7 +50,10 @@ class makeButton{
 
         if(scene != "none"){
             button.on('pointerdown', function () {
-                    context.scene.start(scene, {mode: selecMode, volumen: volume});  
+                if (music != null) {    
+                music.stop();
+                }   
+                    context.scene.start(scene, {mode: selecMode});  
                     
             });
         }

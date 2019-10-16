@@ -37,6 +37,7 @@ class preload extends Phaser.Scene {
         //MUSICAS
         this.load.audio('musica1', 'assets/Sonidos/musica1.mp3');
         this.load.audio('musica2', 'assets/Sonidos/musica2.mp3');
+        this.load.audio('musica3', 'assets/Sonidos/musica3.mp3');
 
 
         //SONIDOS

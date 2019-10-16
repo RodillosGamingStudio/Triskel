@@ -24,6 +24,9 @@ class menu extends Phaser.Scene {
 
         var volumen = this.volume;
 
+        var music = this.sound.add('musica3', {volume: (game.volume/20) ,loop: true});
+        music.play();
+
         var mododejuego = -1;
 
         this.background = this.add.image(0, 0, 'menu');
@@ -35,10 +38,10 @@ class menu extends Phaser.Scene {
         var makebutton = new makeButton();
 
         //Botón de créditos
-        var credits_button = makebutton.setButton(this, 800, 550, 'Bbutton', B.credits[game.language], 'creditsScene');
+        var credits_button = makebutton.setButton(this, 800, 550, 'Bbutton', B.credits[game.language], 'creditsScene', null, music);
 
         //Botón de ajustes
-        makebutton.setButton(this, 180, 500, 'Sbutton', B.settings[game.language], 'settingsScene', null, volumen);
+        makebutton.setButton(this, 180, 500, 'Sbutton', B.settings[game.language], 'settingsScene', null, music);
 
         //Botón jugar
         var play_button = makebutton.setButton(this, 800, 350, 'Bbutton', B.play[game.language], 'none');
@@ -63,7 +66,7 @@ class menu extends Phaser.Scene {
                 mode2.setFrame(0);
                 mode3.setFrame(0);
                 mododejuego = 0;
-                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, volumen);
+                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, music);
             });
 
             mode2.on('pointerdown', function () {
@@ -71,7 +74,7 @@ class menu extends Phaser.Scene {
                 mode2.setFrame(1);
                 mode3.setFrame(0);
                 mododejuego = 1;
-                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, volumen);
+                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, music);
             });
 
             mode3.on('pointerdown', function () {
@@ -79,7 +82,7 @@ class menu extends Phaser.Scene {
                 mode2.setFrame(0);
                 mode3.setFrame(1)
                 mododejuego = 2;
-                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, volumen);
+                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, music);
             });
 
             makebutton.setButton(that, 685, 670, 'Lbutton', B.back[game.language], 'menuScene', mododejuego);
