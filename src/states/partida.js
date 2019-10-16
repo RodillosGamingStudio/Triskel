@@ -189,6 +189,8 @@ class partida extends Phaser.Scene {
                                     interaccion2(mano1 ,mano2, celdas, b1, c1);
                                     } else if (modojuego == 1) {
                                     interaccion(mano1 ,mano2, celdas, b1, c1);        
+                                    } else if (modojuego == 2) {
+                                        interaccion3(mano1 ,mano2, celdas, b1, c1);
                                     }
                                         
                                     for (var z = 0; z < 8; z++) {
@@ -280,6 +282,8 @@ class partida extends Phaser.Scene {
                                         interaccion2(mano1 ,mano2, celdas, b2, c2);
                                         } else if (modojuego == 1) {
                                         interaccion(mano1 ,mano2, celdas, b2, c2);        
+                                        } else if (modojuego == 2) {
+                                            interaccion3(mano1 ,mano2, celdas, b1, c1);
                                         }
       
                                     for (var z = 0; z < 8; z++) {

@@ -63,6 +63,7 @@ class menu extends Phaser.Scene {
             mode1.on('pointerdown', function () {
                 mode1.setFrame(1);
                 mode2.setFrame(0);
+                mode3.setFrame(0);
                 mododejuego = 0;
                 makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, volumen);
             });
@@ -70,7 +71,16 @@ class menu extends Phaser.Scene {
             mode2.on('pointerdown', function () {
                 mode1.setFrame(0);
                 mode2.setFrame(1);
+                mode3.setFrame(0);
                 mododejuego = 1;
+                makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, volumen);
+            });
+
+            mode3.on('pointerdown', function () {
+                mode1.setFrame(0);
+                mode2.setFrame(0);
+                mode3.setFrame(1)
+                mododejuego = 2;
                 makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, volumen);
             });
 
