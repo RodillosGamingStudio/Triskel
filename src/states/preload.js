@@ -28,14 +28,18 @@ class preload extends Phaser.Scene {
         this.load.image('mode', 'assets/Pantallas/Mode.png');
         this.load.image('Scrollbar', 'assets/Botones/Scrollbar.png');
         this.load.image('Settings', 'assets/Pantallas/Settings.png');
+
         this.load.spritesheet('Bbutton', 'assets/Botones/Bbutton.png',  { frameWidth: 267, frameHeight: 86 });
         this.load.spritesheet('Lbutton', 'assets/Botones/Lbutton.png',  { frameWidth: 138, frameHeight: 75 });
-
         this.load.spritesheet('Sbutton', 'assets/Botones/Sbutton.png',  { frameWidth: 271, frameHeight: 250 });        
     
 
-
+        //MUSICAS
         this.load.audio('musica1', 'assets/Sonidos/musica1.mp3');
+        this.load.audio('musica2', 'assets/Sonidos/musica2.mp3');
+
+
+        //SONIDOS
         this.load.audio('clickCarta', 'assets/Sonidos/clickCarta.mp3');
         this.load.audio('clickCelda', 'assets/Sonidos/clickCelda.mp3');
         

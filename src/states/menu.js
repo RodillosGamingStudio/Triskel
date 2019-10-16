@@ -13,7 +13,7 @@ class menu extends Phaser.Scene {
         } else {
             this.volume = 5;
         }
-        console.log(data);
+      
     }
 
     preload() {
@@ -23,8 +23,6 @@ class menu extends Phaser.Scene {
     create() {
 
         var volumen = this.volume;
-
-        console.log(volumen);
 
         var mododejuego = -1;
 
