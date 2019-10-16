@@ -35,12 +35,15 @@ class partida extends Phaser.Scene {
 
         var escena = this.that;
 
-
         var volumen = this.volumen;
+        var random = Phaser.Math.Between(1, 2);
     
-        var music2  = this.sound.add('musica1', {volume: (volumen/20) ,loop: true});
-            
-        music2.play();
+        if (random == 1){
+            var music = this.sound.add('musica1', {volume: (volumen/20) ,loop: true});
+        } else if (random == 2) {
+            var music = this.sound.add('musica2', {volume: (volumen/20) ,loop: true});
+        }
+        music.play()
 
         var click1 = this.sound.add('clickCarta');
         var click2 = this.sound.add('clickCelda');
@@ -189,6 +192,8 @@ class partida extends Phaser.Scene {
                                     interaccion2(mano1 ,mano2, celdas, b1, c1);
                                     } else if (modojuego == 1) {
                                     interaccion(mano1 ,mano2, celdas, b1, c1);        
+                                    } else if (modojuego == 2) {
+                                        interaccion3(mano1 ,mano2, celdas, b1, c1);
                                     }
                                         
                                     for (var z = 0; z < 8; z++) {
@@ -280,6 +285,8 @@ class partida extends Phaser.Scene {
                                         interaccion2(mano1 ,mano2, celdas, b2, c2);
                                         } else if (modojuego == 1) {
                                         interaccion(mano1 ,mano2, celdas, b2, c2);        
+                                        } else if (modojuego == 2) {
+                                            interaccion3(mano1 ,mano2, celdas, b1, c1);
                                         }
       
                                     for (var z = 0; z < 8; z++) {
@@ -300,9 +307,12 @@ class partida extends Phaser.Scene {
 
 
                                     //FUNCION QUE HAY QUE RECUPERAR PARA EL FINAL DE LA PARTIDA
-                                    /*if (turnonumerico == 3){
-                                        setTimeout(function(){  that.scene.start('menuScene'); }, 3000);
-                                    }*/
+                                    if (turnonumerico == 3){
+                                        var finale = that.setWinner(celdas);
+                                        that.scene.pause();
+                                        setTimeout(function(){ music.stop();}, 2900);
+                                        setTimeout(function(){  that.scene.start('puntuacionesScene', {puntos: finale}); }, 3000);
+                                    }
                                     
 
                                 } else {
@@ -370,6 +380,25 @@ class partida extends Phaser.Scene {
 
     getPos0Y2(index) {
         return this.pos0Y2[index];
+    }
+
+    setWinner(celdas){
+
+        var j1 = 0;
+        var j2 = 0
+
+        for(var i = 0; i < 4; i++){
+            for(var j = 0; j < 4; j++){
+                if(celdas[i][j].owner == 0){
+                    j1++
+                } else if (celdas[i][j].owner == 1){
+                    j2++
+                }
+            }
+        }
+
+        return [j1, j2];
+
     }
 
     setAllInteractive() {

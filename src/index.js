@@ -7,7 +7,7 @@ var config = {
 		autoCenter: Phaser.Scale.CENTER_BOTH
 	},
 	autoRound: false,
-	scene: [boot, preload, menu, partida, credits, settings]
+	scene: [boot, preload, menu, partida, credits, settings, puntuaciones]
 	
 };
 
