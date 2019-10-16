@@ -3,8 +3,8 @@ class Jugador {
 
 	constructor(scene, cont, own, ndeck) {
 		var i = 0;
-		var n = 100;
-		var m = 100;
+		var n = 125;
+		var m = 125;
 	
 		//this.cartaSeleccionada = -1;
 
@@ -17,9 +17,9 @@ class Jugador {
 		}
 
 		if (cont == 1) {
-			this.setManoPos(100,100);
+			this.setManoPos(250, 220);
 		} else if (cont == 2) {
-			this.setManoPos(980, 100);
+			this.setManoPos(1225, 220);
 		}
 	}
 

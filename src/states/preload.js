@@ -4,7 +4,7 @@ class preload extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('fondo', 'assets/fondo.jpg');
+        this.load.image('fondo', 'assets/tablero1.jpg');
         this.load.image('carta', 'assets/carta.jpg');
         //this.load.image('dorsocarta', 'assets/dorsocarta.jpg');
         //this.load.image('dorsocarta2', 'assets/dorsocarta2.jpg');
@@ -21,8 +21,8 @@ class preload extends Phaser.Scene {
         this.load.image('thot', 'assets/Cartas/Griegas/Thot.jpg');
         //Fin de cartas
 
-        this.load.image('tablero', 'assets/tablero.png');
-        this.load.image('celda', 'assets/celda.jpg');
+        //this.load.image('tablero', 'assets/tablero.png');
+        this.load.image('celda', 'assets/celda.png');
         
         this.load.image('menu', 'assets/Pantallas/Menu.png');
         this.load.image('mode', 'assets/Pantallas/Mode.png');

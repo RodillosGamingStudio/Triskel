@@ -198,7 +198,7 @@ class partida extends Phaser.Scene {
                                         
                                     for (var z = 0; z < 8; z++) {
                                         mano1[z].removeInteractive();
-                                        if (mano2[z].x < 463 || mano2[z].x > 935 || mano2[z].y < 130.5 || mano2[z].y > 742.5) {
+                                        if (mano2[z].x < 472 || mano2[z].x > 944 || mano2[z].y < 220.5 || mano2[z].y > 832.5) {
                                             mano2[z].setInteractive();
                                         }
                                     }
@@ -291,7 +291,7 @@ class partida extends Phaser.Scene {
       
                                     for (var z = 0; z < 8; z++) {
                                         mano2[z].removeInteractive();
-                                        if (mano1[z].x < 463 || mano1[z].x > 935 || mano1[z].y < 130.5 || mano1[z].y > 742.5) {
+                                        if (mano1[z].x < 472 || mano1[z].x > 944 || mano1[z].y < 220.5 || mano1[z].y > 832.5) {
                                             mano1[z].setInteractive();
                                         }
                                     }
