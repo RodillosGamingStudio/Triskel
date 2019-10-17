@@ -28,6 +28,8 @@ class partida extends Phaser.Scene {
     }
 
     create() {
+        console.log(game.deck);
+
         var that = this;
 
         var escena = this.that;
@@ -310,7 +312,7 @@ class partida extends Phaser.Scene {
                                         var finale = that.setWinner(celdas);
                                         that.scene.pause();
                                         setTimeout(function(){ music.stop();}, 2900);
-                                        setTimeout(function(){  that.scene.start('puntuacionesScene', {puntos: finale}); }, 3000);
+                                        setTimeout(function(){  that.scene.start('gameOverScene', {puntos: finale}); }, 3000);
                                     }
                                     
 
