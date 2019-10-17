@@ -18,13 +18,13 @@ class credits extends Phaser.Scene {
 
         var C = JSON.parse(credits_text);
 
-        this.add.text(800, 87.5, C.title, { fontFamily: '"Roboto Condensed"', fontSize:'66px', color:'#e2b40b' }).setOrigin(0.5);
-        this.add.text(800, 175, C.subtitle[game.language], { fontFamily: '"Roboto Condensed"', fontSize:'42px', color:'#e2b40b' }).setOrigin(0.5);
+        this.add.text(800, 87.5, C.title, { fontFamily: 'Metamorphous', fontSize:'66px', color:'#e2b40b' }).setOrigin(0.5);
+        this.add.text(800, 175, C.subtitle[game.language], { fontFamily: 'Metamorphous', fontSize:'42px', color:'#e2b40b' }).setOrigin(0.5);
 
         for(var i = 0; i < C.roles[game.language].length; i++){
-            this.add.text((i+1)*400, 325, C.roles[game.language][i], { fontFamily: '"Roboto Condensed"', fontSize:'36px', color:'#e2b40b' }).setOrigin(0.5);
+            this.add.text((i+1)*400, 325, C.roles[game.language][i], { fontFamily: 'Metamorphous', fontSize:'36px', color:'#e2b40b' }).setOrigin(0.5);
             for(var j = 0; j < C.names[i].length; j++){
-                this.add.text((i+1)*400, 325 + (j+1) * 100, C.names[i][j], { fontFamily: '"Roboto Condensed"', fontSize:'26px', color:'#e2b40b' }).setOrigin(0.5);
+                this.add.text((i+1)*400, 325 + (j+1) * 100, C.names[i][j], { fontFamily: 'Metamorphous', fontSize:'26px', color:'#e2b40b' }).setOrigin(0.5);
             }
         }
 

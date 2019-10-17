@@ -29,7 +29,7 @@ class settings extends Phaser.Scene {
         //Botón de retorno al menú
         makebutton.setButton(this, 800, 815, "Bbutton", S.return[game.language], "menuScene", null, volumen);
 
-        this.add.text(800, 187, S.settings[game.language], { fontFamily: '"Roboto Condensed"', fontSize:'60px', color:'white' }).setOrigin(0.5);
+        this.add.text(800, 187, S.settings[game.language], { fontFamily: 'Metamorphous', fontSize:'60px', color:'white' }).setOrigin(0.5);
 
         //Botón de idioma
         var language_button = makebutton.setButton(this, 805, 375, 'Bbutton', S.language[1][game.language], 'settingsScene');
@@ -43,15 +43,15 @@ class settings extends Phaser.Scene {
 
         });
 
-        this.add.text(500, 375, S.language[0][game.language]+" :", { fontFamily: '"Roboto Condensed"', fontSize:'40px', color:'white' }).setOrigin(0.5);
+        this.add.text(500, 375, S.language[0][game.language]+" :", { fontFamily: 'Metamorphous', fontSize:'40px', color:'white' }).setOrigin(0.5);
 
         //Barra de volumen
-        this.add.text(500, 500, S.volume[game.language]+" :", { fontFamily: '"Roboto Condensed"', fontSize:'40px', color:'white' }).setOrigin(0.5);
+        this.add.text(500, 500, S.volume[game.language]+" :", { fontFamily: 'Metamorphous', fontSize:'40px', color:'white' }).setOrigin(0.5);
         
         this.add.image(910, 500, 'Scrollbar').setScale(1.55, 1);
         var volume_bar = this.add.sprite(750 + game.volume * 30, 500, 'Lbutton', 0);
         
-        var volume_number = this.add.text(750 + game.volume * 30, 500, game.volume, { fontFamily: '"Roboto Condensed"', fontSize:'40px', color:'white' });
+        var volume_number = this.add.text(750 + game.volume * 30, 500, game.volume, { fontFamily: 'Metamorphous', fontSize:'40px', color:'white' });
         volume_number.setOrigin(0.5);
 
         volume_bar.setInteractive();

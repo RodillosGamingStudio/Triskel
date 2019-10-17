@@ -10,23 +10,23 @@ class makeButton{
         switch(type){
             case 'Bbutton':
                     button = context.add.sprite(posX, posY, 'Bbutton', 0);
-                    t = context.add.text(posX, posY, text, { fontFamily: '"Roboto Condensed"', fontSize:'46px', color:'white' });
+                    t = context.add.text(posX, posY, text, { fontFamily: 'Metamorphous', fontSize:'42px', color:'white' });
             break;
 
             case 'Lbutton':
                     button = context.add.sprite(posX, posY, 'Lbutton', 0);
-                    t = context.add.text(posX, posY, text, { fontFamily: '"Roboto Condensed"', fontSize:'36px', color:'white' });
+                    t = context.add.text(posX, posY, text, { fontFamily: 'Metamorphous', fontSize:'34px', color:'white' });
             break;
 
             case 'Sbutton':
                     button = context.add.sprite(posX, posY, 'Sbutton', 0);
                     button.scale = 0.75;
-                    t = context.add.text(posX, posY + 50, text, { fontFamily: '"Roboto Condensed"', fontSize:'36px', color:'white' });
+                    t = context.add.text(posX, posY + 50, text, { fontFamily: 'Metamorphous', fontSize:'34px', color:'white' });
             break;
 
             default:
                     button = context.add.sprite(posX, posY, 'Lbutton', 0);
-                    t = context.add.text(posX, posY, text, { fontFamily: '"Roboto Condensed"', fontSize:'36px', color:'white' });
+                    t = context.add.text(posX, posY, text, { fontFamily: 'Metamorphous', fontSize:'34px', color:'white' });
             break;
 
         }     

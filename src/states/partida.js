@@ -28,14 +28,15 @@ class partida extends Phaser.Scene {
     }
 
     create() {
-        console.log(game.deck);
+       
 
         var that = this;
 
         var escena = this.that;
 
         var volumen = game.volume;
-        
+        var modojuego = game.mode;
+      
         var random = Phaser.Math.Between(1, 2);
     
         if (random == 1){
@@ -74,17 +75,17 @@ class partida extends Phaser.Scene {
         var celdas;
         var turno = -1;
         var turnonumerico = 1;
-        var modojuego = this.mode;
+        //var modojuego = this.mode;
 
         this.tablero = new Tablero(this, 4, 4);
         this.tablero.crearMatrizCeldas(this);
 
         celdas = this.tablero.getMatrizCeldas();
 
-        this.jugador1 = new Jugador(this, 1, 0, 0);
+        this.jugador1 = new Jugador(this, 1, 0, game.deck[0]);
         this.jugador1.pintarMano(this);
 
-        this.jugador2 = new Jugador(this, 2, 1, 1);
+        this.jugador2 = new Jugador(this, 2, 1, game.deck[1]);
         this.jugador2.pintarMano(this);
         //this.jugador2.setManoX(1185);
 

@@ -20,10 +20,10 @@ class deckSelect extends Phaser.Scene {
 
         var B = JSON.parse(buttons);
 
-        this.add.text(800, 75, B.deck[game.language], { fontFamily: '"Roboto Condensed"', fontSize: '46px', color: 'white' }).setOrigin(0.5);
+        this.add.text(750, 75, B.deck[game.language], { fontFamily: 'Metamorphous', fontSize: '46px', color: 'white' }).setOrigin(0.5);
 
-        this.add.text(562.5, 187.5, B.player[game.language] + " 1", { fontFamily: '"Roboto Condensed"', fontSize: '36px', color: 'white' }).setOrigin(0.5);
-        this.add.text(1037.5, 187.5, B.player[game.language] + " 2", { fontFamily: '"Roboto Condensed"', fontSize: '36px', color: 'white' }).setOrigin(0.5);
+        this.add.text(562.5, 187.5, B.player[game.language] + " 1", { fontFamily: 'Metamorphous', fontSize: '36px', color: 'white' }).setOrigin(0.5);
+        this.add.text(1037.5, 187.5, B.player[game.language] + " 2", { fontFamily: 'Metamorphous', fontSize: '36px', color: 'white' }).setOrigin(0.5);
 
         var makebutton = new makeButton();
 

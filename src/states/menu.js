@@ -60,7 +60,7 @@ class menu extends Phaser.Scene {
             else
                 that.add.image(1125, 450, 'infoENG').setScale(1.35).setOrigin(0.5);
 
-            game.modetext = that.add.text(780, 350, "", { fontFamily: '"Roboto Condensed"', fontSize: '22px', color: 'black' });
+            game.modetext = that.add.text(780, 350, "", { fontFamily: 'Metamorphous', fontSize: '16px', color: 'black' });
         }
         
         play_button.on('pointerdown', function () {
@@ -75,7 +75,7 @@ class menu extends Phaser.Scene {
             //Imagen y botones de selección de modo de juego
             that.add.image(400, 450, 'mode').setScale(1.25).setOrigin(0.5, 0.5);
 
-            that.add.text(400, 187.5, B.gamemode[game.language], { fontFamily: '"Roboto Condensed"', fontSize: '46px', color: 'white' }).setOrigin(0.5);
+            that.add.text(400, 187.5, B.gamemode[game.language], { fontFamily: 'Metamorphous', fontSize: '46px', color: 'white' }).setOrigin(0.5);
             var mode1 = makebutton.setButton(that, 400, 312.5, 'Bbutton', MODES.mode1.name[game.language], 'mode');
             var mode2 = makebutton.setButton(that, 400, 437.5, 'Bbutton', MODES.mode2.name[game.language], 'mode');
             var mode3 = makebutton.setButton(that, 400, 562.5, 'Bbutton', MODES.mode3.name[game.language], 'mode');
@@ -86,8 +86,8 @@ class menu extends Phaser.Scene {
                 mode1.setFrame(1);
                 mode2.setFrame(0);
                 mode3.setFrame(0)
-                mododejuego = 0;
-
+                //mododejuego = 0;
+                game.mode = 0;
                 if(!set){
                     setModeDescription();
                     set = true;
@@ -100,8 +100,9 @@ class menu extends Phaser.Scene {
                 mode1.setFrame(0);
                 mode2.setFrame(1);
                 mode3.setFrame(0)
-                mododejuego = 1;
-
+                //mododejuego = 1;
+                game.mode = 1;
+                
                 if(!set){
                     setModeDescription();
                     set = true;
@@ -114,8 +115,8 @@ class menu extends Phaser.Scene {
                 mode1.setFrame(0);
                 mode2.setFrame(0);
                 mode3.setFrame(1)
-                mododejuego = 2;
-
+                //mododejuego = 2;
+                game.mode = 2;
                 if(!set){
                     setModeDescription();
                     set = true;
