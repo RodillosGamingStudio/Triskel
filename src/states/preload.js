@@ -38,8 +38,11 @@ class preload extends Phaser.Scene {
 
         this.load.image('menu', 'assets/Pantallas/Menu.png');
         this.load.image('mode', 'assets/Pantallas/Mode.png');
+        this.load.image('infoENG', 'assets/Pantallas/infoENG.png');
+        this.load.image('infoESP', 'assets/Pantallas/infoESP.png');
         this.load.image('Scrollbar', 'assets/Botones/Scrollbar.png');
         this.load.image('Settings', 'assets/Pantallas/Settings.png');
+        this.load.image('gameover', 'assets/Pantallas/Gameover.png');
 
         this.load.spritesheet('Bbutton', 'assets/Botones/Bbutton.png', { frameWidth: 267, frameHeight: 86 });
         this.load.spritesheet('Lbutton', 'assets/Botones/Lbutton.png', { frameWidth: 138, frameHeight: 75 });
@@ -110,7 +113,7 @@ class preload extends Phaser.Scene {
 
     }
     create() {
-        this.scene.start('menuScene');
+        this.scene.start('menuScene');     
 
     }
 

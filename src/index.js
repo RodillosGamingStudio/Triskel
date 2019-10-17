@@ -7,7 +7,7 @@ var config = {
 		autoCenter: Phaser.Scale.CENTER_BOTH
 	},
 	autoRound: false,
-	scene: [boot, preload, menu, partida, credits, settings, puntuaciones]
+	scene: [boot, preload, menu, partida, credits, settings, gameOver, deckSelect]
 	
 };
 
@@ -26,5 +26,10 @@ game.mode = 0;
 //Volumen del juego (0-10), 5 por defecto
 game.volume = 5;
 
+//Texto del modo de juego
+game.modetext;
+
+//Mazos de cada jugador (Inicializado a -1 por defecto, 0 = Nórdicos, 1 = Griegos)
+game.deck = [-1, -1];
 
     //this.scene.start('bootScene');

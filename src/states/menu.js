@@ -22,7 +22,7 @@ class menu extends Phaser.Scene {
 
     create() {
 
-        var volumen = this.volume;
+        var volumen = game.volume;
 
         var music = this.sound.add('musica3', {volume: (game.volume/20) ,loop: true});
         music.play();
@@ -33,6 +33,7 @@ class menu extends Phaser.Scene {
         this.background.setOrigin(0, 0);
 
         var B = JSON.parse(buttons);
+        var MODES = JSON.parse(modes_text);
 
         //Variable que permite hacer botones
         var makebutton = new makeButton();
@@ -41,40 +42,72 @@ class menu extends Phaser.Scene {
         var credits_button = makebutton.setButton(this, 800, 550, 'Bbutton', B.credits[game.language], 'creditsScene', null, music);
 
         //Botón de ajustes
-        makebutton.setButton(this, 180, 500, 'Sbutton', B.settings[game.language], 'settingsScene', null, music);
+        var settings_button = makebutton.setButton(this, 180, 500, 'Sbutton', B.settings[game.language], 'settingsScene', null, music);
 
         //Botón jugar
-        var play_button = makebutton.setButton(this, 800, 350, 'Bbutton', B.play[game.language], 'none');
+        var play_button = makebutton.setButton(this, 800, 350, 'Bbutton', B.play[game.language], 'none', null, music);
 
+        //Contexto
         var that = this;
+
+
+        //Acciones genéricas al pulsar un botón de modo
+        function setModeDescription(){
+            makebutton.setButton(that, 575, 750, 'Lbutton', B.play[game.language], 'deckSelectScene', mododejuego, music);
+            
+            if(game.language == 0)
+                that.add.image(1125, 450, 'infoESP').setScale(1.35).setOrigin(0.5);
+            else
+                that.add.image(1125, 450, 'infoENG').setScale(1.35).setOrigin(0.5);
+
+            game.modetext = that.add.text(780, 350, "", { fontFamily: '"Roboto Condensed"', fontSize: '22px', color: 'black' });
+        }
+        
         play_button.on('pointerdown', function () {
             //Desactivamos los botones no visibles
             play_button.disableInteractive();
             credits_button.disableInteractive();
+            settings_button.disableInteractive();
+
+            //Si se ha creado la ventana
+            var set = false;
 
             //Imagen y botones de selección de modo de juego
-            that.add.image(800, 450, 'mode').setOrigin(0.5, 0.5);
-            that.add.text(800, 220, B.gamemode[game.language], { fontFamily: '"Roboto Condensed"', fontSize: '36px', color: 'white' }).setOrigin(0.5);
-            var mode1 = makebutton.setButton(that, 800, 312, 'Bbutton', B.mode1[game.language], 'mode');
-            var mode2 = makebutton.setButton(that, 800, 437, 'Bbutton', B.mode2[game.language], 'mode');
-            var mode3 = makebutton.setButton(that, 800, 562, 'Bbutton', B.mode3[game.language], 'mode');
+            that.add.image(400, 450, 'mode').setScale(1.25).setOrigin(0.5, 0.5);
+
+            that.add.text(400, 187.5, B.gamemode[game.language], { fontFamily: '"Roboto Condensed"', fontSize: '46px', color: 'white' }).setOrigin(0.5);
+            var mode1 = makebutton.setButton(that, 400, 312.5, 'Bbutton', MODES.mode1.name[game.language], 'mode');
+            var mode2 = makebutton.setButton(that, 400, 437.5, 'Bbutton', MODES.mode2.name[game.language], 'mode');
+            var mode3 = makebutton.setButton(that, 400, 562.5, 'Bbutton', MODES.mode3.name[game.language], 'mode');
 
             mode1.setFrame(0);
 
             mode1.on('pointerdown', function () {
                 mode1.setFrame(1);
                 mode2.setFrame(0);
-                mode3.setFrame(0);
+                mode3.setFrame(0)
                 mododejuego = 0;
-                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, music);
+
+                if(!set){
+                    setModeDescription();
+                    set = true;
+                }
+                
+                game.modetext.text = MODES.mode1.description[game.language];
             });
 
             mode2.on('pointerdown', function () {
                 mode1.setFrame(0);
                 mode2.setFrame(1);
-                mode3.setFrame(0);
+                mode3.setFrame(0)
                 mododejuego = 1;
-                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, music);
+
+                if(!set){
+                    setModeDescription();
+                    set = true;
+                }
+
+                game.modetext.text = MODES.mode2.description[game.language];
             });
 
             mode3.on('pointerdown', function () {
@@ -82,10 +115,17 @@ class menu extends Phaser.Scene {
                 mode2.setFrame(0);
                 mode3.setFrame(1)
                 mododejuego = 2;
-                makebutton.setButton(that, 920, 670, 'Lbutton', B.play[game.language], 'partidaScene', mododejuego, music);
+
+                if(!set){
+                    setModeDescription();
+                    set = true;
+                }
+
+                game.modetext.text = MODES.mode3.description[game.language];
             });
 
-            makebutton.setButton(that, 685, 670, 'Lbutton', B.back[game.language], 'menuScene', mododejuego);
+            makebutton.setButton(that, 225, 750, 'Lbutton', B.back[game.language], 'menuScene', null, music);
+            //makebutton.setButton(that, 790, 600, 'Lbutton', B.play[game.language], 'partidaScene', game.mode);
 
         });
 
