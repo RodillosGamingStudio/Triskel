@@ -28,11 +28,8 @@ class partida extends Phaser.Scene {
     }
 
     create() {
-       
 
         var that = this;
-
-        var escena = this.that;
 
         var volumen = game.volume;
         var modojuego = game.mode;
@@ -49,7 +46,44 @@ class partida extends Phaser.Scene {
         this.background.setOrigin(0, 0);
         music.play()
 
-        
+        //Botones
+        var B = JSON.parse(buttons);
+
+        var makebutton = new makeButton();
+        makebutton.setButton(this, 800, 840, 'Lbutton', B.back[game.language], 'menuScene', null, music).setScale(1.45);
+        var rules_button = makebutton.setButton(this, 100, 450, 'Lbutton', B.rules[game.language], 'none', null, null).setScale(1.45);
+
+        var image;
+        if(game.language == 0)
+            image = this.add.image(800, 450, 'infoESP').setScale(1.8).setOrigin(0.5);
+        else
+            image = this.add.image(800, 450, 'infoENG').setScale(1.8).setOrigin(0.5);
+
+        var text = this.add.text(340, 330, "", { fontFamily: 'Metamorphous', fontSize: '21px', color: 'black' });
+        image.visible = false;
+        image.depth = 1;
+        text.depth = 1;
+
+        rules_button.on('pointerdown', function () {
+            if(!image.visible)
+                text.text = game.modetext.text;
+            else 
+                text.text = "";
+            
+            image.visible = !image.visible;
+        });
+
+        //Botón de silenciar
+        var mute_button = makebutton.setButton(this, 1500, 450, 'mute', B.mute[game.language], 'mode', null, null).setScale(0.65);
+        var current = 0;
+        mute_button.on('pointerdown', function () {            
+            current = (current + 1) % 2;
+            mute_button.setFrame(current);
+
+            if(current == 1) music.pause();
+            else music.resume();
+        });
+
 
         var click1 = this.sound.add('clickCarta');
         var click2 = this.sound.add('clickCelda');
@@ -309,7 +343,7 @@ class partida extends Phaser.Scene {
 
 
                                     //FUNCION QUE HAY QUE RECUPERAR PARA EL FINAL DE LA PARTIDA
-                                    if (turnonumerico == 3){
+                                    if (turnonumerico == 17){
                                         var finale = that.setWinner(celdas);
                                         that.scene.pause();
                                         setTimeout(function(){ music.stop();}, 2900);

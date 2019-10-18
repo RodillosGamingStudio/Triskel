@@ -47,6 +47,7 @@ class preload extends Phaser.Scene {
         this.load.spritesheet('Bbutton', 'assets/Botones/Bbutton.png', { frameWidth: 267, frameHeight: 86 });
         this.load.spritesheet('Lbutton', 'assets/Botones/Lbutton.png', { frameWidth: 138, frameHeight: 75 });
         this.load.spritesheet('Sbutton', 'assets/Botones/Sbutton.png', { frameWidth: 271, frameHeight: 250 });
+        this.load.spritesheet('mute', 'assets/Botones/mute.png', { frameWidth: 271, frameHeight: 250 });
 
 
 
