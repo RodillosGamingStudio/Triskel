@@ -23,6 +23,7 @@ class preload extends Phaser.Scene {
 
         //Cartas 
         this.load.image('berserker', 'assets/Cartas/Nordicas/Berserker.jpg');
+        this.load.image('berserkerbig', 'assets/Cartas/Nordicas/RagnarBig.png');
         this.load.image('einherjar', 'assets/Cartas/Nordicas/Einherjar.jpg');
         this.load.image('freyja', 'assets/Cartas/Nordicas/Freyja.jpg');
         this.load.image('jomsviking', 'assets/Cartas/Nordicas/Jomsviking.jpg');

@@ -25,6 +25,7 @@ class Jugador {
 
 	crearManoNordico(scene, cont, own){
 		var aux = [];
+		var aux2 = [];
 
 		aux[0] = new CartaRagnar(scene, cont, own);
 		aux[1] = new CartaRagnar(scene, cont, own);
@@ -35,11 +36,21 @@ class Jugador {
 		aux[6] = new CartaN3(scene, cont, own);
 		aux[7] = new CartaN3(scene, cont, own);
 
-		return aux;
+		aux2[0] = new CartaRagnarBig(scene);
+		aux2[1] = new CartaRagnarBig(scene);
+		aux2[2] = new CartaN1Big(scene);
+		aux2[3] = new CartaN1Big(scene);
+		aux2[4] = new CartaN2Big(scene);
+		aux2[5] = new CartaN2Big(scene);
+		aux2[6] = new CartaN3Big(scene);
+		aux2[7] = new CartaN3Big(scene);
+
+		return [aux, aux2];
 	}
 
 	crearManoGriego(scene, cont, own){
 		var aux = [];
+		var aux2 = [];
 
 		aux[0] = new CartaMedusa(scene, cont, own);
 		aux[1] = new CartaMedusa(scene, cont, own);
@@ -50,7 +61,16 @@ class Jugador {
 		aux[6] = new CartaG3(scene, cont, own);
 		aux[7] = new CartaG3(scene, cont, own);
 
-		return aux;
+		aux2[0] = new CartaMedusaBig(scene);
+		aux2[1] = new CartaMedusaBig(scene);
+		aux2[2] = new CartaG1Big(scene);
+		aux2[3] = new CartaG1Big(scene);
+		aux2[4] = new CartaG2Big(scene);
+		aux2[5] = new CartaG2Big(scene);
+		aux2[6] = new CartaG3Big(scene);
+		aux2[7] = new CartaG3Big(scene);
+
+		return [aux, aux2];
 	}
 
 	getCartaSeleccionada() { return this.cartaSeleccionada; }
@@ -60,29 +80,32 @@ class Jugador {
 		return this.mano;
 	}
 
-	pintarMano(scene) {
+	pintarMano(scene, cont) {
 		var i = 0;
 		for (i; i < 8; i++) {
-			this.mano[i].pintarCarta(scene);
+			this.mano[0][i].pintarCarta(scene);
+			if (cont == 1){
+			this.mano[1][i].pintarCarta(scene);
 		}
+	}
 	}
 
 	setManoX(a) {
 		var i = 0;
 		for (i; i < 8; i++) {
-			this.mano[i].setX(a);
+			this.mano[0][i].setX(a);
 		}
 	}
 
 	setManoPos(a, b){
 		for (var i = 0; i < 4; i++) {
-			this.mano[i].setX(a);
-			this.mano[i].setY(b + i*154);
+			this.mano[0][i].setX(a);
+			this.mano[0][i].setY(b + i*154);
 		}
 
 		for (var i = 4; i < 8; i++) {
-			this.mano[i].setX(a + 120);
-			this.mano[i].setY(b + (i-4)*154);
+			this.mano[0][i].setX(a + 120);
+			this.mano[0][i].setY(b + (i-4)*154);
 		}
 	}
 
