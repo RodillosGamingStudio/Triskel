@@ -33,7 +33,8 @@ class preload extends Phaser.Scene {
         this.load.image('medusabig', 'assets/Cartas/Griegas/MedusaBig.png');
         this.load.image('poseidon', 'assets/Cartas/Griegas/Poseidon.png');
         this.load.image('poseidonbig', 'assets/Cartas/Griegas/PoseidonBig.png');
-        this.load.image('serket', 'assets/Cartas/Griegas/Serket.jpg');
+        this.load.image('zeus', 'assets/Cartas/Griegas/Zeus.png');
+        this.load.image('zeusbig', 'assets/Cartas/Griegas/ZeusBig.png');
         this.load.image('thot', 'assets/Cartas/Griegas/Thot.jpg');
         //Fin de cartas
 

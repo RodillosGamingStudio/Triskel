@@ -152,7 +152,7 @@ class CartaG2 extends Carta {
 
         super(scene ,x, y);
 
-        this.setTexture('serket');
+        this.setTexture('zeus');
 
         //terrenal sagrado oscuro neutro
         //1	1	4	1

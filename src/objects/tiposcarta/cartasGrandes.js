@@ -73,7 +73,7 @@ class CartaG2Big extends Carta {
 
         super(scene ,x, y);
         this.setPosicion(800, 450);
-        this.setTexture('sacerdote');
+        this.setTexture('zeusbig');
     }
 }
 
