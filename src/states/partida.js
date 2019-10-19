@@ -46,9 +46,16 @@ class partida extends Phaser.Scene {
         this.background.setOrigin(0, 0);
         music.play()
 
+        //TEXTOS
+        var C = JSON.parse(credits_text);
+
+        this.add.sprite(310, 75, 'Scrollbar');
+        this.add.sprite(1280, 75, 'Scrollbar');
+        this.add.text(310, 75, C.jugador1[game.language], { fontFamily: 'Metamorphous', fontSize:'42px',fontWeight: 'bold'}).setOrigin(0.5);
+        this.add.text(1280, 75, C.jugador2[game.language], { fontFamily: 'Metamorphous', fontSize:'42px',fontWeight: 'bold'}).setOrigin(0.5);
         //Botones
         var B = JSON.parse(buttons);
-
+        
         var makebutton = new makeButton();
         makebutton.setButton(this, 800, 840, 'Lbutton', B.back[game.language], 'menuScene', null, music).setScale(1.45);
         var rules_button = makebutton.setButton(this, 100, 450, 'Lbutton', B.rules[game.language], 'none', null, null).setScale(1.45);
