@@ -14,6 +14,7 @@ class preload extends Phaser.Scene {
         //SONIDOS
         this.load.audio('clickCarta', 'assets/Sonidos/clickCarta.mp3');
         this.load.audio('clickCelda', 'assets/Sonidos/clickCelda.mp3');
+        this.load.audio('clickmenus', 'assets/Sonidos/clickmenus.mp3');
 
         this.load.image('fondo', 'assets/tablero1.jpg');
         this.load.image('fondo2', 'assets/tablero2.jpg');

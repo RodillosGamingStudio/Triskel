@@ -12,6 +12,8 @@ class deckSelect extends Phaser.Scene {
     }
 
     create() {
+
+        var clicksonido = game.sound.add('clickmenus');
         this.background = this.add.image(0, 0, 'Settings');
         this.background.setOrigin(0,0);
 
@@ -56,6 +58,7 @@ class deckSelect extends Phaser.Scene {
         }
 
         deck1_1.on('pointerdown', function () {
+            clicksonido.play();
             deck1_1.setFrame(1);
             deck2_1.setFrame(0);
 
@@ -64,6 +67,7 @@ class deckSelect extends Phaser.Scene {
         });
 
         deck2_1.on('pointerdown', function () {
+            clicksonido.play();
             deck1_1.setFrame(0);
             deck2_1.setFrame(1);
 
@@ -72,6 +76,7 @@ class deckSelect extends Phaser.Scene {
         });
 
         deck1_2.on('pointerdown', function () {
+            clicksonido.play();
             deck1_2.setFrame(1);
             deck2_2.setFrame(0);
 
@@ -80,6 +85,7 @@ class deckSelect extends Phaser.Scene {
         });
 
         deck2_2.on('pointerdown', function () {
+            clicksonido.play();
             deck1_2.setFrame(0);
             deck2_2.setFrame(1);
 

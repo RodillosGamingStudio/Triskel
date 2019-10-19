@@ -31,6 +31,8 @@ class partida extends Phaser.Scene {
 
         var that = this;
 
+        var clicksonido = game.sound.add('clickmenus');
+
         var volumen = game.volume;
         var modojuego = game.mode;
       
@@ -72,6 +74,8 @@ class partida extends Phaser.Scene {
         text.depth = 1;
 
         rules_button.on('pointerdown', function () {
+       clicksonido.play();
+
             if(!image.visible)
                 text.text = game.modetext.text;
             else 

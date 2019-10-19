@@ -4,6 +4,8 @@ class makeButton{
 
     //Crea un botón a partir del contexto (context), su posición x e y (posX, posY), el tipo de botón (type), texto que contiene (text) y escena a la que transiciona (scene)
     setButton(context, posX, posY, type, text, scene, selecMode = null, music = null){
+
+        var clicksonido = game.sound.add('clickmenus');
         var button;
         var t;
         //Tipo de botón
@@ -58,6 +60,7 @@ class makeButton{
 
         if(scene != "none"){
             button.on('pointerdown', function () {
+                clicksonido.play();
                 if (music != null) {    
                 music.stop();
                 }   

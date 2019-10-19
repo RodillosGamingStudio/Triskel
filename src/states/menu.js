@@ -24,6 +24,8 @@ class menu extends Phaser.Scene {
 
         var volumen = game.volume;
 
+        var clicksonido = game.sound.add('clickmenus');
+
         var music = this.sound.add('musica3', {volume: (game.volume/20) ,loop: true});
         music.play();
 
@@ -64,6 +66,7 @@ class menu extends Phaser.Scene {
         }
         
         play_button.on('pointerdown', function () {
+            clicksonido.play();
             //Desactivamos los botones no visibles
             play_button.disableInteractive();
             credits_button.disableInteractive();
@@ -83,6 +86,7 @@ class menu extends Phaser.Scene {
             mode1.setFrame(0);
 
             mode1.on('pointerdown', function () {
+                clicksonido.play();
                 mode1.setFrame(1);
                 mode2.setFrame(0);
                 mode3.setFrame(0)
@@ -97,6 +101,7 @@ class menu extends Phaser.Scene {
             });
 
             mode2.on('pointerdown', function () {
+                clicksonido.play();
                 mode1.setFrame(0);
                 mode2.setFrame(1);
                 mode3.setFrame(0)
@@ -112,6 +117,7 @@ class menu extends Phaser.Scene {
             });
 
             mode3.on('pointerdown', function () {
+                clicksonido.play();
                 mode1.setFrame(0);
                 mode2.setFrame(0);
                 mode3.setFrame(1)
