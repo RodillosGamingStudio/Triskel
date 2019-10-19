@@ -57,18 +57,18 @@ class Jugador {
 		aux[2] = new CartaG1(scene, cont, own);
 		aux[3] = new CartaG1(scene, cont, own);
 		aux[4] = new CartaG2(scene, cont, own);
-		aux[5] = new CartaG2(scene, cont, own);
-		aux[6] = new CartaG3(scene, cont, own);
-		aux[7] = new CartaG3(scene, cont, own);
+		aux[5] = new CartaG3(scene, cont, own);
+		aux[6] = new CartaG4(scene, cont, own);
+		aux[7] = new CartaG5(scene, cont, own);
 
 		aux2[0] = new CartaMedusaBig(scene);
 		aux2[1] = new CartaMedusaBig(scene);
 		aux2[2] = new CartaG1Big(scene);
 		aux2[3] = new CartaG1Big(scene);
 		aux2[4] = new CartaG2Big(scene);
-		aux2[5] = new CartaG2Big(scene);
-		aux2[6] = new CartaG3Big(scene);
-		aux2[7] = new CartaG3Big(scene);
+		aux2[5] = new CartaG3Big(scene);
+		aux2[6] = new CartaG4Big(scene);
+		aux2[7] = new CartaG5Big(scene);
 
 		return [aux, aux2];
 	}

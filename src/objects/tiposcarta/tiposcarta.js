@@ -82,7 +82,7 @@ class CartaN3 extends Carta {
 
         this.seleccionada;
 
-        this.setTexture('jomsviking');
+        this.setTexture('odin');
 
         // terrenal sagrado oscuro neutro
         // 4	1	3	2
@@ -175,7 +175,7 @@ class CartaG3 extends Carta {
 
         super(scene ,x, y);
 
-        this.setTexture('thot');
+        this.setTexture('afrodita');
 
         //terrenal sagrado oscuro neutro
         //2	4	2	1
@@ -184,6 +184,52 @@ class CartaG3 extends Carta {
         this.setSur("terrenal");
         this.setEste("oscuro");
         this.setOeste("neutro");
+
+        this.setWhich(cont);
+        this.setOwner(own);
+
+    }
+}
+
+class CartaG4 extends Carta {
+    constructor(scene, cont, own){
+        var x = 0;
+        var y = 0;
+
+        super(scene ,x, y);
+
+        this.setTexture('atenea');
+
+        //terrenal sagrado oscuro neutro
+        //2	4	2	1
+
+        this.setNorte("oscuro");
+        this.setSur("neutro");
+        this.setEste("terrenal");
+        this.setOeste("terrenal");
+
+        this.setWhich(cont);
+        this.setOwner(own);
+
+    }
+}
+
+class CartaG5 extends Carta {
+    constructor(scene, cont, own){
+        var x = 0;
+        var y = 0;
+
+        super(scene ,x, y);
+
+        this.setTexture('hades');
+
+        //terrenal sagrado oscuro neutro
+        //2	4	2	1
+
+        this.setNorte("terrenal");
+        this.setSur("terrenal");
+        this.setEste("neutro");
+        this.setOeste("oscuro");
 
         this.setWhich(cont);
         this.setOwner(own);

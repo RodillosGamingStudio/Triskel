@@ -27,7 +27,8 @@ class preload extends Phaser.Scene {
         this.load.image('hela', 'assets/Cartas/Nordicas/Hela.png');
         this.load.image('helabig', 'assets/Cartas/Nordicas/HelaBig.png');
         this.load.image('freyja', 'assets/Cartas/Nordicas/Freyja.jpg');
-        this.load.image('jomsviking', 'assets/Cartas/Nordicas/Jomsviking.jpg');
+        this.load.image('odin', 'assets/Cartas/Nordicas/Odin.png');
+        this.load.image('odinbig', 'assets/Cartas/Nordicas/OdinBig.png');
 
         this.load.image('medusa', 'assets/Cartas/Griegas/Medusa.png');
         this.load.image('medusabig', 'assets/Cartas/Griegas/MedusaBig.png');
@@ -35,7 +36,12 @@ class preload extends Phaser.Scene {
         this.load.image('poseidonbig', 'assets/Cartas/Griegas/PoseidonBig.png');
         this.load.image('zeus', 'assets/Cartas/Griegas/Zeus.png');
         this.load.image('zeusbig', 'assets/Cartas/Griegas/ZeusBig.png');
-        this.load.image('thot', 'assets/Cartas/Griegas/Thot.jpg');
+        this.load.image('afrodita', 'assets/Cartas/Griegas/Afrodita.png');
+        this.load.image('afroditabig', 'assets/Cartas/Griegas/AfroditaBig.png');
+        this.load.image('atenea', 'assets/Cartas/Griegas/Atenea.png');
+        this.load.image('ateneabig', 'assets/Cartas/Griegas/AteneaBig.png');
+        this.load.image('hades', 'assets/Cartas/Griegas/Hades.png');
+        this.load.image('hadesbig', 'assets/Cartas/Griegas/HadesBig.png');
         //Fin de cartas
 
         //this.load.image('tablero', 'assets/tablero.png');

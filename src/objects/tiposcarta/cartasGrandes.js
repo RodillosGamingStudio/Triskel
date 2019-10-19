@@ -39,7 +39,7 @@ class CartaN3Big extends Carta {
 
         super(scene ,x, y);
         this.setPosicion(800, 450);
-        this.setTexture('sacerdote');
+        this.setTexture('odinbig');
     }
 }
 
@@ -84,6 +84,28 @@ class CartaG3Big extends Carta {
 
         super(scene ,x, y);
         this.setPosicion(800, 450);
-        this.setTexture('sacerdote');
+        this.setTexture('afroditabig');
+    }
+}
+
+class CartaG4Big extends Carta {
+    constructor(scene){
+        var x = 0;
+        var y = 0;
+
+        super(scene ,x, y);
+        this.setPosicion(800, 450);
+        this.setTexture('ateneabig');
+    }
+}
+
+class CartaG5Big extends Carta {
+    constructor(scene){
+        var x = 0;
+        var y = 0;
+
+        super(scene ,x, y);
+        this.setPosicion(800, 450);
+        this.setTexture('hadesbig');
     }
 }
