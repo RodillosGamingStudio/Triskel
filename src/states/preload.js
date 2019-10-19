@@ -22,14 +22,17 @@ class preload extends Phaser.Scene {
         //this.load.image('dorsocarta2', 'assets/dorsocarta2.jpg');
 
         //Cartas 
-        this.load.image('berserker', 'assets/Cartas/Nordicas/Berserker.jpg');
-        this.load.image('berserkerbig', 'assets/Cartas/Nordicas/RagnarBig.png');
-        this.load.image('einherjar', 'assets/Cartas/Nordicas/Einherjar.jpg');
+        this.load.image('ragnar', 'assets/Cartas/Nordicas/Ragnar.png');
+        this.load.image('ragnarbig', 'assets/Cartas/Nordicas/RagnarBig.png');
+        this.load.image('hela', 'assets/Cartas/Nordicas/Hela.png');
+        this.load.image('helabig', 'assets/Cartas/Nordicas/HelaBig.png');
         this.load.image('freyja', 'assets/Cartas/Nordicas/Freyja.jpg');
         this.load.image('jomsviking', 'assets/Cartas/Nordicas/Jomsviking.jpg');
 
-        this.load.image('escarabajo', 'assets/Cartas/Griegas/Escarabajo.jpg');
-        this.load.image('sacerdote', 'assets/Cartas/Griegas/Sacerdote.jpg');
+        this.load.image('medusa', 'assets/Cartas/Griegas/Medusa.png');
+        this.load.image('medusabig', 'assets/Cartas/Griegas/MedusaBig.png');
+        this.load.image('poseidon', 'assets/Cartas/Griegas/Poseidon.png');
+        this.load.image('poseidonbig', 'assets/Cartas/Griegas/PoseidonBig.png');
         this.load.image('serket', 'assets/Cartas/Griegas/Serket.jpg');
         this.load.image('thot', 'assets/Cartas/Griegas/Thot.jpg');
         //Fin de cartas
@@ -56,7 +59,7 @@ class preload extends Phaser.Scene {
         var progressBar = this.add.graphics();
         var progressBox = this.add.graphics();
         progressBox.fillStyle(0x222222, 0.8);
-        progressBox.fillRect(240, 270, 320, 50);
+        progressBox.fillRect(480, 420, 640, 60);
 
         var width = this.cameras.main.width;
         var height = this.cameras.main.height;
@@ -98,7 +101,7 @@ class preload extends Phaser.Scene {
             percentText.setText(parseInt(value * 100) + '%');
             progressBar.clear();
             progressBar.fillStyle(0xffffff, 1);
-            progressBar.fillRect(250, 280, 300 * value, 30);
+            progressBar.fillRect(490, 425, 620 * value, 50);
         });
 
         this.load.on('fileprogress', function (file) {

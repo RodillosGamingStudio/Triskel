@@ -80,14 +80,12 @@ class Jugador {
 		return this.mano;
 	}
 
-	pintarMano(scene, cont) {
+	pintarMano(scene) {
 		var i = 0;
 		for (i; i < 8; i++) {
 			this.mano[0][i].pintarCarta(scene);
-			if (cont == 1){
 			this.mano[1][i].pintarCarta(scene);
 		}
-	}
 	}
 
 	setManoX(a) {

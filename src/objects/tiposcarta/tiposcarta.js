@@ -8,7 +8,7 @@ class CartaRagnar extends Carta {
 
         this.seleccionada;
 
-        this.setTexture('berserker');
+        this.setTexture('ragnar');
 
         // terrenal sagrado oscuro neutro
 
@@ -32,7 +32,7 @@ class CartaN1 extends Carta {
 
         this.seleccionada;
 
-        this.setTexture('einherjar');
+        this.setTexture('hela');
 
         // terrenal sagrado oscuro neutro
 
@@ -106,7 +106,7 @@ class CartaMedusa extends Carta {
 
         super(scene ,x, y);
 
-        this.setTexture('escarabajo');
+        this.setTexture('medusa');
 
         // terrenal sagrado oscuro neutro
         //2  3	2	2
@@ -129,7 +129,7 @@ class CartaG1 extends Carta {
 
         super(scene ,x, y);
 
-        this.setTexture('sacerdote');
+        this.setTexture('poseidon');
 
         //terrenal sagrado oscuro neutro
         // 3	1	4	2

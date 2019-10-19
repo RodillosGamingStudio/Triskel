@@ -103,6 +103,7 @@ class partida extends Phaser.Scene {
         var a2 = -1;
         var b2 = -1;
         var c2 = -1;
+        var d2 = -1;
         var x02;
         var y02;
 
@@ -121,13 +122,13 @@ class partida extends Phaser.Scene {
         var carta;
 
         this.jugador1 = new Jugador(this, 1, 0, game.deck[0]);
-        this.jugador1.pintarMano(this, 1);
+        this.jugador1.pintarMano(this);
 
         this.jugador2 = new Jugador(this, 2, 1, game.deck[1]);
-        this.jugador2.pintarMano(this, 0);
+        this.jugador2.pintarMano(this);
         //this.jugador2.setManoX(1185);
 
-        var mano1 = this.jugador1.getMano()[0];
+        mano1 = this.jugador1.getMano()[0];
         var manobig1 = this.jugador1.getMano()[1];
         /*
         this.mano1[0].setId('a1');
@@ -138,6 +139,7 @@ class partida extends Phaser.Scene {
         */
 
         mano2 = this.jugador2.getMano()[0];
+        var manobig2 = this.jugador2.getMano()[1];
         /*
         this.mano2[0].setId('b1');
         this.mano2[1].setId('b2');
@@ -147,6 +149,7 @@ class partida extends Phaser.Scene {
         */
         //pruebas
        var timeout;
+       var timeout2;
         /*mano1[0].sur = "sagrado";
         mano1[0].norte = "terrenal";
         mano1[0].este = "terrenal";
@@ -179,6 +182,7 @@ class partida extends Phaser.Scene {
         //if (turno == 0) {
             for (var i = 0; i < mano1.length; i++) {
                 manobig1[i].visible = false;
+                manobig2[i].visible = false;
                 mano1[i].setInteractive();
                 mano2[i].setInteractive();
             }
@@ -307,6 +311,26 @@ class partida extends Phaser.Scene {
         //Para seleccionar solamente una carta a la vez
 
         for (var i = 0; i < mano2.length; i++) {
+
+            manobig2[i].setData({i: i});
+
+            var  miguel2 = mano2[i].on('pointerover', function() {
+                d2 =  this.getData('i');
+                 timeout2 = setTimeout(function(){ 
+                    manobig2[d2].setDepth(1);
+                    manobig2[d2].visible = true;
+                   
+                 }, 500);
+            });
+        
+            var cartalunya2 = mano2[i].on('pointerout', function(){
+                if (manobig2[d2].visible){
+                    manobig2[d2].visible = false;
+                    }
+                    clearTimeout(timeout2);
+            });
+
+
             mano2[i].setTint(0xfc8987);
             mano2[i].setData({ seleccionada: false, i: i });
             var jose2 = mano2[i].on('pointerup', function () {

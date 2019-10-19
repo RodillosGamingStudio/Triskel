@@ -6,7 +6,7 @@ class CartaRagnarBig extends Carta {
 
         super(scene ,x, y);
         this.setPosicion(800, 450);
-        this.setTexture('berserkerbig');
+        this.setTexture('ragnarbig');
     }
 }
 
@@ -16,7 +16,8 @@ class CartaN1Big extends Carta {
         var y = 0;
 
         super(scene ,x, y);
-        this.setTexture('sacerdote');
+        this.setPosicion(800, 450);
+        this.setTexture('helabig');
     }
 }
 
@@ -26,6 +27,7 @@ class CartaN2Big extends Carta {
         var y = 0;
 
         super(scene ,x, y);
+        this.setPosicion(800, 450);
         this.setTexture('sacerdote');
     }
 }
@@ -36,6 +38,7 @@ class CartaN3Big extends Carta {
         var y = 0;
 
         super(scene ,x, y);
+        this.setPosicion(800, 450);
         this.setTexture('sacerdote');
     }
 }
@@ -47,7 +50,8 @@ class CartaMedusaBig extends Carta {
         var y = 0;
 
         super(scene ,x, y);
-        this.setTexture('sacerdote');
+        this.setPosicion(800, 450);
+        this.setTexture('medusabig');
     }
 }
 
@@ -57,7 +61,8 @@ class CartaG1Big extends Carta {
         var y = 0;
 
         super(scene ,x, y);
-        this.setTexture('sacerdote');
+        this.setPosicion(800, 450);
+        this.setTexture('poseidonbig');
     }
 }
 
@@ -67,6 +72,7 @@ class CartaG2Big extends Carta {
         var y = 0;
 
         super(scene ,x, y);
+        this.setPosicion(800, 450);
         this.setTexture('sacerdote');
     }
 }
@@ -77,6 +83,7 @@ class CartaG3Big extends Carta {
         var y = 0;
 
         super(scene ,x, y);
+        this.setPosicion(800, 450);
         this.setTexture('sacerdote');
     }
 }
