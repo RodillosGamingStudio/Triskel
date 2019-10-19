@@ -21,7 +21,7 @@ class makeButton{
             case 'Sbutton':
                     button = context.add.sprite(posX, posY, 'Sbutton', 0);
                     button.scale = 0.75;
-                    t = context.add.text(posX, posY + 50, text, { fontFamily: 'Metamorphous', fontSize:'34px', color:'white' });
+                    t = context.add.text(posX, posY + 50, text, { fontFamily: 'Metamorphous', fontSize:'30px', color:'white' });
             break;
 
             case 'mute':

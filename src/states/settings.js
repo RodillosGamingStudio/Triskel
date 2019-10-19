@@ -32,7 +32,7 @@ class settings extends Phaser.Scene {
         this.add.text(800, 187, S.settings[game.language], { fontFamily: 'Metamorphous', fontSize:'60px', color:'white' }).setOrigin(0.5);
 
         //Botón de idioma
-        var language_button = makebutton.setButton(this, 805, 375, 'Bbutton', S.language[1][game.language], 'settingsScene');
+        var language_button = makebutton.setButton(this, 836, 375, 'Bbutton', S.language[1][game.language], 'settingsScene');
         language_button.on('pointerdown', function () {
             if(game.language == 1){
                 game.language = 0;  
