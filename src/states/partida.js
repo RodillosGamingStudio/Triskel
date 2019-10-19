@@ -237,7 +237,7 @@ class partida extends Phaser.Scene {
                 if(!mano1[a1].colocada && turno == 0){
                 click1.play();
                 mano1[a1].setSeleccionada(true);
-                this.setTint(0xff0000);
+                this.setTint(0xafedab);
                 
 
                 //if(!mano2[a1].colocada && turno == 0){
@@ -360,7 +360,7 @@ class partida extends Phaser.Scene {
                 if(!mano2[a2].colocada && turno == 1){
                     click1.play();
                 mano2[a2].setSeleccionada(true);
-                this.setTint(0x2828fe);
+                this.setTint(0xafedab);
                 
                 //Para las celdas
                 if(mano2[a2].getSeleccionada() && turno == 1){

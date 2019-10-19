@@ -27,7 +27,8 @@ class preload extends Phaser.Scene {
         this.load.image('ragnarbig', 'assets/Cartas/Nordicas/RagnarBig.png');
         this.load.image('hela', 'assets/Cartas/Nordicas/Hela.png');
         this.load.image('helabig', 'assets/Cartas/Nordicas/HelaBig.png');
-        this.load.image('freyja', 'assets/Cartas/Nordicas/Freyja.jpg');
+        this.load.image('thor', 'assets/Cartas/Nordicas/Thor.png');
+        this.load.image('thorbig', 'assets/Cartas/Nordicas/ThorBig.png');        
         this.load.image('odin', 'assets/Cartas/Nordicas/Odin.png');
         this.load.image('odinbig', 'assets/Cartas/Nordicas/OdinBig.png');
 

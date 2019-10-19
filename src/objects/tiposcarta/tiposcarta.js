@@ -56,7 +56,7 @@ class CartaN2 extends Carta {
 
         this.seleccionada;
 
-        this.setTexture('freyja');
+        this.setTexture('thor');
 
         // terrenal sagrado oscuro neutro
 
