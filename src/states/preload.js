@@ -53,6 +53,8 @@ class preload extends Phaser.Scene {
         this.load.image('mode', 'assets/Pantallas/Mode.png');
         this.load.image('infoENG', 'assets/Pantallas/infoENG.png');
         this.load.image('infoESP', 'assets/Pantallas/infoESP.png');
+        this.load.image('helpESP', 'assets/Pantallas/dummyESP.png');
+        this.load.image('helpENG', 'assets/Pantallas/dummyENG.png');
         this.load.image('Scrollbar', 'assets/Botones/Scrollbar.png');
         this.load.image('Settings', 'assets/Pantallas/Settings.png');
         this.load.image('gameover', 'assets/Pantallas/Gameover.png');

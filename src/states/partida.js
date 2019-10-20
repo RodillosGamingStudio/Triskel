@@ -60,18 +60,33 @@ class partida extends Phaser.Scene {
         
         var makebutton = new makeButton();
         makebutton.setButton(this, 800, 840, 'Lbutton', B.back[game.language], 'menuScene', null, music).setScale(1.45);
-        var rules_button = makebutton.setButton(this, 100, 450, 'Lbutton', B.rules[game.language], 'none', null, null).setScale(1.45);
+        var rules_button = makebutton.setButton(this, 100, 500, 'Lbutton', B.rules[game.language], 'none', null, null).setScale(1.45);
+        var help_button = makebutton.setButton(this, 100, 400, 'Lbutton', B.ayuda[game.language], 'none', null, null).setScale(1.45);
 
         var image;
-        if(game.language == 0)
+        var halp;
+        if(game.language == 0){
             image = this.add.image(800, 450, 'infoESP').setScale(1.8).setOrigin(0.5);
-        else
+            halp = this.add.image(800, 450, 'helpESP').setScale(1.8).setOrigin(0.5);
+        }else{
             image = this.add.image(800, 450, 'infoENG').setScale(1.8).setOrigin(0.5);
-
+            halp = this.add.image(800, 450, 'helpENG').setScale(1.8).setOrigin(0.5);
+        }
         var text = this.add.text(340, 330, "", { fontFamily: 'Metamorphous', fontSize: '21px', color: 'black' });
+        halp.visible = false;
+        halp.depth = 1;
         image.visible = false;
         image.depth = 1;
         text.depth = 1;
+
+        help_button.on('pointerdown', function () {
+            clicksonido.play();
+     
+                 if(!halp.visible)
+                     halp.visible = true;
+                 else 
+                 halp.visible = false;
+             });
 
         rules_button.on('pointerdown', function () {
        clicksonido.play();
