@@ -12,7 +12,7 @@ Nuestro equipo de desarrollo, Rodillo´s Games, está compuesto por los siguient
 
 <b>Descripción: </b>
 Juego de cartas multijugador englobado en el género de estrategia basado en turnos de 30 segundos (para dos jugadores). Cada jugador dispondrá de un mazo de 8 cartas, las cuales podrá escoger entre una baraja de 12 (número ampliable, se explica en <b>Monetización</b>).
-Los mazos de cartas se corresponden con mitologías antiguas, conteniendo dioses y seres fantásticos relativos a cada una de ellas. Las mitologías contempladas son: <b>Griega</b>, <b>Egipcia<b> y <b>Nórdica</b>.
+Los mazos de cartas se corresponden con mitologías antiguas, conteniendo dioses y seres fantásticos relativos a cada una de ellas. Las mitologías contempladas son: <b>Griega</b>, <b>Egipcia</b> y <b>Nórdica</b>.
 
 <b>Objetivo: </b>
 El fin último de nuestro producto es <b>entretener</b>. Nos hemos decantado por juegos de cartas porque, en su mayoría, tienen jugadores experimentados y apenas casuales. 
@@ -144,7 +144,7 @@ Microtransacciones (esto se explicará en Monetización)
 La razón a ganar en cada partida dependerá de: si has vencido a tu oponente o no, y cuántas cartas del tablero están en tu poder al acabar ésta.
 
 <b>Monetización: </b>
-Nuestro proyecto es FreeToPlay, pero con microtransacciones que son las que derivarán los beneficios del mismo.
+Nuestro proyecto es <b>FreeToPlay</b>, pero con microtransacciones que son las que derivarán los beneficios del mismo.
 Es importante recalcar que no es un P2W (PayToWin), ya que será posible jugar con total normalidad tanto si se han realizado o no compras internas del juego, es decir, no brindará ninguna ventaja sobre el resto de usuarios. Tomamos esta decisión debido al rechazo general en la comunidad Gamer a este tipo de videojuegos.
 Entonces, ¿qué beneficio obtengo si hago una compra? La diferencia está en que habrá mazos con cartas predeterminadas, a las que todos los jugadores tendrán acceso. Pero existirán las cartas exclusivas (que como indicábamos antes, no más poderosas pero sí con personajes nuevos) que solamente serán accesibles mediante pago. Con eso, nuestro objetivo es promover el coleccionismo, que es el sector al que queremos orientar el producto:
 Si una persona quiere completar la colección, deberá pagar para ello. Pero se podrá jugar indiferentemente si quiere evitar los pagos.
@@ -159,7 +159,10 @@ Se realizarán mediante pago con tarjeta de crédito o de débito y siempre a tr
 
 <b>Hosting (Alojamiento del proyecto): </b> 
 El proyecto estará alojado en Github en el siguiente enlace https://github.com/RodillosGamingStudio/Triskel
-Asimismo estará disponible para su ejecución en *itch.io* https://rodillos-gaming.itch.io/triskel y en Facebook Instant Games (solo puede verse desde una cuenta de *Developer*).
+
+Asimismo estará disponible para su ejecución en *itch.io* https://rodillos-gaming.itch.io/triskel 
+
+y en Facebook Instant Games (solo puede verse desde una cuenta de *Developer*).
 
 # 4. CONTACTO
 <b>Contacto y Redes Sociales: </b>
