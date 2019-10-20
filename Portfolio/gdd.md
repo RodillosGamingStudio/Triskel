@@ -32,9 +32,9 @@ Al inicio del juego, se mostrará una pantalla de carga con una breve historia s
 			Los dioses crearon al hombre, y ellos serán 
 			quienes los destruirán pero, ¿quién será el
 			responsable último de ello?
-		  Tal poder estará consagrado únicamente a 
-      Quienes demuestran tal capacidad destructiva.
-		  La batalla por el poder ha comenzado.”	
+		  	Tal poder estará consagrado únicamente a 
+      			Quienes demuestran tal capacidad destructiva.
+		  	La batalla por el poder ha comenzado.”	
 Como indica el relato, el mundo está llegando a su fin y en concreto la existencia del hombre. Pero, de entre todas las mitologías que existen, solo una de ellas tendrá el poder de destruir al último hombre vivo. Para ello, las divinidades y criaturas de las mitologías lucharán entre sí para demostrar su liderazgo.
 Aquí empezaría el juego, justo en el contexto de las batallas entre mitologías.
   
@@ -100,6 +100,7 @@ Entonces, ¿cómo abatir una carta de tipo Dios Primigenio? Esto se explica con 
 
 Los atributos se situarán cada uno en uno de los cuatro lados de la carta, de manera que solo afectarán a las cartas que sean adyacentes por dicho lado.
 Los atributos funcionan de la siguiente manera:
+<img alt="Triángulo de poderes" src="imgs/triangulopoderes.png" width="400">
 
 <b>Cartas exclusivas: </b>
 Serán cartas de cualquier tipo (Dioses Primigenios, Dioses, Héroes o Criaturas) que solamente podrán añadirse a la colección del jugador, para su uso en las partidas, mediante compra interna con la moneda del juego. Esto se explica en Sistema de Banca y Monetización.
