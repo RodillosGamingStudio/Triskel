@@ -121,7 +121,8 @@ Las reglas se podrán ampliar próximamente con mecánicas como cartas con habil
 …………….
 
 <b>Herramientas de desarrollo: </b>
-Para el desarrollo se usará el motor de videojuegos Phaser v3.0.0 (https://phaser.io "Phaser")
+Para el desarrollo se usará el motor de videojuegos Phaser v3.0.0 
+(https://phaser.io "Phaser")
 El Departamento de Arte utilizará Photoshop CC 19.
 El Departamento de Programación usará el editor de código Visual Code Studio.
 El equipo entero alojará el proyecto en una cuenta de GitHub, y el editor de texto Microsoft Word, y servicios de mensajería (como WhatsApp y Correo Electrónico) para el contacto entre los miembros del equipo.
