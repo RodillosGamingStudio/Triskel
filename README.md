@@ -49,7 +49,7 @@ Aquí empezaría el juego, justo en el contexto de las batallas entre mitología
 <b>Pantallas: </b>
 
 Menú principal, opciones, pantalla de juego, gameover y leaderboard.
-<img alt="States" src="Portifolio/img/states.png" width="400">
+<img alt="States" src="Portfolio/img/states.png" width="400">
 
 <b>Modos de juego: </b>
 
@@ -85,7 +85,7 @@ Estos atributos pueden repetirse o no (es decir, podemos tener 1 unidad de cada 
 <b>Botones: </b>
 Los botones utilizan una tipografía de Google de Ancient Greek superpuesto en botones de madera. El listado de botones según el estado es el siguiente:
 
-<img alt="Botones" src="Portifolio/img/botones.png" width="400">
+<img alt="Botones" src="Portfolio/img/botones.png" width="400">
 
 <b>Tablero de juego: </b>
 El tablero, dependiendo del modo de juego, podrá ser de 4x4 (16 casillas) en el caso de modo clásico, o de 3x3 (9 casillas) en el modo rápido.
@@ -122,7 +122,7 @@ Entonces, ¿cómo abatir una carta de tipo Dios Primigenio? Esto se explica con 
 
 Los atributos se situarán cada uno en uno de los cuatro lados de la carta, de manera que solo afectarán a las cartas que sean adyacentes por dicho lado.
 Los atributos funcionan de la siguiente manera:
-<img alt="Triángulo de poderes" src="Portifolio/img/triangulopoderes.png" width="400">
+<img alt="Triángulo de poderes" src="Portfolio/img/triangulopoderes.png" width="400">
 
 <b>Cartas exclusivas: </b>
 
