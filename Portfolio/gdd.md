@@ -150,10 +150,10 @@ Es importante recalcar que no es un P2W (PayToWin), ya que será posible jugar c
 Entonces, ¿qué beneficio obtengo si hago una compra? La diferencia está en que habrá mazos con cartas predeterminadas, a las que todos los jugadores tendrán acceso. Pero existirán las cartas exclusivas (que como indicábamos antes, no más poderosas pero sí con personajes nuevos) que solamente serán accesibles mediante pago. Con eso, nuestro objetivo es promover el coleccionismo, que es el sector al que queremos orientar el producto:
 Si una persona quiere completar la colección, deberá pagar para ello. Pero se podrá jugar indiferentemente si quiere evitar los pagos.
 Las microtransacciones para obtener las monedas son las siguientes:
-100 monedas 🡪 0.99 €
-600 monedas 🡪 4.99 €
-1500 monedas 🡪 9.99 €
-3000 monedas 🡪 19.99 €
++ 100 monedas 🡪 0.99 €
++ 600 monedas 🡪 4.99 €
++ 1500 monedas 🡪 9.99 €
++ 3000 monedas 🡪 19.99 €
 Nota: las monedas no podrán ser compradas en otras cantidades.
 Se realizarán mediante pago con tarjeta de crédito o de débito y siempre a través de la aplicación.
 
