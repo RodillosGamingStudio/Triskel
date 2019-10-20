@@ -97,6 +97,10 @@ Nórdico: Asgard
 
 <b>Calidad de las cartas: </b>
 
+En un principio todas las cartas serán igual de poderosas, pero a medida que avance el juego a lo largo del tiempo se inculirán cambios a las mecánicas generales para matener al público interesado.
+
+Ideas para el futuro:
+
 Dentro de cada mazo tendremos 3 tipos diferentes de cartas que, de mayor a menor calidad serán:
 + Dioses Primigenios
 + Dioses
@@ -128,8 +132,8 @@ Serán cartas de cualquier tipo (Dioses Primigenios, Dioses, Héroes o Criaturas
 
 Durante cada turno, el jugador podrá usar 1 carta. Si sus atributos ganan a los de alguna de las cartas adyacentes (y estas pertenecen al rival) el jugador tomará el control sobre ellas. Además, si dichas cartas a su vez ganan contra alguna otra de las del rival (y no han sido ganadas por debilidad), se seguirá tomando el control sobre ellas hasta que se llegue a una que no gane a ninguna.
 Es decir, durante cada turno solo se toman en cuenta los atributos de la carta jugada que ganan a sus <b>adyacentes</b>, así como los de las cartas ganadas al rival en dicho turno.
-Las partidas serán mejor de 3, dándose por terminadas cuando un jugador reúna 2 victorias.
-También estará disponible el botón de rendición, que supondrá la retirada de la partida y la victoria inminente del contrincante.
+Al finalizar las partidas se tiene la posibilidad de revancha o la vuelta al menú principal.
+También estará disponible el botón de vuelta al menú en mitad de la partida.
 Las reglas se podrán ampliar próximamente con mecánicas como cartas con habilidades o habilidades específicas de cada mitología.
 
 <b>Fondos de tablero exclusivos: </b>
@@ -147,19 +151,17 @@ El Departamento de Programación usará el editor de código *Visual Code Studio
 El equipo entero alojará el proyecto en una cuenta de *GitHub*, y el editor de texto *Microsoft Word*, y servicios de mensajería (como *WhatsApp*, Correo Electrónico y *Discord*) para el contacto entre los miembros del equipo.
 Para la edición de diagramas se ha usado la herramienta online *Draw.io*
 
-<b>Sistema de banca del juego: </b>
-
-El sistema de banca se basa en monedas virtuales que podremos obtener de dos formas:
-Ganando partidas
-Microtransacciones (esto se explicará en Monetización)
-Éstas se irán sumando a la cuenta del usuario y luego las podrá canjear por las cartas exclusivas.
-La razón a ganar en cada partida dependerá de: si has vencido a tu oponente o no, y cuántas cartas del tablero están en tu poder al acabar ésta.
-
 <b>Monetización: </b>
 
-Nuestro proyecto es <b>FreeToPlay</b>, pero con microtransacciones que son las que derivarán los beneficios del mismo.
-Es importante recalcar que no es un P2W (PayToWin), ya que será posible jugar con total normalidad tanto si se han realizado o no compras internas del juego, es decir, no brindará ninguna ventaja sobre el resto de usuarios. Tomamos esta decisión debido al rechazo general en la comunidad Gamer a este tipo de videojuegos.
-Entonces, ¿qué beneficio obtengo si hago una compra? La diferencia está en que habrá mazos con cartas predeterminadas, a las que todos los jugadores tendrán acceso. Pero existirán las cartas exclusivas (que como indicábamos antes, no más poderosas pero sí con personajes nuevos) que solamente serán accesibles mediante pago. Con eso, nuestro objetivo es promover el coleccionismo, que es el sector al que queremos orientar el producto:
+Nuestro proyecto comenzará como un <b>FreeToPlay</b>, pero se aceptarán donaciones en las fases tempranas para poder continuar con el desarrollo del proyecto. En un futuro, y cuando se implementen más mecánicas y mejoras en el juego, se introducirá un sistema de microtransacciones como se explica en el apartado del futuro de nuestro videojuego.
+
+<b>Futuro de Triskel: </b>
+
+Como proyecto a largo plazo (unos 2 años), la idea de Rodillo´s Gaming es trasladar el concepto de Triskel a tablero de mesa. En esta versión del juego, se agrandará el número de jugadores por partida, entre 2 y 4, de forma que cada uno use una de las barajas mitológicas. En dicho caso, se añadiría la mitología Romana.
+
+Aunque nuestro proyecto es <b>FreeToPlay</b>, se incorporará un sistema de microtransacciones que son las que derivarán los beneficios del mismo.
+Es importante recalcar que no será un P2W (PayToWin), ya que será posible jugar con total normalidad tanto si se han realizado o no compras internas del juego, es decir, no brindará ninguna ventaja sobre el resto de usuarios. Tomamos esta decisión debido al rechazo general en la comunidad Gamer a este tipo de videojuegos.
+Entonces, ¿qué beneficio obtendré si hago una compra? La diferencia está en que habrá mazos con cartas predeterminadas, a las que todos los jugadores tendrán acceso. Pero existirán las cartas exclusivas (que como indicábamos antes, no más poderosas pero sí con personajes nuevos) que solamente serán accesibles mediante pago. Con eso, nuestro objetivo es promover el coleccionismo, que es el sector al que queremos orientar el producto:
 Si una persona quiere completar la colección, deberá pagar para ello. Pero se podrá jugar indiferentemente si quiere evitar los pagos.
 Las microtransacciones para obtener las monedas son las siguientes:
 + 100 monedas 🡪 0.99 €
@@ -170,9 +172,11 @@ Las microtransacciones para obtener las monedas son las siguientes:
 Nota: las monedas no podrán ser compradas en otras cantidades.
 Se realizarán mediante pago con tarjeta de crédito o de débito y siempre a través de la aplicación.
 
-<b>Futuro de Triskel: </b>
-
-Como proyecto a largo plazo (unos 2 años), la idea de Rodillo´s Gaming es trasladar el concepto de Triskel a tablero de mesa. En esta versión del juego, se agrandará el número de jugadores por partida, entre 2 y 4, de forma que cada uno use una de las barajas mitológicas. En dicho caso, se añadiría la mitología Romana.
+El sistema de banca se basará en monedas virtuales que podremos obtener de dos formas:
+Ganando partidas
+Microtransacciones (explicado anteriormente)
+Éstas se irán sumando a la cuenta del usuario y luego las podrá canjear por las cartas exclusivas.
+La razón a ganar en cada partida dependerá de: si has vencido a tu oponente o no, y cuántas cartas del tablero están en tu poder al acabar ésta.
 
 <b>Hosting (Alojamiento del proyecto): </b> 
 
