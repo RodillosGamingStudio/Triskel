@@ -1,90 +1,204 @@
-# Welcome to GitHub
+# *Rodillo´s Gaming Studio*
 
-Welcome to GitHub—where millions of developers work together on software. Ready to get started? Let’s learn how this all works by building and publishing your first GitHub Pages website!
+# GAME DESIGN DOCUMENT DE TRISKEL
 
-## Repositories
+# 1. INTRODUCCIÓN 
 
-Right now, we’re in your first GitHub **repository**. A repository is like a folder or storage space for your project. Your project's repository contains all its files such as code, documentation, images, and more. It also tracks every change that you—or your collaborators—make to each file, so you can always go back to previous versions of your project if you make any mistakes.
+<b>Equipo de Desarrollo: </b>
 
-This repository contains three important files: The HTML code for your first website on GitHub, the CSS stylesheet that decorates your website with colors and fonts, and the **README** file. It also contains an image folder, with one image file.
+Nuestro equipo de desarrollo, Rodillo´s Games, está compuesto por los siguientes integrantes:
++ Departamento de <b>Programación</b>: Andrés y Manuel.
++ Departamento de <b>Diseño</b>: Javier y Laura.
++ Departamento de <b>Arte</b>: Daniel.
 
-## Describe your project
+<b>Descripción: </b>
 
-You are currently viewing your project's **README** file. **_README_** files are like cover pages or elevator pitches for your project. They are written in plain text or [Markdown language](https://guides.github.com/features/mastering-markdown/), and usually include a paragraph describing the project, directions on how to use it, who authored it, and more.
+Juego de cartas multijugador englobado en el género de estrategia basado en turnos de 30 segundos (para dos jugadores). Cada jugador dispondrá de un mazo de 8 cartas, las cuales podrá escoger entre una baraja de 12 (número ampliable, se explica en <b>Monetización</b>).
+Los mazos de cartas se corresponden con mitologías antiguas, conteniendo dioses y seres fantásticos relativos a cada una de ellas. Las mitologías contempladas son: <b>Griega</b>, <b>Egipcia</b> y <b>Nórdica</b>.
 
-[Learn more about READMEs](https://help.github.com/en/articles/about-readmes)
+<b>Objetivo: </b>
 
-## Your first website
+El fin último de nuestro producto es <b>entretener</b>. Nos hemos decantado por juegos de cartas porque, en su mayoría, tienen jugadores experimentados y apenas casuales. 
+Además, en este segmento de mercado son aficionados al <b>coleccionismo</b> e invierten dinero en ello, caso que se da en nuestro videojuego con la compra de cartas al estilo “Hazte con todos” de la serie Pokemon. 
+Asimismo, atraerá a personas interesadas en mitologías antiguas, que es un tema muy recurrente en la actualidad (por ejemplo, mediante la serie Vikingos, la gente se ha interesado por la cultura nórdica)
+Por lo tanto, es juego orientado a atraer a una comunidad de jugadores que, en principio, jueguen de forma indefinida.
 
-**GitHub Pages** is a free and easy way to create a website using the code that lives in your GitHub repositories. You can use GitHub Pages to build a portfolio of your work, create a personal website, or share a fun project that you coded with the world. GitHub Pages is automatically enabled in this repository, but when you create new repositories in the future, the steps to launch a GitHub Pages website will be slightly different.
+<b>Plataformas y Regiones: </b>
 
-[Learn more about GitHub Pages](https://pages.github.com/)
+PC y móvil.
+Usando un navegador como intermediario.
+  
+<b>Background literario (Contexto argumental): </b>
 
-## Rename this repository to publish your site
+Al inicio del juego, se mostrará una <b>pantalla de carga</b> con una breve historia sobre la razón de ser videojuego. Es la siguiente:
+			
+			"En el fin de los tiempos, los dioses del hombre
+			chocan y toda la tierra se ve arrastrada a una 
+ 			última contienda: la Guerra Sacra.
+			Los dioses crearon al hombre, y ellos serán 
+			quienes los destruirán pero, ¿quién será el
+			responsable último de ello?
+		  	Tal poder estará consagrado únicamente a 
+      		quienes demuestran tal capacidad destructiva.
+		  	La batalla por el poder ha comenzado."
+Como indica el relato, el mundo está llegando a su fin y en concreto la existencia del hombre. Pero, de entre todas las mitologías que existen, solo una de ellas tendrá el poder de destruir al último hombre vivo. Para ello, las divinidades y criaturas de las mitologías lucharán entre sí para demostrar su liderazgo.
+Aquí empezaría el juego, justo en el contexto de las batallas entre mitologías.
+  
 
-We've already set-up a GitHub Pages website for you, based on your personal username. This repository is called `hello-world`, but you'll rename it to: `username.github.io`, to match your website's URL address. If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.
+# 2. ESTRUCTURA DEL JUEGO
+<b>Pantallas: </b>
 
-Let's get started! To update this repository’s name, click the `Settings` tab on this page. This will take you to your repository’s settings page. 
+Menú principal, opciones, pantalla de juego, gameover y leaderboard.
+<img alt="States" src="img/states.png" width="400">
 
-![repo-settings-image](https://user-images.githubusercontent.com/18093541/63130482-99e6ad80-bf88-11e9-99a1-d3cf1660b47e.png)
+<b>Modos de juego: </b>
 
-Under the **Repository Name** heading, type: `username.github.io`, where username is your username on GitHub. Then click **Rename**—and that’s it. When you’re done, click your repository name or browser’s back button to return to this page.
+Existirán 3 posibles modos de juego:
++ Clásico: el objetivo es terminar con el mayor número de cartas en tu poder. Si al poner una carta, le ganas a una adyacente y ésta pertenece al rival, dicha carta pasará a tu poder. Esta acción se encadena hasta llegar a una carta que no gane a ninguno (es decir, hacemos un combo). Sin embargo, si se gana a una carta por su lado de debilidad, el combo se detiene.
++ Fullcombo: el sistema es el mismo que en clásico, con la diferencia de que se omite el valor de debilidad, de forma que los combos no se detienen en tal caso.
++ Inverso: el sistema es igual que el clásico con la diferencia de que debes prestar más atención aún a dónde colocas tus cartas, pues será el rival quien pueda hacer combos contra ti.
 
-<img width="1039" alt="rename_screenshot" src="https://user-images.githubusercontent.com/18093541/63129466-956cc580-bf85-11e9-92d8-b028dd483fa5.png">
+<b>Controles mecánicos: </b>
 
-Once you click **Rename**, your website will automatically be published at: https://your-username.github.io/. The HTML file—called `index.html`—is rendered as the home page and you'll be making changes to this file in the next step.
+Los controles, en el caso del PC, se resumen al uso del puntero (hacer click en botones y cartas, y arrastrar en barras).
+En el caso del móvil, se interactúa con la pantalla táctil a modo de imitación del puntero del ordenador.
 
-Congratulations! You just launched your first GitHub Pages website. It's now live to share with the entire world
+<b>Puntuación: </b>
 
-## Making your first edit
+La puntuación se calculará por separado para jugador, y consistirá en la suma de cartas que queden en su poder al finalizar la partida.
 
-When you make any change to any file in your project, you’re making a **commit**. If you fix a typo, update a filename, or edit your code, you can add it to GitHub as a commit. Your commits represent your project’s entire history—and they’re all saved in your project’s repository.
+<b>Revancha: </b>
 
-With each commit, you have the opportunity to write a **commit message**, a short, meaningful comment describing the change you’re making to a file. So you always know exactly what changed, no matter when you return to a commit.
+Inicia de nuevo el juego con los valores predeterminados escogidos en la partida anterior (modo de juego y barajas asociadas al jugador).
 
-## Practice: Customize your first GitHub website by writing HTML code
+<b>Mecánicas de juego: </b>
 
-Want to edit the site you just published? Let’s practice commits by introducing yourself in your `index.html` file. Don’t worry about getting it right the first time—you can always build on your introduction later.
+La mecánica se basa en el juego "Piedra, papel, tijera". Es decir, habrá 3 atributos diferentes que podrá ganar o perder frente al resto de ellos. En nuestro caso, los atributos serán:
+- Sagrado
+- Terrenal
+- Oscuro
+Además de dos atributos extra:
+- Debilidad
+- Resistencia
+Estos atributos pueden repetirse o no (es decir, podemos tener 1 unidad de cada tipo de atributo o tener los 4 atributos del mismo tipo.
 
-Let’s start with this template:
+<b>Botones: </b>
+Los botones utilizan una tipografía de Google de Ancient Greek superpuesto en botones de madera. El listado de botones según el estado es el siguiente:
 
-```
-<p>Hello World! I’m [username]. This is my website!</p>
-```
+<img alt="Botones" src="img/botones.png" width="400">
 
-To add your introduction, copy our template and click the edit pencil icon at the top right hand corner of the `index.html` file.
+<b>Tablero de juego: </b>
+El tablero, dependiendo del modo de juego, podrá ser de 4x4 (16 casillas) en el caso de modo clásico, o de 3x3 (9 casillas) en el modo rápido.
+Dispone de casillas del tamaño de las cartas que será donde los jugadores irán colocando sus cartas. 
+Al fondo del tablero se podrá ver una imagen escogida de forma aleatoria de un banco que contiene una imagen temática por cada mitología:
+Griega: el Olimpo
+Egipcio: desierto con pirámides
+Nórdico: Asgard
 
-<img width="997" alt="edit-this-file" src="https://user-images.githubusercontent.com/18093541/63131820-0794d880-bf8d-11e9-8b3d-c096355e9389.png">
+<b>Calidad de las cartas: </b>
+
+En un principio todas las cartas serán igual de poderosas, pero a medida que avance el juego a lo largo del tiempo se inculirán cambios a las mecánicas generales para matener al público interesado.
+
+Ideas para el futuro:
+
+Dentro de cada mazo tendremos 3 tipos diferentes de cartas que, de mayor a menor calidad serán:
++ Dioses Primigenios
++ Dioses
++ Héroes
++ Criaturas 
+Dios primigenio > Dios > Héroe > Criatura
+
+La superioridad o inferioridad de una calidad de carta frente a otro se ve reflejada en este caso:
+Si hay una carta de peor calidad con un atributo que gana frente al de una carta de mayor calidad, no ganará puesto que <b>la calidad de carta tiene prioridad</b> respecto a los poderes de los atributos.
+Calidad de carta > poder de atributos
+
+<b>Atributos de las cartas: </b>
+
+Cada una de las cartas tendrá cuatro atributos obligatorios, que pueden o no repetirse (es decir, puede que alguna carta no tenga algún atributo concreto).
+Hay tres tipos de atributos básicos (Sagrado, Terrenal u Oscuro) y uno neutral (que puede tomar dos valores: Resistencia o Debilidad).
+
+En el caso de los atributos neutrales, las cartas de tipo Dios Primigenio se salvan: solo las cartas de tipo Dios, Héroe o Criatura pueden tener atributos neutrales.
+Entonces, ¿cómo abatir una carta de tipo Dios Primigenio? Esto se explica con detalle en <b>Combos</b>.
+
+Los atributos se situarán cada uno en uno de los cuatro lados de la carta, de manera que solo afectarán a las cartas que sean adyacentes por dicho lado.
+Los atributos funcionan de la siguiente manera:
+<img alt="Triángulo de poderes" src="img/triangulopoderes.png" width="400">
+
+<b>Cartas exclusivas: </b>
+
+Serán cartas de cualquier tipo (Dioses Primigenios, Dioses, Héroes o Criaturas) que solamente podrán añadirse a la colección del jugador, para su uso en las partidas, mediante compra interna con la moneda del juego. Esto se explica en Sistema de Banca y Monetización.
+
+<b>Turnos: </b>
+
+Durante cada turno, el jugador podrá usar 1 carta. Si sus atributos ganan a los de alguna de las cartas adyacentes (y estas pertenecen al rival) el jugador tomará el control sobre ellas. Además, si dichas cartas a su vez ganan contra alguna otra de las del rival (y no han sido ganadas por debilidad), se seguirá tomando el control sobre ellas hasta que se llegue a una que no gane a ninguna.
+Es decir, durante cada turno solo se toman en cuenta los atributos de la carta jugada que ganan a sus <b>adyacentes</b>, así como los de las cartas ganadas al rival en dicho turno.
+Al finalizar las partidas se tiene la posibilidad de revancha o la vuelta al menú principal.
+También estará disponible el botón de vuelta al menú en mitad de la partida.
+Las reglas se podrán ampliar próximamente con mecánicas como cartas con habilidades o habilidades específicas de cada mitología.
+
+<b>Fondos de tablero exclusivos: </b>
+
+Cada una de las mitologías dispondrá de un fondo temático exclusivo. No afectan a la jugabilidad y son un mero adorno visual para el videojuego. 
 
 
-Delete this placeholder line:
+# 3. LOGÍSTICA
+<b>Herramientas de desarrollo: </b>
 
-```
-<p>Welcome to your first GitHub Pages website!</p>
-```
+Para el desarrollo se usará el motor de videojuegos *Phaser v3.20.1*
+(https://phaser.io)
+El Departamento de Arte y Diseño usará *Photoshop CC 19*.
+El Departamento de Programación usará el editor de código *Visual Code Studio*.
+El equipo entero alojará el proyecto en una cuenta de *GitHub*, y el editor de texto *Microsoft Word*, y servicios de mensajería (como *WhatsApp*, Correo Electrónico y *Discord*) para el contacto entre los miembros del equipo.
+Para la edición de diagramas se ha usado la herramienta online *Draw.io*
 
-Then, paste the template to line 15 and fill in the blanks.
+<b>Monetización: </b>
 
-<img width="1032" alt="edit-githuboctocat-index" src="https://user-images.githubusercontent.com/18093541/63132339-c3a2d300-bf8e-11e9-8222-59c2702f6c42.png">
+Nuestro proyecto comenzará como un <b>FreeToPlay</b>, pero se aceptarán donaciones en las fases tempranas para poder continuar con el desarrollo del proyecto. En un futuro, y cuando se implementen más mecánicas y mejoras en el juego, se introducirá un sistema de microtransacciones como se explica en el apartado del futuro de nuestro videojuego.
 
+<b>Futuro de Triskel: </b>
 
-When you’re done, scroll down to the `Commit changes` section near the bottom of the edit page. Add a short message explaining your change, like "Add my introduction", then click `Commit changes`.
+Como proyecto a largo plazo (unos 2 años), la idea de Rodillo´s Gaming es trasladar el concepto de Triskel a tablero de mesa. En esta versión del juego, se agrandará el número de jugadores por partida, entre 2 y 4, de forma que cada uno use una de las barajas mitológicas. En dicho caso, se añadiría la mitología Romana.
 
+Aunque nuestro proyecto es <b>FreeToPlay</b>, se incorporará un sistema de microtransacciones que son las que derivarán los beneficios del mismo.
+Es importante recalcar que no será un P2W (PayToWin), ya que será posible jugar con total normalidad tanto si se han realizado o no compras internas del juego, es decir, no brindará ninguna ventaja sobre el resto de usuarios. Tomamos esta decisión debido al rechazo general en la comunidad Gamer a este tipo de videojuegos.
+Entonces, ¿qué beneficio obtendré si hago una compra? La diferencia está en que habrá mazos con cartas predeterminadas, a las que todos los jugadores tendrán acceso. Pero existirán las cartas exclusivas (que como indicábamos antes, no más poderosas pero sí con personajes nuevos) que solamente serán accesibles mediante pago. Con eso, nuestro objetivo es promover el coleccionismo, que es el sector al que queremos orientar el producto:
+Si una persona quiere completar la colección, deberá pagar para ello. Pero se podrá jugar indiferentemente si quiere evitar los pagos.
+Las microtransacciones para obtener las monedas son las siguientes:
++ 100 monedas 🡪 0.99 €
++ 600 monedas 🡪 4.99 €
++ 1500 monedas 🡪 9.99 €
++ 3000 monedas 🡪 19.99 €
 
-<img width="1030" alt="add-my-username" src="https://user-images.githubusercontent.com/18093541/63131801-efbd5480-bf8c-11e9-9806-89273f027d16.png">
+Nota: las monedas no podrán ser compradas en otras cantidades.
+Se realizarán mediante pago con tarjeta de crédito o de débito y siempre a través de la aplicación.
 
-Once you click `Commit changes`, your changes will automatically be published on your GitHub Pages website. Refresh the page to see your new changes live in action.
+El sistema de banca se basará en monedas virtuales que podremos obtener de dos formas:
+Ganando partidas
+Microtransacciones (explicado anteriormente)
+Éstas se irán sumando a la cuenta del usuario y luego las podrá canjear por las cartas exclusivas.
+La razón a ganar en cada partida dependerá de: si has vencido a tu oponente o no, y cuántas cartas del tablero están en tu poder al acabar ésta.
 
-:tada: You just made your first commit! :tada:
+<b>Hosting (Alojamiento del proyecto): </b> 
 
-## Extra Credit: Keep on building!
+El proyecto estará alojado en Github en el siguiente enlace https://github.com/RodillosGamingStudio/Triskel
 
-Change the placeholder Octocat gif on your GitHub Pages website by [creating your own personal Octocat emoji](https://myoctocat.com/build-your-octocat/) or [choose a different Octocat gif from our logo library here](https://octodex.github.com/). Add that image to line 12 of your `index.html` file, in place of the `<img src=` link.
+Asimismo estará disponible para su ejecución en *itch.io* https://rodillos-gaming.itch.io/triskel 
 
-Want to add even more code and fun styles to your GitHub Pages website? [Follow these instructions](https://github.com/github/personal-website) to build a fully-fledged static website.
+y en Facebook Instant Games (solo puede verse desde una cuenta de *Developer*).
 
-![octocat](./images/create-octocat.png)
+# 4. CONTACTO
+<b>Contacto y Redes Sociales: </b>
 
-## Everything you need to know about GitHub
+Facebook: Rodillo´s Gaming
+facebook.com/rodillos.gaming.9
 
-Getting started is the hardest part. If there’s anything you’d like to know as you get started with GitHub, try searching [GitHub Help](https://help.github.com). Our documentation has tutorials on everything from changing your repository settings to configuring GitHub from your command line.
+Twitter: @RodillosGaming  
+twitter.com/RodillosGaming
+
+itch.io: Rodillos Gaming
+rodillos-gaming.itch.io/
+
+Youtube: Rodillos Gaming
+youtube.com/channel/UCUaR00AHGi0U2Z7mT9jfVfw
+
+email: rodillosgaming@gmail.com
