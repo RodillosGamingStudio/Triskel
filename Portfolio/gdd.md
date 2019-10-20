@@ -6,7 +6,7 @@
 Título
 : Game Design Document - *Triskel*
 
-<b>Equipo de Desarrollo</b>
+<b>Equipo de Desarrollo</b><\n>
 Nuestro equipo de desarrollo, Rodillo´s Games, está compuesto por los siguientes integrantes:
 + Departamento de Programación: Andrés y Manuel.
 + Departamento de Diseño: Javier y Laura.
