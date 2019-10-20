@@ -66,7 +66,7 @@ class preload extends Phaser.Scene {
 
 
 
-/*
+
         var progressBar = this.add.graphics();
         var progressBox = this.add.graphics();
         progressBox.fillStyle(0x222222, 0.8);
@@ -125,7 +125,7 @@ class preload extends Phaser.Scene {
             loadingText.destroy();
             percentText.destroy();
             assetText.destroy();
-        });*/
+        });
 
     }
     create() {
