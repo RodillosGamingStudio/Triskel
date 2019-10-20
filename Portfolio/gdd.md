@@ -84,18 +84,18 @@ Dentro de cada mazo tendremos 3 tipos diferentes de cartas que, de mayor a menor
 + Dioses
 + Héroes
 + Criaturas 
-| Dios primigenio > Dios > Héroe > Criatura |
+Dios primigenio > Dios > Héroe > Criatura
 
 La superioridad o inferioridad de una calidad de carta frente a otro se ve reflejada en este caso:
 Si hay una carta de peor calidad con un atributo que gana frente al de una carta de mayor calidad, no ganará puesto que <b>la calidad de carta tiene prioridad</b> respecto a los poderes de los atributos.
-   | Calidad de carta > poder de atributos |
+Calidad de carta > poder de atributos
 
 <b>Atributos de las cartas: </b>
 Cada una de las cartas tendrá cuatro atributos obligatorios, que pueden o no repetirse (es decir, puede que alguna carta no tenga algún atributo concreto).
 Hay tres tipos de atributos básicos (Sagrado, Terrenal u Oscuro) y uno neutral (que puede tomar dos valores: Resistencia o Debilidad).
 
 En el caso de los atributos neutrales, las cartas de tipo Dios Primigenio se salvan: solo las cartas de tipo Dios, Héroe o Criatura pueden tener atributos neutrales.
-Entonces, ¿cómo abatir una carta de tipo Dios Primigenio? Esto se explica con detalle en Combos.
+Entonces, ¿cómo abatir una carta de tipo Dios Primigenio? Esto se explica con detalle en <b>Combos</b>.
 
 Los atributos se situarán cada uno en uno de los cuatro lados de la carta, de manera que solo afectarán a las cartas que sean adyacentes por dicho lado.
 Los atributos funcionan de la siguiente manera:
@@ -106,13 +106,13 @@ Serán cartas de cualquier tipo (Dioses Primigenios, Dioses, Héroes o Criaturas
 
 <b>Turnos: </b>
 Durante cada turno, el jugador podrá usar 1 carta. Si sus atributos ganan a los de alguna de las cartas adyacentes (y estas pertenecen al rival) el jugador tomará el control sobre ellas. Además, si dichas cartas a su vez ganan contra alguna otra de las del rival (y no han sido ganadas por debilidad), se seguirá tomando el control sobre ellas hasta que se llegue a una que no gane a ninguna.
-Es decir, durante cada turno solo se toman en cuenta los atributos de la carta jugada que ganan a sus adyacentes, así como los de las cartas ganadas al rival en dicho turno.
+Es decir, durante cada turno solo se toman en cuenta los atributos de la carta jugada que ganan a sus <b>adyacentes</b>, así como los de las cartas ganadas al rival en dicho turno.
 Las partidas serán mejor de 3, dándose por terminadas cuando un jugador reúna 2 victorias.
 También estará disponible el botón de rendición, que supondrá la retirada de la partida y la victoria inminente del contrincante.
 Las reglas se podrán ampliar próximamente con mecánicas como cartas con habilidades o habilidades específicas de cada mitología.
 
 <b>Fondos de tablero exclusivos: </b>
-………..
+Cada una de las mitologías dispondrá de un fondo temático exclusivo. No afectan a la jugabilidad y son un mero adorno visual para el videojuego. 
 
 
 # 3. LOGÍSTICA
@@ -126,15 +126,6 @@ El Departamento de Arte y Diseño usará *Photoshop CC 19*.
 El Departamento de Programación usará el editor de código *Visual Code Studio*.
 El equipo entero alojará el proyecto en una cuenta de *GitHub*, y el editor de texto *Microsoft Word*, y servicios de mensajería (como *WhatsApp*, Correo Electrónico y *Discord*) para el contacto entre los miembros del equipo.
 Para la edición de diagramas se ha usado la herramienta online *Draw.io*
-
-<b>Estudio de mercado: </b>
-……………
-
-<b>Estimación de costes: </b>
-……………..
-
-<b>Distribución y Ventas: </b>
-…………….
 
 <b>Sistema de banca del juego: </b>
 El sistema de banca se basa en monedas virtuales que podremos obtener de dos formas:
@@ -156,6 +147,9 @@ Las microtransacciones para obtener las monedas son las siguientes:
 
 Nota: las monedas no podrán ser compradas en otras cantidades.
 Se realizarán mediante pago con tarjeta de crédito o de débito y siempre a través de la aplicación.
+
+<b>Futuro de Triskel: </b>
+Como proyecto a largo plazo (unos 2 años), la idea de Rodillo´s Gaming es trasladar el concepto de Triskel a tablero de mesa. En esta versión del juego, se agrandará el número de jugadores por partida, entre 2 y 4, de forma que cada uno use una de las barajas mitológicas. En dicho caso, se añadiría la mitología Romana.
 
 <b>Hosting (Alojamiento del proyecto): </b> 
 El proyecto estará alojado en Github en el siguiente enlace https://github.com/RodillosGamingStudio/Triskel
