@@ -56,7 +56,7 @@ Menú principal, opciones, pantalla de juego, gameover y leaderboard.
 Existirán 3 posibles modos de juego:
 + Clásico: el objetivo es terminar con el mayor número de cartas en tu poder. Si al poner una carta, le ganas a una adyacente y ésta pertenece al rival, dicha carta pasará a tu poder. Esta acción se encadena hasta llegar a una carta que no gane a ninguno (es decir, hacemos un combo). Sin embargo, si se gana a una carta por su lado de debilidad, el combo se detiene.
 + Fullcombo: el sistema es el mismo que en clásico, con la diferencia de que se omite el valor de debilidad, de forma que los combos no se detienen en tal caso.
-+ Inverso: 
++ Inverso: el sistema es igual que el clásico con la diferencia de que debes prestar más atención aún a dónde colocas tus cartas, pues será el rival quien pueda hacer combos contra ti.
 
 <b>Controles mecánicos: </b>
 
@@ -121,6 +121,7 @@ Los atributos funcionan de la siguiente manera:
 <img alt="Triángulo de poderes" src="img/triangulopoderes.png" width="400">
 
 <b>Cartas exclusivas: </b>
+
 Serán cartas de cualquier tipo (Dioses Primigenios, Dioses, Héroes o Criaturas) que solamente podrán añadirse a la colección del jugador, para su uso en las partidas, mediante compra interna con la moneda del juego. Esto se explica en Sistema de Banca y Monetización.
 
 <b>Turnos: </b>
