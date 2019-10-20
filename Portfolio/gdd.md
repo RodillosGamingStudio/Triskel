@@ -12,7 +12,7 @@ Nuestro equipo de desarrollo, Rodillo´s Games, está compuesto por los siguient
 
 <b>Descripción: </b>
 Juego de cartas multijugador englobado en el género de estrategia basado en turnos de 30 segundos (para dos jugadores). Cada jugador dispondrá de un mazo de 8 cartas, las cuales podrá escoger entre una baraja de 12 (número ampliable, se explica en <b>Monetización</b>).
-Los mazos de cartas se corresponden con mitologías antiguas, conteniendo dioses y seres fantásticos relativos a cada una de ellas. Las mitologías contempladas son: <b>Griega</b>, </b>Egipcia<b> y <b>Nórdica</b>.
+Los mazos de cartas se corresponden con mitologías antiguas, conteniendo dioses y seres fantásticos relativos a cada una de ellas. Las mitologías contempladas son: <b>Griega</b>, <b>Egipcia<b> y <b>Nórdica</b>.
 
 <b>Objetivo: </b>
 El fin último de nuestro producto es <b>entretener</b>. Nos hemos decantado por juegos de cartas porque, en su mayoría, tienen jugadores experimentados y apenas casuales. 
@@ -25,7 +25,7 @@ PC y móvil.
 Usando un navegador como intermediario.
   
 <b>Background literario (Contexto argumental): </b>
-Al inicio del juego, se mostrará una pantalla de carga con una breve historia sobre la razón de ser videojuego. Es la siguiente:
+Al inicio del juego, se mostrará una <b>pantalla de carga</b> con una breve historia sobre la razón de ser videojuego. Es la siguiente:
 			*“En el fin de los tiempos, los dioses del hombre
 			chocan y toda la tierra se ve arrastrada a una 
  			última contienda: la Guerra Sacra.
@@ -80,16 +80,15 @@ Nórdico: Asgard
 
 <b>Calidad de las cartas: </b>
 Dentro de cada mazo tendremos 3 tipos diferentes de cartas que, de mayor a menor calidad serán:
-Dioses Primigenios
-Dioses
-Héroes
-Criaturas 
-Dios primigenio > Dios > Héroe > Criatura
++ Dioses Primigenios
++ Dioses
++ Héroes
++ Criaturas 
+| Dios primigenio > Dios > Héroe > Criatura |
 
-La superioridad o inferioridad de una calidad de carta frente a otro se ve reflejada en dos casos:
-Si hay una carta de peor calidad con un atributo que gana frente al de una carta de mayor calidad, no ganará puesto que la calidad de carta tiene prioridad respecto a los poderes de los atributos.
-    Calidad de carta > poder de atributos 
-¿?
+La superioridad o inferioridad de una calidad de carta frente a otro se ve reflejada en este caso:
+Si hay una carta de peor calidad con un atributo que gana frente al de una carta de mayor calidad, no ganará puesto que <b>la calidad de carta tiene prioridad</b> respecto a los poderes de los atributos.
+   | Calidad de carta > poder de atributos |
 
 <b>Atributos de las cartas: </b>
 Cada una de las cartas tendrá cuatro atributos obligatorios, que pueden o no repetirse (es decir, puede que alguna carta no tenga algún atributo concreto).
