@@ -6,17 +6,17 @@
 
 <b>Equipo de Desarrollo: </b>
 Nuestro equipo de desarrollo, Rodillo´s Games, está compuesto por los siguientes integrantes:
-+ Departamento de Programación: Andrés y Manuel.
-+ Departamento de Diseño: Javier y Laura.
-+ Departamento de Arte: Daniel.
++ Departamento de <b>Programación</b>: Andrés y Manuel.
++ Departamento de <b>Diseño</b>: Javier y Laura.
++ Departamento de <b>Arte</b>: Daniel.
 
 <b>Descripción: </b>
-Juego de cartas multijugador englobado en el género de estrategia basado en turnos de 30 segundos (para dos jugadores). Cada jugador dispondrá de un mazo de 8 cartas, las cuales podrá escoger entre una baraja de 12 (número ampliable, se explica en Monetización).
-Los mazos de cartas se corresponden con mitologías antiguas, conteniendo dioses y seres fantásticos relativos a cada una de ellas. Las mitologías contempladas son: Griega, Egipcia y Nórdica.
+Juego de cartas multijugador englobado en el género de estrategia basado en turnos de 30 segundos (para dos jugadores). Cada jugador dispondrá de un mazo de 8 cartas, las cuales podrá escoger entre una baraja de 12 (número ampliable, se explica en <b>Monetización</b>).
+Los mazos de cartas se corresponden con mitologías antiguas, conteniendo dioses y seres fantásticos relativos a cada una de ellas. Las mitologías contempladas son: <b>Griega</b>, </b>Egipcia<b> y <b>Nórdica</b>.
 
 <b>Objetivo: </b>
-El fin último de nuestro producto es entretener. Nos hemos decantado por juegos de cartas porque, en su mayoría, tienen jugadores experimentados y apenas casuales. 
-Además, en este segmento de mercado son aficionados al coleccionismo e invierten dinero en ello, caso que se da en nuestro videojuego con la compra de cartas al estilo “Hazte con todos” de la serie Pokemon. 
+El fin último de nuestro producto es <b>entretener</b>. Nos hemos decantado por juegos de cartas porque, en su mayoría, tienen jugadores experimentados y apenas casuales. 
+Además, en este segmento de mercado son aficionados al <b>coleccionismo</b> e invierten dinero en ello, caso que se da en nuestro videojuego con la compra de cartas al estilo “Hazte con todos” de la serie Pokemon. 
 Asimismo, atraerá a personas interesadas en mitologías antiguas, que es un tema muy recurrente en la actualidad (por ejemplo, mediante la serie Vikingos, la gente se ha interesado por la cultura nórdica)
 Por lo tanto, es juego orientado a atraer a una comunidad de jugadores que, en principio, jueguen de forma indefinida.
 
@@ -26,7 +26,7 @@ Usando un navegador como intermediario.
   
 <b>Background literario (Contexto argumental): </b>
 Al inicio del juego, se mostrará una pantalla de carga con una breve historia sobre la razón de ser videojuego. Es la siguiente:
-			“En el fin de los tiempos, los dioses del hombre
+			*“En el fin de los tiempos, los dioses del hombre
 			chocan y toda la tierra se ve arrastrada a una 
  			última contienda: la Guerra Sacra.
 			Los dioses crearon al hombre, y ellos serán 
@@ -34,7 +34,7 @@ Al inicio del juego, se mostrará una pantalla de carga con una breve historia s
 			responsable último de ello?
 		  	Tal poder estará consagrado únicamente a 
       			Quienes demuestran tal capacidad destructiva.
-		  	La batalla por el poder ha comenzado.”	
+		  	La batalla por el poder ha comenzado.”*
 Como indica el relato, el mundo está llegando a su fin y en concreto la existencia del hombre. Pero, de entre todas las mitologías que existen, solo una de ellas tendrá el poder de destruir al último hombre vivo. Para ello, las divinidades y criaturas de las mitologías lucharán entre sí para demostrar su liderazgo.
 Aquí empezaría el juego, justo en el contexto de las batallas entre mitologías.
   
@@ -154,6 +154,7 @@ Las microtransacciones para obtener las monedas son las siguientes:
 + 600 monedas 🡪 4.99 €
 + 1500 monedas 🡪 9.99 €
 + 3000 monedas 🡪 19.99 €
+
 Nota: las monedas no podrán ser compradas en otras cantidades.
 Se realizarán mediante pago con tarjeta de crédito o de débito y siempre a través de la aplicación.
 
