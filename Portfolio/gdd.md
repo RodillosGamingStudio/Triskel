@@ -118,14 +118,15 @@ Las reglas se podrán ampliar próximamente con mecánicas como cartas con habil
 
 # 3. LOGÍSTICA
 <b>Planificación del proyecto: </b>
-…………….
+El proyecto ha sido desarrollado en un 
 
 <b>Herramientas de desarrollo: </b>
-Para el desarrollo se usará el motor de videojuegos Phaser v3.0.0 
-(https://phaser.io "Phaser")
-El Departamento de Arte utilizará Photoshop CC 19.
-El Departamento de Programación usará el editor de código Visual Code Studio.
-El equipo entero alojará el proyecto en una cuenta de GitHub, y el editor de texto Microsoft Word, y servicios de mensajería (como WhatsApp y Correo Electrónico) para el contacto entre los miembros del equipo.
+Para el desarrollo se usará el motor de videojuegos *Phaser v3.20.1*
+(https://phaser.io)
+El Departamento de Arte y Diseño usará *Photoshop CC 19*.
+El Departamento de Programación usará el editor de código *Visual Code Studio*.
+El equipo entero alojará el proyecto en una cuenta de *GitHub*, y el editor de texto *Microsoft Word*, y servicios de mensajería (como *WhatsApp*, Correo Electrónico y *Discord*) para el contacto entre los miembros del equipo.
+Para la edición de diagramas se ha usado la herramienta online *Draw.io*
 
 <b>Estudio de mercado: </b>
 ……………
@@ -157,6 +158,8 @@ Nota: las monedas no podrán ser compradas en otras cantidades.
 Se realizarán mediante pago con tarjeta de crédito o de débito y siempre a través de la aplicación.
 
 <b>Hosting (Alojamiento del proyecto): </b> 
+El proyecto estará alojado en Github en el siguiente enlace https://github.com/RodillosGamingStudio/Triskel
+Asimismo estará disponible para su ejecución en *itch.io* https://rodillos-gaming.itch.io/triskel y en Facebook Instant Games (solo puede verse desde una cuenta de *Developer*).
 
 # 4. CONTACTO
 <b>Contacto y Redes Sociales: </b>
@@ -173,14 +176,3 @@ Youtube: Rodillos Gaming
 youtube.com/channel/UCUaR00AHGi0U2Z7mT9jfVfw
 
 email: rodillosgaming@gmail.com
-
-# 5.
-# 6. 
-# 7. 
-
-
-<b>: <\b>
-
-
-
-
