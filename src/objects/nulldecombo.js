@@ -7,24 +7,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][0].owner == 0) {
                     celdas[1][0].owner = 0;
                     if (celdas[1][0].which == 1) {
-                        mano1[celdas[1][0].indice].setInteractive();
                         mano1[celdas[1][0].indice].clearTint();
-                        mano1[celdas[1][0].indice].removeInteractive();
                     } else if (celdas[1][0].which == 2) {
-                        mano2[celdas[1][0].indice].setInteractive();
                         mano2[celdas[1][0].indice].clearTint();
-                        mano2[celdas[1][0].indice].removeInteractive();
                     }
                 } else if (celdas[0][0].owner == 1) {
                     celdas[1][0].owner = 1;
                     if (celdas[1][0].which == 1) {
-                        mano1[celdas[1][0].indice].setInteractive();
                         mano1[celdas[1][0].indice].setTint(0xfc8987);
-                        mano1[celdas[1][0].indice].removeInteractive();
                     } else if (celdas[1][0].which == 2) {
-                        mano2[celdas[1][0].indice].setInteractive();
                         mano2[celdas[1][0].indice].setTint(0xfc8987);
-                        mano2[celdas[1][0].indice].removeInteractive();
                     }
                 }
                 if (celdas[1][0].oeste != "neutro") {
@@ -35,24 +27,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][0].owner == 0) {
                     celdas[1][0].owner = 0;
                     if (celdas[1][0].which == 1) {
-                        mano1[celdas[1][0].indice].setInteractive();
                         mano1[celdas[1][0].indice].clearTint();
-                        mano1[celdas[1][0].indice].removeInteractive();
                     } else if (celdas[1][0].which == 2) {
-                        mano2[celdas[1][0].indice].setInteractive();
                         mano2[celdas[1][0].indice].clearTint();
-                        mano2[celdas[1][0].indice].removeInteractive();
                     }
                 } else if (celdas[0][0].owner == 1) {
                     celdas[1][0].owner = 1;
                     if (celdas[1][0].which == 1) {
-                        mano1[celdas[1][0].indice].setInteractive();
                         mano1[celdas[1][0].indice].setTint(0xfc8987);
-                        mano1[celdas[1][0].indice].removeInteractive();
                     } else if (celdas[1][0].which == 2) {
-                        mano2[celdas[1][0].indice].setInteractive();
                         mano2[celdas[1][0].indice].setTint(0xfc8987);
-                        mano2[celdas[1][0].indice].removeInteractive();
                     }
                 }
                 if (celdas[1][0].oeste != "neutro") {
@@ -63,24 +47,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][0].owner == 0) {
                     celdas[1][0].owner = 0;
                     if (celdas[1][0].which == 1) {
-                        mano1[celdas[1][0].indice].setInteractive();
                         mano1[celdas[1][0].indice].clearTint();
-                        mano1[celdas[1][0].indice].removeInteractive();
                     } else if (celdas[1][0].which == 2) {
-                        mano2[celdas[1][0].indice].setInteractive();
                         mano2[celdas[1][0].indice].clearTint();
-                        mano2[celdas[1][0].indice].removeInteractive();
                     }
                 } else if (celdas[0][0].owner == 1) {
                     celdas[1][0].owner = 1;
                     if (celdas[1][0].which == 1) {
-                        mano1[celdas[1][0].indice].setInteractive();
                         mano1[celdas[1][0].indice].setTint(0xfc8987);
-                        mano1[celdas[1][0].indice].removeInteractive();
                     } else if (celdas[1][0].which == 2) {
-                        mano2[celdas[1][0].indice].setInteractive();
                         mano2[celdas[1][0].indice].setTint(0xfc8987);
-                        mano2[celdas[1][0].indice].removeInteractive();
                     }
                 }
                 if (celdas[1][0].oeste != "neutro") {
@@ -93,24 +69,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][0].owner == 0) {
                     celdas[0][1].owner = 0;
                     if (celdas[0][1].which == 1) {
-                        mano1[celdas[0][1].indice].setInteractive();
                         mano1[celdas[0][1].indice].clearTint();
-                        mano1[celdas[0][1].indice].removeInteractive();
                     } else if (celdas[0][1].which == 2) {
-                        mano2[celdas[0][1].indice].setInteractive();
                         mano2[celdas[0][1].indice].clearTint();
-                        mano2[celdas[0][1].indice].removeInteractive();
                     }
                 } else if (celdas[0][0].owner == 1) {
                     celdas[0][1].owner = 1;
                     if (celdas[0][1].which == 1) {
-                        mano1[celdas[0][1].indice].setInteractive();
                         mano1[celdas[0][1].indice].setTint(0xfc8987);
-                        mano1[celdas[0][1].indice].removeInteractive();
                     } else if (celdas[0][1].which == 2) {
-                        mano2[celdas[0][1].indice].setInteractive();
                         mano2[celdas[0][1].indice].setTint(0xfc8987);
-                        mano2[celdas[0][1].indice].removeInteractive();
                     }
                 }
                 if (celdas[0][1].norte != "neutro") {
@@ -121,24 +89,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][0].owner == 0) {
                     celdas[0][1].owner = 0;
                     if (celdas[0][1].which == 1) {
-                        mano1[celdas[0][1].indice].setInteractive();
                         mano1[celdas[0][1].indice].clearTint();
-                        mano1[celdas[0][1].indice].removeInteractive();
                     } else if (celdas[0][1].which == 2) {
-                        mano2[celdas[0][1].indice].setInteractive();
                         mano2[celdas[0][1].indice].clearTint();
-                        mano2[celdas[0][1].indice].removeInteractive();
                     }
                 } else if (celdas[0][0].owner == 1) {
                     celdas[0][1].owner = 1;
                     if (celdas[0][1].which == 1) {
-                        mano1[celdas[0][1].indice].setInteractive();
                         mano1[celdas[0][1].indice].setTint(0xfc8987);
-                        mano1[celdas[0][1].indice].removeInteractive();
                     } else if (celdas[0][1].which == 2) {
-                        mano2[celdas[0][1].indice].setInteractive();
                         mano2[celdas[0][1].indice].setTint(0xfc8987);
-                        mano2[celdas[0][1].indice].removeInteractive();
                     }
                 }
                 if (celdas[0][1].norte != "neutro") {
@@ -149,24 +109,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][0].owner == 0) {
                     celdas[0][1].owner = 0;
                     if (celdas[0][1].which == 1) {
-                        mano1[celdas[0][1].indice].setInteractive();
                         mano1[celdas[0][1].indice].clearTint();
-                        mano1[celdas[0][1].indice].removeInteractive();
                     } else if (celdas[0][1].which == 2) {
-                        mano2[celdas[0][1].indice].setInteractive();
                         mano2[celdas[0][1].indice].clearTint();
-                        mano2[celdas[0][1].indice].removeInteractive();
                     }
                 } else if (celdas[0][0].owner == 1) {
                     celdas[0][1].owner = 1;
                     if (celdas[0][1].which == 1) {
-                        mano1[celdas[0][1].indice].setInteractive();
                         mano1[celdas[0][1].indice].clearTint();
-                        mano1[celdas[0][1].indice].removeInteractive();
                     } else if (celdas[0][1].which == 2) {
-                        mano2[celdas[0][1].indice].setInteractive();
                         mano2[celdas[0][1].indice].clearTint();
-                        mano2[celdas[0][1].indice].removeInteractive();
                     }
                 }
                 if (celdas[0][1].norte != "neutro") {
@@ -184,24 +136,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][0].owner == 0) {
                     celdas[2][0].owner = 0;
                     if (celdas[2][0].which == 1) {
-                        mano1[celdas[2][0].indice].setInteractive();
                         mano1[celdas[2][0].indice].clearTint();
-                        mano1[celdas[2][0].indice].removeInteractive();
                     } else if (celdas[2][0].which == 2) {
-                        mano2[celdas[2][0].indice].setInteractive();
                         mano2[celdas[2][0].indice].clearTint();
-                        mano2[celdas[2][0].indice].removeInteractive();
                     }
                 } else if (celdas[3][0].owner == 1) {
                     celdas[2][0].owner = 1;
                     if (celdas[2][0].which == 1) {
-                        mano1[celdas[2][0].indice].setInteractive();
                         mano1[celdas[2][0].indice].setTint(0xfc8987);
-                        mano1[celdas[2][0].indice].removeInteractive();
                     } else if (celdas[2][0].which == 2) {
-                        mano2[celdas[2][0].indice].setInteractive();
                         mano2[celdas[2][0].indice].setTint(0xfc8987);
-                        mano2[celdas[2][0].indice].removeInteractive();
                     }
                 }
                 if (celdas[2][0].este != "neutro") {
@@ -212,24 +156,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][0].owner == 0) {
                     celdas[2][0].owner = 0;
                     if (celdas[2][0].which == 1) {
-                        mano1[celdas[2][0].indice].setInteractive();
                         mano1[celdas[2][0].indice].clearTint();
-                        mano1[celdas[2][0].indice].removeInteractive();
                     } else if (celdas[2][0].which == 2) {
-                        mano2[celdas[2][0].indice].setInteractive();
                         mano2[celdas[2][0].indice].clearTint();
-                        mano2[celdas[2][0].indice].removeInteractive();
                     }
                 } else if (celdas[3][0].owner == 1) {
                     celdas[2][0].owner = 1;
                     if (celdas[2][0].which == 1) {
-                        mano1[celdas[2][0].indice].setInteractive();
                         mano1[celdas[2][0].indice].setTint(0xfc8987);
-                        mano1[celdas[2][0].indice].removeInteractive();
                     } else if (celdas[2][0].which == 2) {
-                        mano2[celdas[2][0].indice].setInteractive();
                         mano2[celdas[2][0].indice].setTint(0xfc8987);
-                        mano2[celdas[2][0].indice].removeInteractive();
                     }
                 }
                 if (celdas[2][0].este != "neutro") {
@@ -240,24 +176,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][0].owner == 0) {
                     celdas[2][0].owner = 0;
                     if (celdas[2][0].which == 1) {
-                        mano1[celdas[2][0].indice].setInteractive();
                         mano1[celdas[2][0].indice].clearTint();
-                        mano1[celdas[2][0].indice].removeInteractive();
                     } else if (celdas[2][0].which == 2) {
-                        mano2[celdas[2][0].indice].setInteractive();
                         mano2[celdas[2][0].indice].clearTint();
-                        mano2[celdas[2][0].indice].removeInteractive();
                     }
                 } else if (celdas[3][0].owner == 1) {
                     celdas[2][0].owner = 1;
                     if (celdas[2][0].which == 1) {
-                        mano1[celdas[2][0].indice].setInteractive();
                         mano1[celdas[2][0].indice].setTint(0xfc8987);
-                        mano1[celdas[2][0].indice].removeInteractive();
                     } else if (celdas[2][0].which == 2) {
-                        mano2[celdas[2][0].indice].setInteractive();
                         mano2[celdas[2][0].indice].setTint(0xfc8987);
-                        mano2[celdas[2][0].indice].removeInteractive();
                     }
                 }
                 if (celdas[2][0].este != "neutro") {
@@ -270,24 +198,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][0].owner == 0) {
                     celdas[3][1].owner = 0;
                     if (celdas[3][1].which == 1) {
-                        mano1[celdas[3][1].indice].setInteractive();
                         mano1[celdas[3][1].indice].clearTint();
-                        mano1[celdas[3][1].indice].removeInteractive();
                     } else if (celdas[3][1].which == 2) {
-                        mano2[celdas[3][1].indice].setInteractive();
                         mano2[celdas[3][1].indice].clearTint();
-                        mano2[celdas[3][1].indice].removeInteractive();
                     }
                 } else if (celdas[3][0].owner == 1) {
                     celdas[3][1].owner = 1;
                     if (celdas[3][1].which == 1) {
-                        mano1[celdas[3][1].indice].setInteractive();
                         mano1[celdas[3][1].indice].setTint(0xfc8987);
-                        mano1[celdas[3][1].indice].removeInteractive();
                     } else if (celdas[3][1].which == 2) {
-                        mano2[celdas[3][1].indice].setInteractive();
                         mano2[celdas[3][1].indice].setTint(0xfc8987);
-                        mano2[celdas[3][1].indice].removeInteractive();
                     }
                 }
                 if (celdas[3][1].norte != "neutro") {
@@ -298,24 +218,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][0].owner == 0) {
                     celdas[3][1].owner = 0;
                     if (celdas[3][1].which == 1) {
-                        mano1[celdas[3][1].indice].setInteractive();
                         mano1[celdas[3][1].indice].clearTint();
-                        mano1[celdas[3][1].indice].removeInteractive();
                     } else if (celdas[3][1].which == 2) {
-                        mano2[celdas[3][1].indice].setInteractive();
                         mano2[celdas[3][1].indice].clearTint();
-                        mano2[celdas[3][1].indice].removeInteractive();
                     }
                 } else if (celdas[3][0].owner == 1) {
                     celdas[3][1].owner = 1;
                     if (celdas[3][1].which == 1) {
-                        mano1[celdas[3][1].indice].setInteractive();
                         mano1[celdas[3][1].indice].setTint(0xfc8987);
-                        mano1[celdas[3][1].indice].removeInteractive();
                     } else if (celdas[3][1].which == 2) {
-                        mano2[celdas[3][1].indice].setInteractive();
                         mano2[celdas[3][1].indice].setTint(0xfc8987);
-                        mano2[celdas[3][1].indice].removeInteractive();
                     }
                 }
                 if (celdas[3][1].norte != "neutro") {
@@ -327,24 +239,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][0].owner == 0) {
                     celdas[3][1].owner = 0;
                     if (celdas[3][1].which == 1) {
-                        mano1[celdas[3][1].indice].setInteractive();
                         mano1[celdas[3][1].indice].clearTint();
-                        mano1[celdas[3][1].indice].removeInteractive();
                     } else if (celdas[3][1].which == 2) {
-                        mano2[celdas[3][1].indice].setInteractive();
                         mano2[celdas[3][1].indice].clearTint();
-                        mano2[celdas[3][1].indice].removeInteractive();
                     }
                 } else if (celdas[3][0].owner == 1) {
                     celdas[3][1].owner = 1;
                     if (celdas[3][1].which == 1) {
-                        mano1[celdas[3][1].indice].setInteractive();
                         mano1[celdas[3][1].indice].setTint(0xfc8987);
-                        mano1[celdas[3][1].indice].removeInteractive();
                     } else if (celdas[3][1].which == 2) {
-                        mano2[celdas[3][1].indice].setInteractive();
                         mano2[celdas[3][1].indice].setTint(0xfc8987);
-                        mano2[celdas[3][1].indice].removeInteractive();
                     }
                 }
                 if (celdas[3][1].norte != "neutro") {
@@ -362,24 +266,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][3].owner == 0) {
                     celdas[1][3].owner = 0;
                     if (celdas[1][3].which == 1) {
-                        mano1[celdas[1][3].indice].setInteractive();
                         mano1[celdas[1][3].indice].clearTint();
-                        mano1[celdas[1][3].indice].removeInteractive();
                     } else if (celdas[1][3].which == 2) {
-                        mano2[celdas[1][3].indice].setInteractive();
                         mano2[celdas[1][3].indice].clearTint();
-                        mano2[celdas[1][3].indice].removeInteractive();
                     }
                 } else if (celdas[0][3].owner == 1) {
                     celdas[1][3].owner = 1;
                     if (celdas[1][3].which == 1) {
-                        mano1[celdas[1][3].indice].setInteractive();
                         mano1[celdas[1][3].indice].setTint(0xfc8987);
-                        mano1[celdas[1][3].indice].removeInteractive();
                     } else if (celdas[1][3].which == 2) {
-                        mano2[celdas[1][3].indice].setInteractive();
                         mano2[celdas[1][3].indice].setTint(0xfc8987);
-                        mano2[celdas[1][3].indice].removeInteractive();
                     }
                 }
                 if (celdas[1][3].oeste != "neutro") {
@@ -390,24 +286,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][3].owner == 0) {
                     celdas[1][3].owner = 0;
                     if (celdas[1][3].which == 1) {
-                        mano1[celdas[1][3].indice].setInteractive();
                         mano1[celdas[1][3].indice].clearTint();
-                        mano1[celdas[1][3].indice].removeInteractive();
                     } else if (celdas[1][3].which == 2) {
-                        mano2[celdas[1][3].indice].setInteractive();
                         mano2[celdas[1][3].indice].clearTint();
-                        mano2[celdas[1][3].indice].removeInteractive();
                     }
                 } else if (celdas[0][3].owner == 1) {
                     celdas[1][3].owner = 1;
                     if (celdas[1][3].which == 1) {
-                        mano1[celdas[1][3].indice].setInteractive();
                         mano1[celdas[1][3].indice].setTint(0xfc8987);
-                        mano1[celdas[1][3].indice].removeInteractive();
                     } else if (celdas[1][3].which == 2) {
-                        mano2[celdas[1][3].indice].setInteractive();
                         mano2[celdas[1][3].indice].setTint(0xfc8987);
-                        mano2[celdas[1][3].indice].removeInteractive();
                     }
                 }
                 if (celdas[1][3].oeste != "neutro") {
@@ -418,24 +306,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][3].owner == 0) {
                     celdas[1][3].owner = 0;
                     if (celdas[1][3].which == 1) {
-                        mano1[celdas[1][3].indice].setInteractive();
                         mano1[celdas[1][3].indice].clearTint();
-                        mano1[celdas[1][3].indice].removeInteractive();
                     } else if (celdas[1][3].which == 2) {
-                        mano2[celdas[1][3].indice].setInteractive();
                         mano2[celdas[1][3].indice].clearTint();
-                        mano2[celdas[1][3].indice].removeInteractive();
                     }
                 } else if (celdas[0][3].owner == 1) {
                     celdas[1][3].owner = 1;
                     if (celdas[1][3].which == 1) {
-                        mano1[celdas[1][3].indice].setInteractive();
                         mano1[celdas[1][3].indice].setTint(0xfc8987);
-                        mano1[celdas[1][3].indice].removeInteractive();
                     } else if (celdas[1][3].which == 2) {
-                        mano2[celdas[1][3].indice].setInteractive();
                         mano2[celdas[1][3].indice].setTint(0xfc8987);
-                        mano2[celdas[1][3].indice].removeInteractive();
                     }
                 }
                 if (celdas[1][3].oeste != "neutro") {
@@ -448,24 +328,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][3].owner == 0) {
                     celdas[0][2].owner = 0;
                     if (celdas[0][2].which == 1) {
-                        mano1[celdas[0][2].indice].setInteractive();
                         mano1[celdas[0][2].indice].clearTint();
-                        mano1[celdas[0][2].indice].removeInteractive();
                     } else if (celdas[0][2].which == 2) {
-                        mano2[celdas[0][2].indice].setInteractive();
                         mano2[celdas[0][2].indice].clearTint();
-                        mano2[celdas[0][2].indice].removeInteractive();
                     }
                 } else if (celdas[0][3].owner == 1) {
                     celdas[0][2].owner = 1;
                     if (celdas[0][2].which == 1) {
-                        mano1[celdas[0][2].indice].setInteractive();
                         mano1[celdas[0][2].indice].setTint(0xfc8987);
-                        mano1[celdas[0][2].indice].removeInteractive();
                     } else if (celdas[0][2].which == 2) {
-                        mano2[celdas[0][2].indice].setInteractive();
                         mano2[celdas[0][2].indice].setTint(0xfc8987);
-                        mano2[celdas[0][2].indice].removeInteractive();
                     }
                 }
                 if (celdas[0][2].sur != "neutro") {
@@ -476,24 +348,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][3].owner == 0) {
                     celdas[0][2].owner = 0;
                     if (celdas[0][2].which == 1) {
-                        mano1[celdas[0][2].indice].setInteractive();
                         mano1[celdas[0][2].indice].clearTint();
-                        mano1[celdas[0][2].indice].removeInteractive();
                     } else if (celdas[0][2].which == 2) {
-                        mano2[celdas[0][2].indice].setInteractive();
                         mano2[celdas[0][2].indice].clearTint();
-                        mano2[celdas[0][2].indice].removeInteractive();
                     }
                 } else if (celdas[0][3].owner == 1) {
                     celdas[0][2].owner = 1;
                     if (celdas[0][2].which == 1) {
-                        mano1[celdas[0][2].indice].setInteractive();
                         mano1[celdas[0][2].indice].setTint(0xfc8987);
-                        mano1[celdas[0][2].indice].removeInteractive();
                     } else if (celdas[0][2].which == 2) {
-                        mano2[celdas[0][2].indice].setInteractive();
                         mano2[celdas[0][2].indice].setTint(0xfc8987);
-                        mano2[celdas[0][2].indice].removeInteractive();
                     }
                 }
                 if (celdas[0][2].sur != "neutro") {
@@ -504,24 +368,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[0][3].owner == 0) {
                     celdas[0][2].owner = 0;
                     if (celdas[0][2].which == 1) {
-                        mano1[celdas[0][2].indice].setInteractive();
                         mano1[celdas[0][2].indice].clearTint();
-                        mano1[celdas[0][2].indice].removeInteractive();
                     } else if (celdas[0][2].which == 2) {
-                        mano2[celdas[0][2].indice].setInteractive();
                         mano2[celdas[0][2].indice].clearTint();
-                        mano2[celdas[0][2].indice].removeInteractive();
                     }
                 } else if (celdas[0][3].owner == 1) {
                     celdas[0][2].owner = 1;
                     if (celdas[0][2].which == 1) {
-                        mano1[celdas[0][2].indice].setInteractive();
                         mano1[celdas[0][2].indice].setTint(0xfc8987);
-                        mano1[celdas[0][2].indice].removeInteractive();
                     } else if (celdas[0][2].which == 2) {
-                        mano2[celdas[0][2].indice].setInteractive();
                         mano2[celdas[0][2].indice].setTint(0xfc8987);
-                        mano2[celdas[0][2].indice].removeInteractive();
                     }
                 }
                 if (celdas[0][2].sur != "neutro") {
@@ -539,24 +395,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][3].owner == 0) {
                     celdas[2][3].owner = 0;
                     if (celdas[2][3].which == 1) {
-                        mano1[celdas[2][3].indice].setInteractive();
                         mano1[celdas[2][3].indice].clearTint();
-                        mano1[celdas[2][3].indice].removeInteractive();
                     } else if (celdas[2][3].which == 2) {
-                        mano2[celdas[2][3].indice].setInteractive();
                         mano2[celdas[2][3].indice].clearTint();
-                        mano2[celdas[2][3].indice].removeInteractive();
                     }
                 } else if (celdas[3][3].owner == 1) {
                     celdas[2][3].owner = 1;
                     if (celdas[2][3].which == 1) {
-                        mano1[celdas[2][3].indice].setInteractive();
                         mano1[celdas[2][3].indice].setTint(0xfc8987);
-                        mano1[celdas[2][3].indice].removeInteractive();
                     } else if (celdas[2][3].which == 2) {
-                        mano2[celdas[2][3].indice].setInteractive();
                         mano2[celdas[2][3].indice].setTint(0xfc8987);
-                        mano2[celdas[2][3].indice].removeInteractive();
                     }
                 }
                 if (celdas[2][3].este != "neutro") {
@@ -567,24 +415,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][3].owner == 0) {
                     celdas[2][3].owner = 0;
                     if (celdas[2][3].which == 1) {
-                        mano1[celdas[2][3].indice].setInteractive();
                         mano1[celdas[2][3].indice].clearTint();
-                        mano1[celdas[2][3].indice].removeInteractive();
                     } else if (celdas[2][3].which == 2) {
-                        mano2[celdas[2][3].indice].setInteractive();
                         mano2[celdas[2][3].indice].clearTint();
-                        mano2[celdas[2][3].indice].removeInteractive();
                     }
                 } else if (celdas[3][3].owner == 1) {
                     celdas[2][3].owner = 1;
                     if (celdas[2][3].which == 1) {
-                        mano1[celdas[2][3].indice].setInteractive();
                         mano1[celdas[2][3].indice].setTint(0xfc8987);
-                        mano1[celdas[2][3].indice].removeInteractive();
                     } else if (celdas[2][3].which == 2) {
-                        mano2[celdas[2][3].indice].setInteractive();
                         mano2[celdas[2][3].indice].setTint(0xfc8987);
-                        mano2[celdas[2][3].indice].removeInteractive();
                     }
                 }
                 if (celdas[2][3].este != "neutro") {
@@ -595,24 +435,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][3].owner == 0) {
                     celdas[2][3].owner = 0;
                     if (celdas[2][3].which == 1) {
-                        mano1[celdas[2][3].indice].setInteractive();
                         mano1[celdas[2][3].indice].clearTint();
-                        mano1[celdas[2][3].indice].removeInteractive();
                     } else if (celdas[2][3].which == 2) {
-                        mano2[celdas[2][3].indice].setInteractive();
                         mano2[celdas[2][3].indice].clearTint();
-                        mano2[celdas[2][3].indice].removeInteractive();
                     }
                 } else if (celdas[3][3].owner == 1) {
                     celdas[2][3].owner = 1;
                     if (celdas[2][3].which == 1) {
-                        mano1[celdas[2][3].indice].setInteractive();
                         mano1[celdas[2][3].indice].setTint(0xfc8987);
-                        mano1[celdas[2][3].indice].removeInteractive();
                     } else if (celdas[2][3].which == 2) {
-                        mano2[celdas[2][3].indice].setInteractive();
                         mano2[celdas[2][3].indice].setTint(0xfc8987);
-                        mano2[celdas[2][3].indice].removeInteractive();
                     }
                 }
                 if (celdas[2][3].este != "neutro") {
@@ -626,24 +458,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][3].owner == 0) {
                     celdas[3][2].owner = 0;
                     if (celdas[3][2].which == 1) {
-                        mano1[celdas[3][2].indice].setInteractive();
                         mano1[celdas[3][2].indice].clearTint();
-                        mano1[celdas[3][2].indice].removeInteractive();
                     } else if (celdas[3][2].which == 2) {
-                        mano2[celdas[3][2].indice].setInteractive();
                         mano2[celdas[3][2].indice].clearTint();
-                        mano2[celdas[3][2].indice].removeInteractive();
                     }
                 } else if (celdas[3][3].owner == 1) {
                     celdas[3][2].owner = 1;
                     if (celdas[3][2].which == 1) {
-                        mano1[celdas[3][2].indice].setInteractive();
                         mano1[celdas[3][2].indice].setTint(0xfc8987);
-                        mano1[celdas[3][2].indice].removeInteractive();
                     } else if (celdas[3][2].which == 2) {
-                        mano2[celdas[3][2].indice].setInteractive();
                         mano2[celdas[3][2].indice].setTint(0xfc8987);
-                        mano2[celdas[3][2].indice].removeInteractive();
                     }
                 }
                 if (celdas[3][2].sur != "neutro") {
@@ -654,24 +478,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][3].owner == 0) {
                     celdas[3][2].owner = 0;
                     if (celdas[3][2].which == 1) {
-                        mano1[celdas[3][2].indice].setInteractive();
                         mano1[celdas[3][2].indice].clearTint();
-                        mano1[celdas[3][2].indice].removeInteractive();
                     } else if (celdas[3][2].which == 2) {
-                        mano2[celdas[3][2].indice].setInteractive();
                         mano2[celdas[3][2].indice].clearTint();
-                        mano2[celdas[3][2].indice].removeInteractive();
                     }
                 } else if (celdas[3][3].owner == 1) {
                     celdas[3][2].owner = 1;
                     if (celdas[3][2].which == 1) {
-                        mano1[celdas[3][2].indice].setInteractive();
                         mano1[celdas[3][2].indice].setTint(0xfc8987);
-                        mano1[celdas[3][2].indice].removeInteractive();
                     } else if (celdas[3][2].which == 2) {
-                        mano2[celdas[3][2].indice].setInteractive();
                         mano2[celdas[3][2].indice].setTint(0xfc8987);
-                        mano2[celdas[3][2].indice].removeInteractive();
                     }
                 }
                 if (celdas[3][2].sur != "neutro") {
@@ -682,24 +498,16 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[3][3].owner == 0) {
                     celdas[3][2].owner = 0;
                     if (celdas[3][2].which == 1) {
-                        mano1[celdas[3][2].indice].setInteractive();
                         mano1[celdas[3][2].indice].clearTint();
-                        mano1[celdas[3][2].indice].removeInteractive();
                     } else if (celdas[3][2].which == 2) {
-                        mano2[celdas[3][2].indice].setInteractive();
                         mano2[celdas[3][2].indice].clearTint();
-                        mano2[celdas[3][2].indice].removeInteractive();
                     }
                 } else if (celdas[3][3].owner == 1) {
                     celdas[3][2].owner = 1;
                     if (celdas[3][2].which == 1) {
-                        mano1[celdas[3][2].indice].setInteractive();
                         mano1[celdas[3][2].indice].setTint(0xfc8987);
-                        mano1[celdas[3][2].indice].removeInteractive();
                     } else if (celdas[3][2].which == 2) {
-                        mano2[celdas[3][2].indice].setInteractive();
                         mano2[celdas[3][2].indice].setTint(0xfc8987);
-                        mano2[celdas[3][2].indice].removeInteractive();
                     }
                 }
                 if (celdas[3][2].sur != "neutro") {
@@ -717,24 +525,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -745,24 +553,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -773,24 +581,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -804,24 +612,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -832,24 +640,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -860,24 +668,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -890,24 +698,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -918,24 +726,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -946,24 +754,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -984,24 +792,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1012,24 +820,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1041,24 +849,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1073,24 +881,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -1102,24 +910,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -1130,24 +938,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -1161,24 +969,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1189,24 +997,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1217,24 +1025,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1251,24 +1059,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1279,24 +1087,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1307,24 +1115,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1337,24 +1145,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -1365,24 +1173,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -1393,24 +1201,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -1423,24 +1231,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -1451,24 +1259,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -1479,24 +1287,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -1514,24 +1322,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1542,24 +1350,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1570,24 +1378,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1601,24 +1409,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1629,24 +1437,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1657,24 +1465,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1688,24 +1496,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -1716,24 +1524,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -1744,24 +1552,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -1779,24 +1587,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1807,24 +1615,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1835,24 +1643,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b - 1][c].owner = 0;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].clearTint();
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].clearTint();
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b - 1][c].owner = 1;
                     if (celdas[b - 1][c].which == 1) {
-                        mano1[celdas[b - 1][c].indice].setInteractive();
+            
                         mano1[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b - 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b - 1][c].which == 2) {
-                        mano2[celdas[b - 1][c].indice].setInteractive();
+            
                         mano2[celdas[b - 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b - 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b - 1][c].este != "neutro") {
@@ -1866,24 +1674,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1894,24 +1702,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1922,24 +1730,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c - 1].owner = 0;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].clearTint();
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].clearTint();
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c - 1].owner = 1;
                     if (celdas[b][c - 1].which == 1) {
-                        mano1[celdas[b][c - 1].indice].setInteractive();
+            
                         mano1[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c - 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c - 1].which == 2) {
-                        mano2[celdas[b][c - 1].indice].setInteractive();
+            
                         mano2[celdas[b][c - 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c - 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c - 1].sur != "neutro") {
@@ -1953,24 +1761,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -1981,24 +1789,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -2009,24 +1817,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b][c + 1].owner = 0;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].clearTint();
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].clearTint();
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b][c + 1].owner = 1;
                     if (celdas[b][c + 1].which == 1) {
-                        mano1[celdas[b][c + 1].indice].setInteractive();
+            
                         mano1[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano1[celdas[b][c + 1].indice].removeInteractive();
+            
                     } else if (celdas[b][c + 1].which == 2) {
-                        mano2[celdas[b][c + 1].indice].setInteractive();
+            
                         mano2[celdas[b][c + 1].indice].setTint(0xfc8987);
-                        mano2[celdas[b][c + 1].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b][c + 1].norte != "neutro") {
@@ -2040,24 +1848,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -2068,24 +1876,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {
@@ -2096,24 +1904,24 @@ function interaccion2(mano1, mano2, celdas, b, c) {
                 if (celdas[b][c].owner == 0) {
                     celdas[b + 1][c].owner = 0;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].clearTint();
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].clearTint();
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 } else if (celdas[b][c].owner == 1) {
                     celdas[b + 1][c].owner = 1;
                     if (celdas[b + 1][c].which == 1) {
-                        mano1[celdas[b + 1][c].indice].setInteractive();
+            
                         mano1[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano1[celdas[b + 1][c].indice].removeInteractive();
+            
                     } else if (celdas[b + 1][c].which == 2) {
-                        mano2[celdas[b + 1][c].indice].setInteractive();
+            
                         mano2[celdas[b + 1][c].indice].setTint(0xfc8987);
-                        mano2[celdas[b + 1][c].indice].removeInteractive();
+            
                     }
                 }
                 if (celdas[b + 1][c].oeste != "neutro") {

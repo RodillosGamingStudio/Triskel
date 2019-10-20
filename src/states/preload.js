@@ -56,15 +56,28 @@ class preload extends Phaser.Scene {
         this.load.image('helpESP', 'assets/Pantallas/dummyESP.png');
         this.load.image('helpENG', 'assets/Pantallas/dummyENG.png');
         this.load.image('Scrollbar', 'assets/Botones/Scrollbar.png');
+        this.load.image('Turnbar', 'assets/Botones/Turnbar.png');
         this.load.image('Settings', 'assets/Pantallas/Settings.png');
         this.load.image('gameover', 'assets/Pantallas/Gameover.png');
+        this.load.image('titulo', 'assets/Pantallas/Titulo.png');
+        this.load.image('titulolil', 'assets/Pantallas/Titulolil.png');
 
         this.load.spritesheet('Bbutton', 'assets/Botones/Bbutton.png', { frameWidth: 267, frameHeight: 86 });
         this.load.spritesheet('Lbutton', 'assets/Botones/Lbutton.png', { frameWidth: 138, frameHeight: 75 });
         this.load.spritesheet('Sbutton', 'assets/Botones/Sbutton.png', { frameWidth: 271, frameHeight: 250 });
         this.load.spritesheet('mute', 'assets/Botones/mute.png', { frameWidth: 271, frameHeight: 250 });
 
-
+        FBInstant.initializeAsync().then(function () {
+            FBInstant.setLoadingProgress(100);
+            FBInstant.startGameAsync().then(function () {
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+            if (windowWidth > windowHeight) {
+            windowWidth = windowHeight / 1.8;
+            }
+            var gameWidth = windowWidth * gameOptions.gameHeight / windowHeight;
+            })
+            })
 
 
         var progressBar = this.add.graphics();

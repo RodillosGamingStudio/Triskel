@@ -48,13 +48,25 @@ class partida extends Phaser.Scene {
         this.background.setOrigin(0, 0);
         music.play()
 
+        //TITULO
+        var titulolil = this.add.image(800, 75, 'titulolil');
+
+
         //TEXTOS
         var C = JSON.parse(credits_text);
+        var D = JSON.parse(settings_text);
 
         this.add.sprite(310, 75, 'Scrollbar');
         this.add.sprite(1280, 75, 'Scrollbar');
         this.add.text(310, 75, C.jugador1[game.language], { fontFamily: 'Metamorphous', fontSize:'42px',fontWeight: 'bold'}).setOrigin(0.5);
         this.add.text(1280, 75, C.jugador2[game.language], { fontFamily: 'Metamorphous', fontSize:'42px',fontWeight: 'bold'}).setOrigin(0.5);
+        var t1 = this.add.sprite(310, 815, 'Turnbar');
+        var t2 = this.add.sprite(1280, 815, 'Turnbar');
+        var tx1 = this.add.text(310, 815, D.activo[game.language], { fontFamily: 'Metamorphous', fontSize:'38px',fontWeight: 'bold'}).setOrigin(0.5);
+        var tx2 = this.add.text(1280, 815, D.activo[game.language], { fontFamily: 'Metamorphous', fontSize:'38px',fontWeight: 'bold'}).setOrigin(0.5);
+        t2.visible = false;
+        tx2.visible = false;
+
         //Botones
         var B = JSON.parse(buttons);
         
@@ -287,8 +299,6 @@ class partida extends Phaser.Scene {
                                     mano1[a1].clearTint();
                                     mano1[a1].colocada = true;
                                     celdas[b1][c1].ocupada = true;
-
-                                    console.log(mano1[0].colocada);
                                     
                                     if(modojuego == 0){
                                     interaccion2(mano1 ,mano2, celdas, b1, c1);
@@ -308,6 +318,11 @@ class partida extends Phaser.Scene {
                                     turnonumerico++;
                                     this.turnof = turnonumerico;
                                     mano1[a1].setSeleccionada(false);
+
+                                    t2.visible = true;
+                                    tx2.visible = true;
+                                    t1.visible = false;
+                                    tx1.visible = false;
                                     
                                     for (var i = 0; i < 4; i++) {
                                         for (var j = 0; j < 4; j++) {
@@ -428,6 +443,11 @@ class partida extends Phaser.Scene {
                                     turno = 0;
                                     turnonumerico++;
                                     mano2[a2].setSeleccionada(false);
+
+                                    t1.visible = true;
+                                    tx1.visible = true;
+                                    t2.visible = false;
+                                    tx2.visible = false;
 
 
                                     //FUNCION QUE HAY QUE RECUPERAR PARA EL FINAL DE LA PARTIDA

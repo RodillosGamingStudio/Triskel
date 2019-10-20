@@ -34,6 +34,8 @@ class menu extends Phaser.Scene {
         this.background = this.add.image(0, 0, 'menu');
         this.background.setOrigin(0, 0);
 
+        var titulo = this.add.image(800, 105, 'titulo');
+
         var B = JSON.parse(buttons);
         var MODES = JSON.parse(modes_text);
 
@@ -48,6 +50,7 @@ class menu extends Phaser.Scene {
 
         //Botón jugar
         var play_button = makebutton.setButton(this, 800, 350, 'Bbutton', B.play[game.language], 'none', null, music);
+
 
         //Contexto
         var that = this;
