@@ -100,7 +100,7 @@ Entonces, ¿cómo abatir una carta de tipo Dios Primigenio? Esto se explica con 
 
 Los atributos se situarán cada uno en uno de los cuatro lados de la carta, de manera que solo afectarán a las cartas que sean adyacentes por dicho lado.
 Los atributos funcionan de la siguiente manera:
-<img alt="Triángulo de poderes" src="imgs/triangulopoderes.png" width="400">
+<img alt="Triángulo de poderes" src="img/triangulopoderes.png" width="400">
 
 <b>Cartas exclusivas: </b>
 Serán cartas de cualquier tipo (Dioses Primigenios, Dioses, Héroes o Criaturas) que solamente podrán añadirse a la colección del jugador, para su uso en las partidas, mediante compra interna con la moneda del juego. Esto se explica en Sistema de Banca y Monetización.
