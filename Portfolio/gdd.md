@@ -59,13 +59,16 @@ Existirán 3 posibles modos de juego:
 + Inverso: 
 
 <b>Controles mecánicos: </b>
+
 Los controles, en el caso del PC, se resumen al uso del puntero (hacer click en botones y cartas, y arrastrar en barras).
 En el caso del móvil, se interactúa con la pantalla táctil a modo de imitación del puntero del ordenador.
 
 <b>Puntuación: </b>
+
 La puntuación se calculará por separado para jugador, y consistirá en la suma de cartas que queden en su poder al finalizar la partida.
 
 <b>Revancha: </b>
+
 Inicia de nuevo el juego con los valores predeterminados escogidos en la partida anterior (modo de juego y barajas asociadas al jugador).
 
 <b>Mecánicas de juego: </b>
