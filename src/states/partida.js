@@ -90,19 +90,20 @@ class partida extends Phaser.Scene {
         image.visible = false;
         image.depth = 1;
         text.depth = 1;
-
+        
         help_button.on('pointerdown', function () {
             clicksonido.play();
-     
+                image.visible = false;
+                text.text = '';
                  if(!halp.visible)
                      halp.visible = true;
                  else 
                  halp.visible = false;
              });
-
+            
         rules_button.on('pointerdown', function () {
        clicksonido.play();
-
+            halp.visible = false;
             if(!image.visible)
                 text.text = game.modetext.text;
             else 
